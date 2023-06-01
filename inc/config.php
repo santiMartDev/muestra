@@ -3,7 +3,7 @@
 /**
  * Configuration
  *
- * @package      witsound
+ * @package      imaneo
  * @author       Rload
  * @since        1.0.0
 **/

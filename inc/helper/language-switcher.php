@@ -3,8 +3,8 @@
 /**
  * Language Swicher
  *
- * @package      witsound
- * @author       Reload
+ * @package      imaneo
+ * @author       Fresco & Fino
  * @since        1.0.0
 **/
 

@@ -109,7 +109,7 @@ gulp.task("script", async () => {
 /* Gulp Watch */
 gulp.task("watch", async () => {
   server.init({
-    proxy: "http://witsound.local/",
+    proxy: "http://imaneo.local/",
     browser: "chrome",
   });
   watch(paths.sass.watcher).on("change", gulp.series("sass", "minCss", server.reload));

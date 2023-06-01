@@ -3,8 +3,8 @@
 /**
  * Functions
  *
- * @package      witsound
- * @author       Reload
+ * @package      imaneo
+ * @author       Fresco & Fino
  * @since        1.0.0
 **/
 
@@ -15,7 +15,7 @@ require_once('inc/enqueue-assets.php');     // Edit assets enqueque
 
 // Navigation, CPT and Sidebars
 require_once('inc/navigation.php');         // Config your menus (header and footer by default)
-// require_once('inc/cpt.php');             // Creat your CPT
+require_once('inc/cpt.php');                // Creat your CPT
 // require_once('inc/sidebars.php');        // Widgets
 
 // Actions, Helper and Custom fields

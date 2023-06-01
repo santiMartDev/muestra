@@ -3,7 +3,7 @@
 /**
  * Legal Menu
  *
- * @package      witsound
+ * @package      imaneo
  * @author       Rload
  * @since        1.0.0
 **/
@@ -12,7 +12,7 @@
 
 <?php $theme_content = get_field('theme_content','options'); ?>
 
-<nav class="legal-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Legal menu', 'witsound' ); ?>">
+<nav class="legal-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Legal menu', 'imaneo' ); ?>">
 
 	<?php wp_nav_menu( array(
 		'theme_location' => 'legal-menu',
