@@ -1,0 +1,83 @@
+// --------------------------------------------------
+//		Modules: Contact
+// --------------------------------------------------
+
+
+@use 'settings' as *;
+@use 'tools' as *;
+@use 'helper' as *;
+
+
+.module-contact {
+
+    @extend .module-vertical-medium;
+
+    .module-title {
+        @extend .fs-5;
+    }
+
+    .contact-form {
+
+        border-radius: 3rem;
+        background-color: color('gray');
+
+        padding: 2rem 4rem;
+
+        @include up(md) {
+            padding: 4rem 6rem;
+        }
+
+        @include up(lg) {
+            padding: 2rem 4rem;
+        }
+
+        @include up(xl) {
+            padding: 4rem;
+        }
+
+        @include up(xxxl) {
+            padding: 6rem 8rem;
+        }
+
+    }  
+    
+    .contact-info {
+
+        @extend .module-top-small;
+        @extend .module-horizontal-medium;
+        display: flex;
+        flex-direction: column;
+        grid-row-gap: 3rem;
+
+        @include up(lg) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .contact-info-item {
+            @include up(lg) {
+                max-width: 40%;
+                
+                &:not(:first-child) {
+                    padding-left: 10rem;
+                    border-left: 1px solid color('gray','dark');
+                }
+            }
+        }
+
+        h6 {
+            color: color('secondary');
+            margin-bottom: 2rem;
+            @include up(lg) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        a {
+            color: color('primary');
+            text-decoration: underline;
+        }
+
+    }
+
+}

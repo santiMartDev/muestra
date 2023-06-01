@@ -1,0 +1,32 @@
+// --------------------------------------------------
+//		Settings: Fonts
+// --------------------------------------------------
+
+
+// Font base
+$font-family-base:            'Celias', sans-serif;
+$font-weight-base:            400;
+
+$font-size-base:              1.6rem; // 17px
+$font-size-base-md:           1.8rem; // 17px // Custom value
+$font-size-base-lg:           1.8rem; // 17px // Custom value
+
+$line-height-base:            1.5;
+$line-height-base-md:         $line-height-base; // Custom value
+$line-height-base-lg:         $line-height-base; // Custom value
+
+// Headings
+$headings-font-family:        'Celias', serif;
+$headings-font-weight:        normal;
+$headings-line-height:        1;
+$headings-margin-bottom:      0;
+
+// headings font size [ si creas nuevos tamaños genera clases como esta: .fs-2 ]
+$font-sizes: (
+	1: (22 32 45 65 80),	// xs md lg xl xxl
+	2: (28 32 40 45 50),
+	3: (24 22 35 40 45),
+	4: (16 18 20 22 22),
+	5: (15 16 18 20 20),
+	6: (12 12 13 13 13),
+);

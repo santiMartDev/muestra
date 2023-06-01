@@ -1,0 +1,30 @@
+// --------------------------------------------------
+//		Settings: Config theme
+// --------------------------------------------------
+
+// Body  ========================================
+
+$body-bg: var(--color-secondary);
+$body-color: var(--color-white);
+
+// Margins  ========================================
+
+$paragraph_margin: 2rem;
+
+$h1_margin: 4rem;
+$h2_margin: 4rem;
+$h3_margin: 4rem;
+$h4_margin: 4rem;
+$h5_margin: 4rem;
+$h6_margin: 4rem;
+
+// Dark Layer  ========================================
+
+$dark_layer_opacity: .4;
+
+// Links  ========================================
+
+$link-color:            var(--color-black);
+$link-decoration:       none;
+$link-hover-color:      var(--color-black);
+$link-hover-decoration: null;

@@ -1,0 +1,32 @@
+// --------------------------------------------------
+//		Components: Loading
+// --------------------------------------------------
+
+
+@use 'tools' as *;
+
+
+.loading {
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 3000;
+
+    background-color: color("secondary");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all .5s;
+
+    img {
+        max-width: 7rem;
+    }
+
+}
+
+// loaded
+.loaded .loading {
+    transform: translateY(-100%);
+}

@@ -1,0 +1,106 @@
+// --------------------------------------------------
+//		Modules: Image and text
+// --------------------------------------------------
+
+
+@use 'tools' as *;
+
+
+.module-image-text .module-wrapper {
+
+    // module small [default]
+    &.module-small {
+        padding: 8rem 0;
+    }
+
+    // module large [column image large]
+    &.module-large {
+
+        @include down(lg) {
+            padding: 8rem 0;
+        }
+
+        // title
+        .module-title p,
+        .module-title div {
+            @extend .fs-1;
+            line-height: 1em;
+        }
+
+        // columns sizes
+        .col {
+            &:first-child {
+                @include up(lg) {
+                    width: 40%;
+                }
+            }
+            &:last-child {
+                @include up(lg) {
+                    width: 60%;
+                }
+            }
+        }
+
+    }
+
+    // normal + large
+    &:not(.reverse-desktop) {
+        &.module-large {
+            .col {
+                &:first-child {
+                    @include up(lg) {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // reverse desktop
+    &.reverse-desktop {
+
+        .module-section {
+            @include up(lg) {
+                left: 50%;
+                top: 50%;
+                transform: translate( 50%, -120% );
+                &.animated {
+                    transform: translate( 0, -120% );
+                }
+            }
+        }
+
+        &.module-large {
+            .col {
+                &:first-child {
+                    @include up(lg) {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+
+    }
+
+    // section over images
+    &.section-reverse:not(.reverse-desktop) {
+
+        @include up(lg) {
+            padding: 20rem 0 8rem;
+        }
+
+        .module-section {
+            @include up(lg) {
+                left: 50%;
+                top: 5rem;
+                // top: 50%;
+                // transform: translate( 50%, -120% );
+                // &.animated {
+                //     transform: translate( 0, -120% );
+                // }
+            }
+        }
+
+    }
+
+}

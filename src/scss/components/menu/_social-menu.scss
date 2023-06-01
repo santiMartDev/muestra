@@ -1,0 +1,25 @@
+// --------------------------------------------------
+//		Components: Menu: Main menu
+// --------------------------------------------------
+
+
+@use 'tools' as *;
+@use 'elements' as *;
+
+
+.social-navigation {
+
+    ul {
+        @extend %list-inline;
+        grid-column-gap: 3rem;
+    }
+
+    a {
+        color: color('white');
+        font-size: 2rem;
+        &:hover {
+            color: color('primary');
+        }
+    }
+
+}

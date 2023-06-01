@@ -1,0 +1,37 @@
+// --------------------------------------------------
+//		Components: Menu: Main menu
+// --------------------------------------------------
+
+
+@use 'tools' as *;
+@use 'elements' as *;
+
+
+.site-header .main-navigation {
+
+    // hide mobile
+
+    @include down(lg) {
+        display: none;
+    }
+
+    // list
+
+    ul {
+        grid-column-gap: 5rem;
+        @include up(lg) {
+            grid-column-gap: 7.5rem;
+        }
+    }
+
+    // links
+
+    a {
+        font-size: 2rem;
+        font-weight: 500;
+        &:hover {
+            color: color('primary');
+        }
+    }
+
+}

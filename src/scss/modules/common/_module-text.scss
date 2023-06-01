@@ -1,0 +1,15 @@
+// --------------------------------------------------
+//		Modules: Common: Text
+// --------------------------------------------------
+
+@use "tools" as *;
+
+.module-text {
+  p {
+    text-align: justify;
+
+    @include up(lg) {
+      text-align: left;
+    }
+  }
+}

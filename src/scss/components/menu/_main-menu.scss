@@ -1,0 +1,16 @@
+// --------------------------------------------------
+//		Components: Menu: Main menu
+// --------------------------------------------------
+
+
+@use 'tools' as *;
+@use 'elements' as *;
+
+
+.main-navigation {
+
+    ul {
+        @extend %list-inline;
+    }
+
+}

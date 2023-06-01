@@ -1,0 +1,29 @@
+// --------------------------------------------------
+//		Settings: Buttons
+// --------------------------------------------------
+
+
+@use 'fonts' as *;
+
+
+// styles
+$btn-font-family:       $font-family-base;
+$btn-font-weight:       500;
+$btn-line-height:       1.2;
+$btn-border-radius:     5rem;
+$btn-border-width:      1px;
+$btn-color:             var(--color-black);
+
+// sizes buttons
+$btn-font-size-base: 	(1.5, 1.8, 2);	    // xs md lg
+$btn-padding-y-base:	(1.5, 1.8, 2);        // xs md lg
+$btn-padding-x-base:	(5, 6, 7.5);    // xs md lg
+
+
+// Button Colors 		( color,  				hover-color,  			hover-bg,  				hover-border-color)
+// $buttons-colors: (
+// 	"primary" :         ( $color-dark, 			$color-dark, 			$color-gray, 			'transparent' ),
+// 	"secondary" :     	( $color-white,			$color-dark, 			$color-white, 			'transparent' ),
+// 	"black" :   		( 'none', 				$color-white, 			$color-dark, 			'none' ),
+// 	"white" :   		( 'none', 				$color-dark, 			$color-white, 			'none' ),
+// );

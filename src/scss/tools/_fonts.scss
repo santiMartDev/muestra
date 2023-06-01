@@ -1,0 +1,61 @@
+// --------------------------------------------------
+//		Tools: Fonts: Function and Headings
+// --------------------------------------------------
+
+
+@use 'settings' as *;
+@use 'breakpoints' as *;
+@use 'sass:map';
+@use 'sass:list';
+
+
+// Funcion para extraer familia, grosor y tamaño [ setfont("size", "h0") ]
+@function setfont($scheme, $tone: base) {
+    @return map.get($fonts, $scheme, $tone);
+}
+
+
+// placeholders fonts [ mejorable - loop automatico ]
+@each $size, $value in $font-sizes {
+
+	%h#{$size} {
+
+		font-size: list.nth($value, 1) * 1px ;
+
+		@include up(md) {
+			font-size: list.nth($value, 2) * 1px ;
+		}
+
+		@include up(lg) {
+			font-size: list.nth($value, 3) * 1px ;
+		}
+
+		@include up(xl) {
+			font-size: list.nth($value, 4) * 1px ;
+		}
+
+		@include up(xxl) {
+			font-size: list.nth($value, 5) * 1px ;
+		}
+
+	}
+
+}
+
+
+// heading tags and class
+@each $size, $value in $font-sizes {
+
+	$class : '';
+
+	@if $size > 6 {
+		$class : '.h#{$size}, .fs-#{$size}';
+	} @else {
+		$class : 'h#{$size}, .h#{$size}, .fs-#{$size}';
+	}
+
+	#{$class} {
+		@extend %h#{$size};
+	}
+
+}

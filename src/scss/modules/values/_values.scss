@@ -1,0 +1,51 @@
+// --------------------------------------------------
+//		Modules: Values
+// --------------------------------------------------
+
+@use "tools" as *;
+
+.module-values .module-wrapper {
+  padding-left: 0;
+  padding-right: 0;
+  @extend .module-vertical-medium;
+
+  .col-content {
+    @extend .module-left-medium;
+
+    .module-title p div {
+      @extend %h3;
+      font-weight: 300;
+    }
+    .module-buttons {
+      @extend %h3;
+    }
+  }
+
+  .swiper {
+    @extend .module-left-small;
+  }
+
+  .swiper-values {
+    .swiper-slide {
+      width: 80%;
+      @include up(md) {
+        width: 35%;
+      }
+
+      img {
+        width: 30%;
+      }
+    }
+  }
+  
+
+  .swiper-scrollbar {
+    position: relative !important;
+    margin-top: 4rem;
+    background-color: color("gray");
+
+    &-drag {
+      background-color: color("primary");
+    }
+  }
+}

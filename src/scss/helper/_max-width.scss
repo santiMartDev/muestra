@@ -1,0 +1,44 @@
+// --------------------------------------------------
+//		Helpers: Max width
+// --------------------------------------------------
+
+
+@use 'settings' as *;
+@use 'tools' as *;
+
+
+.module {
+
+	&-default {
+		@extend %module-horizontal-small;
+	}
+
+	&-narrow {
+		@extend %module-horizontal-medium;
+	}
+
+	&-extra {
+		@extend %module-horizontal-large;
+	}
+
+	&-max-width {
+		@extend %module-horizontal-small;
+		@include up(xl){
+			margin: 0 auto;
+			padding-right: 0;
+			padding-left: 0;
+			max-width: $max-width;
+		}
+	}
+
+	&-max-width-small {
+		@extend %module-horizontal-small;
+		@include up(xl){
+			margin: 0 auto;
+			padding-right: 0;
+			padding-left: 0;
+			max-width: $max-width-small;
+		}
+	}
+
+}

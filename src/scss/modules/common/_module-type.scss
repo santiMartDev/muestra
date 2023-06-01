@@ -1,0 +1,23 @@
+// --------------------------------------------------
+//		Modules: Common: Type
+// --------------------------------------------------
+
+
+@use 'helper' as *;
+@use 'tools' as *;
+
+
+.module-block {
+    border-radius: 3rem;
+    @include distance('margin-left', 'medium');
+    @include distance('margin-right', 'medium');
+    .module-inside {
+        @extend .module-horizontal-small;
+        @extend .module-vertical-small;
+    }
+}
+
+.module-full {
+    width: 100%;
+    @extend .module-horizontal-medium;
+}

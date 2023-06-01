@@ -1,0 +1,65 @@
+// --------------------------------------------------
+//		Tools: Buttons
+// --------------------------------------------------
+
+
+@use 'settings' as *;
+@use 'breakpoints' as *;
+@use 'sass:list';
+
+
+%buttons {
+
+    font-family:    $btn-font-family;
+    font-weight:    $btn-font-weight;
+    font-size:      list.nth($btn-font-size-base, 1)*1rem;
+    line-height:    $btn-line-height;
+
+    color: $btn-color;
+
+    padding: list.nth($btn-padding-y-base, 1) *1rem list.nth($btn-padding-x-base, 1)*1rem;
+
+    text-decoration: none;
+
+    border-radius: $btn-border-radius;
+
+    transition: all .3s;
+
+    @include up(md) {
+        padding: list.nth($btn-padding-y-base, 2)*1rem list.nth($btn-padding-x-base, 2)*1rem;
+		font-size: list.nth($btn-font-size-base, 2)*1rem;
+    }
+
+    @include up(lg) {
+        padding: list.nth($btn-padding-y-base, 3)*1rem list.nth($btn-padding-x-base, 3)*1rem;
+		font-size: list.nth($btn-font-size-base, 3)*1rem;
+    }
+
+}
+
+// class buttons
+@each $colorname, $palette in $colors {
+
+    @each $key, $value in $palette {
+
+        @if $key == base {
+            // $keyname: "--color-" + $colorname;
+            // #{$keyname}: #{$value};
+
+            .btn-#{$colorname} {
+                background-color: $value;
+            }
+
+        } @else {
+
+            // $keyname: "--color-" + $colorname + "-" + $key;
+            // #{$keyname}: #{$value};
+
+            .btn-#{$colorname}-#{$key} {
+                background-color: $value;
+            }
+
+        }
+    }
+
+}

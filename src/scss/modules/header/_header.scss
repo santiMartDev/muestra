@@ -1,0 +1,60 @@
+// --------------------------------------------------
+//		Modules: Header
+// --------------------------------------------------
+
+
+@use "settings" as *;
+@use "tools" as *;
+@use "helper" as *;
+
+
+.module-header {
+
+    @extend .module-bottom-small;
+    @extend .module-horizontal-small;
+
+    .module-section {
+        margin-top: 0;
+    }
+
+    .header-row {
+
+        display: flex;
+        justify-content: center;
+        grid-gap: 0;
+
+        flex-direction: column;
+        align-items: center;
+
+        grid-gap: 4rem;
+
+        @include up(lg) {
+            grid-gap: 1rem;
+            flex-direction: row;
+        }
+
+        span {
+            @extend .fs-1;
+        }
+
+        span:nth-child(1) {
+            @include down(lg) {
+                order: 1;
+            }
+        }
+
+        img {
+            @include down(lg) {
+                order: 2;
+            }
+        }
+
+        span:nth-child(2) {
+            @include down(lg) {
+                order: 2;
+            }
+        }
+
+    }
+
+}

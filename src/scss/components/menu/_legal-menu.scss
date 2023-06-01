@@ -1,0 +1,49 @@
+// --------------------------------------------------
+//		Components: Menu: Main menu
+// --------------------------------------------------
+
+
+@use 'tools' as *;
+@use 'elements' as *;
+
+
+.legal-navigation {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include up(md) {
+        flex-direction: row
+    }
+
+    // list
+
+    ul {
+        @extend %list-inline;
+        grid-column-gap: 5rem;
+        @include up(lg) {
+            grid-column-gap: 7.5rem;
+        }
+    }
+
+    // text
+
+    a, p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: color('primary','light');
+        @include up(md) {
+            font-size: 1.4rem;
+        }
+    }
+
+    // links
+
+    a {
+        &:hover {
+            color: color('white');
+        }
+    }
+
+}

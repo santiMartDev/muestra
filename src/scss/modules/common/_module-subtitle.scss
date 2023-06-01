@@ -1,0 +1,16 @@
+// --------------------------------------------------
+//		Modules: Common: Section
+// --------------------------------------------------
+
+@use "tools" as *;
+
+.module-subtitle {
+  p {
+    color: color("primary");
+    text-align: justify;
+
+    @include up(lg) {
+      text-align: left;
+    }
+  }
+}

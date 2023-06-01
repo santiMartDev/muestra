@@ -1,0 +1,29 @@
+// --------------------------------------------------
+//		Layout
+// --------------------------------------------------
+
+
+@use 'helper' as *;
+@use 'tools' as *;
+
+
+.site-header {
+
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // z-index: 500;
+
+    @extend .module-horizontal-medium;
+
+    display: flex;
+    justify-content: space-between;
+    background-color: color('secondary');
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+
+    .header-menu {
+        display: none;
+    }
+}

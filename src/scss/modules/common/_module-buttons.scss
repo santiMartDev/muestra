@@ -1,0 +1,26 @@
+// --------------------------------------------------
+//		Modules: Common: Title
+// --------------------------------------------------
+
+
+@use 'settings' as *;
+@use 'tools' as *;
+@use 'elements' as *;
+
+
+.module-buttons {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 5rem;
+
+    @include up(md) {
+        margin-top: 7rem;
+    }
+
+    @include up(lg) {
+        margin-top: 9rem;
+        justify-content: flex-start;
+    }
+
+}

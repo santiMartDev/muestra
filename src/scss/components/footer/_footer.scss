@@ -1,0 +1,27 @@
+// --------------------------------------------------
+//		Components: Footer: Footer
+// --------------------------------------------------
+
+
+@use 'tools' as *;
+@use 'helper' as *;
+
+
+.site-footer {
+
+    background-color: color('primary', light);
+    color: color('gray', 'light');
+
+    border-radius: 4rem 4rem 0 0;
+
+    @extend .module-horizontal-medium;
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include up(lg) {
+        padding-top: 4.5rem;
+        padding-bottom: 7rem;
+    }
+
+}

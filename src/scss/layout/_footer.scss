@@ -1,0 +1,48 @@
+// --------------------------------------------------
+//		Layout
+// --------------------------------------------------
+
+
+@use 'helper' as *;
+@use 'tools' as *;
+
+
+.site-footer {
+    background-color: color('secondary', 'light');
+
+    .footer-top,
+    .footer-bottom {
+
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        grid-gap: 3rem;
+
+        @include up(lg) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .footer-top {
+        margin-bottom: 3rem;
+        @include up(lg) {
+            margin-bottom: 8rem;
+        }
+
+        nav ul li a {
+            color: color('gray', 'light');
+            @extend %h6;
+        }
+    }
+
+    .footer-bottom {
+        p {
+            @extend %h6;
+        }
+    }
+
+}

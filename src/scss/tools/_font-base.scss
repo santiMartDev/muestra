@@ -1,0 +1,27 @@
+// --------------------------------------------------
+//		Tools: font base [placeholder]
+// --------------------------------------------------
+
+
+@use 'settings' as *;
+@use 'breakpoints' as *;
+
+
+%font-base {
+
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	font-weight: $font-weight-base;
+	line-height: $line-height-base;
+
+	@include up(md) {
+		font-size: $font-size-base-md;
+		line-height: $line-height-base-md;
+	}
+
+	@include up(lg) {
+		font-size: $font-size-base-lg;
+		line-height: $line-height-base-lg;
+	}
+
+}

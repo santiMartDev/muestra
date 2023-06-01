@@ -1,0 +1,33 @@
+// --------------------------------------------------
+//		Pages: Default
+// --------------------------------------------------
+
+
+@use 'helper' as *;
+@use 'tools' as *;
+
+
+.page-template-default {
+
+    #wrapper {
+
+        @extend .module-horizontal-medium;
+        @extend .module-vertical-medium;
+
+        // list
+        ul {
+            @extend %list-style;
+        }
+
+    }
+
+    h1, h5  {
+        color: color('secondary');
+    }
+
+    h2, h3, h4, h5 {
+        margin-bottom: 1.5rem;
+        line-height: 1.2em;
+    }
+
+}

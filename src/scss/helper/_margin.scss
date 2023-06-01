@@ -1,0 +1,57 @@
+// --------------------------------------------------
+//		Helpers: Margins
+// --------------------------------------------------
+
+
+@use 'settings' as *;
+@use 'tools' as *;
+@use 'sass:map';
+@use 'sass:list';
+
+
+// Block margins vertical ========================================
+
+@each $size, $value in $custom-block-y-spaces {
+
+	@if $size != 'none' {
+
+		// Margin top
+		.module-top-#{$size} {
+			@extend %module-top-#{$size};
+		}
+
+		// Margin bottom
+		.module-bottom-#{$size} {
+			@extend %module-bottom-#{$size};
+		}
+
+		// Margin vertical
+		.module-vertical-#{$size} {
+			@extend %module-vertical-#{$size};
+		}
+	}
+}
+
+
+// Block margins horizontal ========================================
+
+@each $size, $value in $custom-block-x-spaces {
+
+	@if $size != 'none' {
+
+		// Margin top
+		.module-left-#{$size} {
+			@extend %module-left-#{$size};
+		}
+
+		// Margin bottom
+		.module-right-#{$size} {
+			@extend %module-right-#{$size};
+		}
+
+		// Margin bottom
+		.module-horizontal-#{$size} {
+			@extend %module-horizontal-#{$size};
+		}
+	}
+}

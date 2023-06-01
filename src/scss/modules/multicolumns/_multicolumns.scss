@@ -1,0 +1,31 @@
+// --------------------------------------------------
+//		Modules: Multicolumns
+// --------------------------------------------------
+
+@use "tools" as *;
+
+.module-multicolumns {
+  @extend .module-top-small;
+
+  .module-wrapper.multicoumns-reverse .columns {
+    @include up(lg) {
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  .module-wrapper:not(.multicoumns-reverse) .columns {
+    @include up(lg) {
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  .module-inside {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 8rem;
+  }
+}

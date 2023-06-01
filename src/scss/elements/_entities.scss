@@ -1,0 +1,85 @@
+// --------------------------------------------------
+//		Elements: Entities
+// --------------------------------------------------
+
+
+@use 'settings' as *;
+@use 'tools' as *;
+
+* {
+	box-sizing: border-box;
+}
+
+
+// html
+html {
+    overflow-x: hidden !important;
+    font-size: 62.5%;
+}
+
+// body
+body {
+
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+    -webkit-font-smoothing: antialiased;
+
+    @extend %font-base;
+
+    background-color: $body-bg;
+	color: $body-color;
+
+}
+
+// paragrapgh
+p {
+    @extend %font-base;
+    margin-bottom: $paragraph_margin;
+}
+
+// strong
+strong {
+    font-weight: 600;
+}
+
+// links
+a {
+    color: $link-color;
+    text-decoration: $link-decoration;
+    transition: all .3s;
+    &:hover {
+        color: $link-hover-color;
+    }
+}
+
+// headings
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: $h1_margin;
+}
+
+h2 {
+    margin-bottom: $h2_margin;
+}
+
+h3 {
+    margin-bottom: $h3_margin;
+}
+
+h4 {
+    margin-bottom: $h4_margin;
+}
+
+h5 {
+    margin-bottom: $h5_margin;
+}
+
+h6 {
+    margin-bottom: $h6_margin;
+}

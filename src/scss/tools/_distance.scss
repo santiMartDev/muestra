@@ -1,0 +1,34 @@
+// --------------------------------------------------
+//		Tools: Distance
+// --------------------------------------------------
+
+
+@use 'settings' as *;
+@use 'breakpoints' as *;
+@use 'sass:map';
+@use 'sass:list';
+
+
+@mixin distance($property, $size) {
+
+    $value: map.get($custom-block-x-spaces, $size);
+
+    #{$property}: list.nth($value, 1) * 1px ;
+
+	@include up(md) {
+		#{$property}: list.nth($value, 2) * 1px ;
+	}
+
+	@include up(lg) {
+		#{$property}: list.nth($value, 3) * 1px ;
+	}
+
+	@include up(xl) {
+		#{$property}: list.nth($value, 4) * 1px ;
+	}
+
+	@include up(xxl) {
+		#{$property}: list.nth($value, 5) * 1px ;
+	}
+
+}
