@@ -2,32 +2,34 @@
 
 <ul class="tabs">
 
-    <?php // Tab Photo ?>
+    <?php // Tab Link Photo ?>
     <?php if(!empty($project['photo'])): ?>
         <li><a class="tab" href="#<?php echo slugify($tab_text_photo); ?>"><?php echo $tab_text_photo; ?></a></li>
     <?php endif; ?>
 
-    <?php // Tab History ?>
+    <?php // Tab Link History ?>
     <?php if(!empty($project['history'])): ?>
         <li><a class="tab" href="#<?php echo slugify($tab_text_history); ?>"><?php echo $tab_text_history; ?></a></li>
     <?php endif; ?>
 
-    <?php // Tab Map ?>
+    <?php // Tab Link Map ?>
     <?php if(!empty($project['map'])): ?>
         <li><a class="tab" href="#<?php echo slugify($tab_text_map); ?>"><?php echo $tab_text_map; ?></a></li>
     <?php endif; ?>
 
-    <?php // Tab Artist ?>
+    <?php // Tab Link Artist ?>
     <?php if(!empty($project['artist'])): ?>
         <li><a class="tab" href="#<?php echo slugify($tab_text_artist); ?>"><?php echo $tab_text_artist; ?></a></li>
     <?php endif; ?>
 
-    <?php // Tab Podcast ?>
+    <?php // Tab Link Podcast ?>
     <?php if(!empty($project['podcast'])): ?>
         <li><a class="tab" href="#<?php echo slugify($tab_text_podcast); ?>"><?php echo $tab_text_podcast; ?></a></li>
     <?php endif; ?>
 
-    <?php // Tab Education ?>
+    <li><a class="tab" href="#<?php echo slugify($tab_text_theme); ?>"><?php echo $tab_text_theme; ?></a></li>
+
+    <?php // Tab Link Education ?>
     <?php if(!empty($project['education'])): ?>
         <li><a class="tab" href="#<?php echo slugify($tab_text_education); ?>"><?php echo $tab_text_education; ?></a></li>
     <?php endif; ?>
@@ -39,6 +41,7 @@
 <?php // Tab Content Photo ?>
 <?php if(!empty($project['photo'])):  ?>
     <div id="<?php echo slugify($tab_text_photo); ?>">
+        <h3><?php echo $tab_text_photo; ?></h3>
         <?php require( TEMPLATEPATH . '/template-parts/project/project-photo.php' ); ?>
     </div>
 <?php endif; ?>
@@ -46,42 +49,45 @@
 <?php // Tab Content History ?>
 <?php if(!empty($project['history'])):  ?>
     <div id="<?php echo slugify($tab_text_history); ?>">
+        <h3><?php echo $tab_text_history; ?></h3>
         <?php require( TEMPLATEPATH . '/template-parts/project/project-history.php' ); ?>
     </div>
 <?php endif; ?>
 
-<?php // Tab Content History ?>
+<?php // Tab Content Map ?>
 <?php if(!empty($project['map'])):  ?>
     <div id="<?php echo slugify($tab_text_map); ?>">
+        <h3><?php echo $tab_text_map; ?></h3>
         <?php require( TEMPLATEPATH . '/template-parts/project/project-map.php' ); ?>
     </div>
 <?php endif; ?>
 
-
-<?php // Tab Content History ?>
+<?php // Tab Content Artist ?>
 <?php if(!empty($project['artist'])):  ?>
     <div id="<?php echo slugify($tab_text_artist); ?>">
+        <h3><?php echo $tab_text_artist; ?></h3>
         <?php require( TEMPLATEPATH . '/template-parts/project/project-artist.php' ); ?>
     </div>
 <?php endif; ?>
 
-<?php // Tab Content History ?>
+<?php // Tab Content Podcast ?>
 <?php if(!empty($project['podcast'])):  ?>
     <div id="<?php echo slugify($tab_text_podcast); ?>">
+        <h3><?php echo $tab_text_podcast; ?></h3>
         <?php require( TEMPLATEPATH . '/template-parts/project/project-podcast.php' ); ?>
     </div>
 <?php endif; ?>
 
-<?php // Tab Content History ?>
-<?php if(!empty($project['themes'])):  ?>
-    <div id="<?php echo slugify($tab_text_themes); ?>">
-        <?php require( TEMPLATEPATH . '/template-parts/project/project-themes.php' ); ?>
-    </div>
-<?php endif; ?>
+<?php // Tab Content Theme ?>
+<div id="<?php echo slugify($tab_text_theme); ?>">
+    <h3><?php echo $tab_text_theme; ?></h3>
+    <?php require( TEMPLATEPATH . '/template-parts/project/project-themes.php' ); ?>
+</div>
 
-<?php // Tab Content History ?>
-<?php if(!empty($project['education'])):  ?>
+<?php // Tab Content Education ?>
+<?php if($project['education']):  ?>
     <div id="<?php echo slugify($tab_text_education); ?>">
+        <h3><?php echo $tab_text_education; ?></h3>
         <?php require( TEMPLATEPATH . '/template-parts/project/project-education.php' ); ?>
     </div>
 <?php endif; ?>

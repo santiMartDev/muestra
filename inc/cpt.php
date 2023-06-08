@@ -290,42 +290,134 @@ function project_tax_theme() {
 	  'hierarchical' => true,
 	);
 
-	register_taxonomy( 'project_theme', array( 'theme', 'project' ) , $args );
+	register_taxonomy( 'project_theme', array( 'theme', 'project', 'education' ) , $args );
 
 }
 
 add_action( 'init', 'project_tax_theme', 0 );
 
-// Project / Architects
+// Post type PROJECT
+///////////////////////////
 
-function project_tax_architect() {
+// Register PROJECT Post type
+
+function architect_post_type() {
 
 	$labels = array(
-	  'name'              => _x( 'Project architect', 'taxonomy general name' ),
-	  'singular_name'     => _x( 'Project architect', 'taxonomy singular name' ),
-	  'search_items'      => __( 'Search Project architect' ),
-	  'all_items'         => __( 'All Project architect' ),
-	  'parent_item'       => __( 'Parent Project architect' ),
-	  'parent_item_colon' => __( 'Parent Project architect:' ),
-	  'edit_item'         => __( 'Edit Project architect' ),
-	  'update_item'       => __( 'Update Project architect' ),
-	  'add_new_item'      => __( 'Add New Project architect' ),
-	  'new_item_name'     => __( 'New Project architect' ),
-	  'menu_name'         => __( 'Project architect' ),
+		'name'                  => _x( 'Architect', 'Project', 'imaneo' ),
+		'singular_name'         => _x( 'Architect', 'Project', 'imaneo' ),
+		'menu_name'             => __( 'Architect', 'imaneo' ),
+		'name_admin_bar'        => __( 'Architect', 'imaneo' ),
+		'archives'              => __( 'Architect Archives', 'imaneo' ),
+		'attributes'            => __( 'Architect Attributes', 'imaneo' ),
+		'parent_item_colon'     => __( 'Parent Architect:', 'imaneo' ),
+		'all_items'             => __( 'All Architect', 'imaneo' ),
+		'add_new_item'          => __( 'Add New Architect', 'imaneo' ),
+		'add_new'               => __( 'Add New', 'imaneo' ),
+		'new_item'              => __( 'New Architect', 'imaneo' ),
+		'edit_item'             => __( 'Edit Architect', 'imaneo' ),
+		'update_item'           => __( 'Update Architect', 'imaneo' ),
+		'view_item'             => __( 'View Architect', 'imaneo' ),
+		'view_items'            => __( 'View Architect', 'imaneo' ),
+		'search_items'          => __( 'Search Architect', 'imaneo' ),
+		'not_found'             => __( 'Not found', 'imaneo' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'imaneo' ),
+		'featured_image'        => __( 'Featured Image', 'imaneo' ),
+		'set_featured_image'    => __( 'Set featured image', 'imaneo' ),
+		'remove_featured_image' => __( 'Remove featured image', 'imaneo' ),
+		'use_featured_image'    => __( 'Use as featured image', 'imaneo' ),
+		'insert_into_item'      => __( 'Insert into Architect', 'imaneo' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Architect', 'imaneo' ),
+		'items_list'            => __( 'Architect list', 'imaneo' ),
+		'items_list_navigation' => __( 'Architect list navigation', 'imaneo' ),
+		'filter_items_list'     => __( 'Filter Architect list', 'imaneo' ),
 	);
 
 	$args = array(
-	  'labels' => $labels,
-	  'show_ui' => true,
-	  'show_admin_column' => true,
-	  'query_var'  => true,
-	  'hierarchical' => true,
+		'label'                 => __( 'Architect', 'imaneo' ),
+		'description'           => __( 'Architect Description', 'imaneo' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
 	);
 
-	register_taxonomy( 'project_architect', 'project' , $args );
+	register_post_type( 'architect', $args );
 
 }
 
-add_action( 'init', 'project_tax_architect', 0 );
+add_action( 'init', 'architect_post_type', 0 );
+
+// Post type PROJECT
+///////////////////////////
+
+// Register PROJECT Post type
+
+function education_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Education', 'Project', 'imaneo' ),
+		'singular_name'         => _x( 'Education', 'Project', 'imaneo' ),
+		'menu_name'             => __( 'Education', 'imaneo' ),
+		'name_admin_bar'        => __( 'Education', 'imaneo' ),
+		'archives'              => __( 'Education Archives', 'imaneo' ),
+		'attributes'            => __( 'Education Attributes', 'imaneo' ),
+		'parent_item_colon'     => __( 'Parent Education:', 'imaneo' ),
+		'all_items'             => __( 'All Education', 'imaneo' ),
+		'add_new_item'          => __( 'Add New Education', 'imaneo' ),
+		'add_new'               => __( 'Add New', 'imaneo' ),
+		'new_item'              => __( 'New Education', 'imaneo' ),
+		'edit_item'             => __( 'Edit Education', 'imaneo' ),
+		'update_item'           => __( 'Update Education', 'imaneo' ),
+		'view_item'             => __( 'View Education', 'imaneo' ),
+		'view_items'            => __( 'View Education', 'imaneo' ),
+		'search_items'          => __( 'Search Education', 'imaneo' ),
+		'not_found'             => __( 'Not found', 'imaneo' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'imaneo' ),
+		'featured_image'        => __( 'Featured Image', 'imaneo' ),
+		'set_featured_image'    => __( 'Set featured image', 'imaneo' ),
+		'remove_featured_image' => __( 'Remove featured image', 'imaneo' ),
+		'use_featured_image'    => __( 'Use as featured image', 'imaneo' ),
+		'insert_into_item'      => __( 'Insert into Education', 'imaneo' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Education', 'imaneo' ),
+		'items_list'            => __( 'Education list', 'imaneo' ),
+		'items_list_navigation' => __( 'Education list navigation', 'imaneo' ),
+		'filter_items_list'     => __( 'Filter Education list', 'imaneo' ),
+	);
+
+	$args = array(
+		'label'                 => __( 'Education', 'imaneo' ),
+		'description'           => __( 'Education Description', 'imaneo' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+
+	register_post_type( 'education', $args );
+
+}
+
+add_action( 'init', 'education_post_type', 0 );
 
 ?>

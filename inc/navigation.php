@@ -11,9 +11,12 @@
 function ffTheme_register_menus() {
 
     register_nav_menus( array(
-        'main-menu' => esc_html__('Main Menu', 'wch'),
-        'legal-menu' => esc_html__('Legal Menu', 'wch'),
-        'social-menu' => esc_html__('Social Menu', 'wch'),
+        'main-menu' => esc_html__('Main Menu', 'imaneo'),
+        'legal-menu' => esc_html__('Legal Menu', 'imaneo'),
+        'projects-menu' => esc_html__('Projects Menu', 'imaneo'),
+        'themes-menu' => esc_html__('Themes Menu', 'imaneo'),
+        'resources-menu' => esc_html__('Resources Menu', 'imaneo'),
+        'imaginaries-menu' => esc_html__('Imaginaries Menu', 'imaneo'),
     ));
 
 }

@@ -10,12 +10,12 @@
 
 ?>
 
-<nav class="legal-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Legal menu', 'imaneo' ); ?>">
+<nav class="projects-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Projects menu', 'imaneo' ); ?>">
 
 	<?php wp_nav_menu( array(
-		'theme_location' => 'legal-menu',
+		'theme_location' => 'projects-menu',
 		'container'      => '',
-		'menu_class'     => 'legal-menu',
+		'menu_class'     => 'projects-menu',
 		'depth'          => 1,
 	) ); ?>
 

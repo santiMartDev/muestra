@@ -1,21 +1,30 @@
-<?php
-
-$theme_content = get_field('theme_content','options');
-$copyright = (isset($theme_content['copyright'])) ? $theme_content['copyright'] : '';
-
-?>
+<?php $template = get_field('template','options'); ?>
 
 <!-- site footer -->
 <footer class="site-footer">
 
-	<div class="footer-top">
-		<img src="<?php bloginfo('template_url') ?>/src/assets/logos/logo-brand-footer.svg" alt="" class="footer-brand">
-		<?php get_template_part( 'template-parts/menus/legal' ); ?>
-		<img src="<?php bloginfo('template_url') ?>/src/assets/logos/logo-tpn.png" alt="" class="footer-brand">
-	</div>
+	<?php _e('Projects', 'imaneo'); ?>
+	<?php get_template_part( 'template-parts/menus/projects' ); ?>
 
-	<div class="footer-bottom">
-		<p class="footer-copyright"><?php echo $copyright; ?></p>
-	</div>
+	<?php _e('Themes', 'imaneo'); ?>
+	<?php get_template_part( 'template-parts/menus/themes' ); ?>
+
+	<?php _e('Resources', 'imaneo'); ?>
+	<?php get_template_part( 'template-parts/menus/resources' ); ?>
+
+	<?php _e('Crossed Imagineries', 'imaneo'); ?>
+	<?php get_template_part( 'template-parts/menus/imaginerie' ); ?>
+
+	<?php _e('Partners', 'imaneo'); ?>
+	<?php if($template['partners']): ?>
+		<div class="footer-partners">
+			<?php foreach ($template['partners'] as $img) { ?>
+				<img src="<?php echo $img['sizes']['theme_full']; ?>" alt="">
+			<?php } ?>
+		</div>
+	<?php endif ?>
+
+	<?php _e('Appendices', 'imaneo'); ?>
+	<?php get_template_part( 'template-parts/menus/legal' ); ?>
 
 </footer>
