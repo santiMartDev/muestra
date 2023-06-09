@@ -2,9 +2,9 @@
 
 <ul class="tabs">
 
-    <?php // Tab Link Photo ?>
-    <?php if(!empty($project['photo'])): ?>
-        <li><a class="tab" href="#<?php echo slugify($tab_text_photo); ?>"><?php echo $tab_text_photo; ?></a></li>
+    <?php // Tab Link Gallery ?>
+    <?php if(!empty($project['gallery'])): ?>
+        <li><a class="tab" href="#<?php echo slugify($tab_text_gallery); ?>"><?php echo $tab_text_gallery; ?></a></li>
     <?php endif; ?>
 
     <?php // Tab Link History ?>
@@ -38,11 +38,11 @@
 
 <!-- Tabs contents -->
 
-<?php // Tab Content Photo ?>
-<?php if(!empty($project['photo'])):  ?>
-    <div id="<?php echo slugify($tab_text_photo); ?>">
-        <h3><?php echo $tab_text_photo; ?></h3>
-        <?php require( TEMPLATEPATH . '/template-parts/project/project-photo.php' ); ?>
+<?php // Tab Content Gallery ?>
+<?php if(!empty($project['gallery'])):  ?>
+    <div id="<?php echo slugify($tab_text_gallery); ?>">
+        <h3><?php echo $tab_text_gallery; ?></h3>
+        <?php require( TEMPLATEPATH . '/template-parts/project/project-gallery.php' ); ?>
     </div>
 <?php endif; ?>
 
@@ -63,7 +63,7 @@
 <?php endif; ?>
 
 <?php // Tab Content Artist ?>
-<?php if(!empty($project['artist'])):  ?>
+<?php if(!empty($project['artist'])):  ?>    
     <div id="<?php echo slugify($tab_text_artist); ?>">
         <h3><?php echo $tab_text_artist; ?></h3>
         <?php require( TEMPLATEPATH . '/template-parts/project/project-artist.php' ); ?>
