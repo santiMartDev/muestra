@@ -2,84 +2,81 @@
 //		Elements: Entities
 // --------------------------------------------------
 
-
-@use 'settings' as *;
-@use 'tools' as *;
+@use "settings" as *;
+@use "tools" as *;
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 
 // html
 html {
-    overflow-x: hidden !important;
-    font-size: 62.5%;
+  overflow-x: hidden !important;
 }
 
 // body
 body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+  -webkit-font-smoothing: antialiased;
 
-    position: relative;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden !important;
-    -webkit-font-smoothing: antialiased;
+  @extend %font-base;
+  @extend %body-horizontal-medium;
 
-    @extend %font-base;
-
-    background-color: $body-bg;
-	color: $body-color;
-
+  background-color: $body-bg;
+  color: $body-color;
 }
 
 // paragrapgh
-p {
-    @extend %font-base;
-    margin-bottom: $paragraph_margin;
+p,
+li,
+a,
+small, button {
+  @extend %font-base;
+  color: color('black');
+  line-height: 1.2em;
+}
+
+p,
+li,
+a,
+figure {
+  margin: 0;
+  padding: 0;
 }
 
 // strong
 strong {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 // links
 a {
-    color: $link-color;
-    text-decoration: $link-decoration;
-    transition: all .3s;
-    &:hover {
-        color: $link-hover-color;
-    }
+  color: $link-color;
+  text-decoration: $link-decoration;
+  transition: all 0.3s;
+  &:hover {
+    color: $link-hover-color;
+  }
 }
 
 // headings
-h1, h2, h3, h4, h5, h6 {
-    padding: 0;
-    margin: 0;
-}
-
-h1 {
-    margin-bottom: $h1_margin;
-}
-
-h2 {
-    margin-bottom: $h2_margin;
-}
-
-h3 {
-    margin-bottom: $h3_margin;
-}
-
-h4 {
-    margin-bottom: $h4_margin;
-}
-
-h5 {
-    margin-bottom: $h5_margin;
-}
-
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
-    margin-bottom: $h6_margin;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }

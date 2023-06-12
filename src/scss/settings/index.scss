@@ -4,6 +4,7 @@
 
 
 @forward 'breakpoints';     // your breakpoints
+@forward 'clamped';         // clamp function
 
 @forward 'colors';          // INIT: configure your colors
 @forward 'fontface';        // INIT: include your font

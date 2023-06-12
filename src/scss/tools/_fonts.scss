@@ -6,6 +6,7 @@
 @use 'settings' as *;
 @use 'breakpoints' as *;
 @use 'sass:map';
+@use 'sass:math';
 @use 'sass:list';
 
 
@@ -14,37 +15,48 @@
     @return map.get($fonts, $scheme, $tone);
 }
 
-
 // placeholders fonts [ mejorable - loop automatico ]
-@each $size, $value in $font-sizes {
+// @each $size, $value in $font-sizes {
 
-	%h#{$size} {
+// 	%h#{$size} {
 
-		font-size: list.nth($value, 1) * 1px ;
+// 		font-size: list.nth($value, 1) * 1px ;
 
-		@include up(md) {
-			font-size: list.nth($value, 2) * 1px ;
-		}
+// 		@include up(md) {
+// 			font-size: list.nth($value, 2) * 1px ;
+// 		}
+
+// 		@include up(lg) {
+// 			font-size: list.nth($value, 3) * 1px ;
+// 		}
+
+// 		@include up(xl) {
+// 			font-size: list.nth($value, 4) * 1px ;
+// 		}
+
+// 		@include up(xxl) {
+// 			font-size: list.nth($value, 5) * 1px ;
+// 		}
+
+// 	}
+
+// }
+
+@each $heading, $size in $font-sizes-clamp {
+
+	%h#{$heading} {
+
+		font-size: clamped(map.get($size,"mobile", "min") * 1px, map.get($size, "mobile", "max") * 1px, 390px, 991px);
 
 		@include up(lg) {
-			font-size: list.nth($value, 3) * 1px ;
+			font-size: clamped(map.get($size, "desktop", "min") * 1px, map.get($size, "desktop", "max") * 1px, 992px, 1440px);
 		}
-
-		@include up(xl) {
-			font-size: list.nth($value, 4) * 1px ;
-		}
-
-		@include up(xxl) {
-			font-size: list.nth($value, 5) * 1px ;
-		}
-
+		
 	}
-
 }
 
-
 // heading tags and class
-@each $size, $value in $font-sizes {
+@each $size, $value in $font-sizes-clamp {
 
 	$class : '';
 
@@ -57,5 +69,4 @@
 	#{$class} {
 		@extend %h#{$size};
 	}
-
 }

@@ -3,21 +3,35 @@
 // --------------------------------------------------
 
 
-$custom-block-x-spaces : (
+// $custom-block-x-spaces : (
+// 	none:   0,
+// 	small:  (25 50 50 50 85 85),   
+// 	medium: (25 60 60 80 120 140),   
+// 	large:  (30 60 60 180 220 260),   
+// );
+
+// $custom-block-y-spaces : (
+// 	none:   0,
+// 	small:  (70 70 120 120 150 70),   
+// 	medium: (100 100 160 160 220 130), 
+// 	large:  (140 140 200 200 300 300)
+// );
+
+$clamp-x-spaces : (
 	none:   0,
-	small:  (25 50 50 50 85 85),   // xs md lg xl xxl xxxl
-	medium: (25 60 60 80 120 140),   // xs md lg xl xxl xxxl
-	large:  (30 60 60 180 220 260),   // xs md lg xl xxl xxl
+	small:  (15 50 20 30),   
+	medium: (25 60 60 80),   
+	large:  (30 60 60 180),   
 );
 
-$custom-block-y-spaces : (
+$clamp-y-spaces : (
 	none:   0,
-	small:  (20 30 40 50 70 70),   // xs md lg xl xxl xxxl
-	medium: (100 100 100 110 130 130), // xs md lg xl xxl xxxl
-	large:  (140 140 200 200 300 300)  // xs md lg xl xxl xxxl
+	small:  (15 30 30 40),   
+	medium: (20 40 50 80), 
+	large:  (140 140 200 200)  
 );
 
-$max-width: 100rem;
+$max-width: 1440px;
 $max-width-small: 72rem;
 
 // spacer [basic space gap]

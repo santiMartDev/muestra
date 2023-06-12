@@ -8,20 +8,13 @@
 
 
 %font-base {
-
 	font-family: $font-family-base;
-	font-size: $font-size-base;
 	font-weight: $font-weight-base;
-	line-height: $line-height-base;
 
-	@include up(md) {
-		font-size: $font-size-base-md;
-		line-height: $line-height-base-md;
-	}
+	font-size: clamp(0.813rem, 0.731rem + 0.333vw, 0.938rem);
 
 	@include up(lg) {
-		font-size: $font-size-base-lg;
-		line-height: $line-height-base-lg;
+		font-size: 16px;
 	}
 
 }

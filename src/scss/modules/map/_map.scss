@@ -1,0 +1,29 @@
+.mapa {
+  position: relative;
+
+  #map {
+    position: relative;
+    z-index: 0;
+
+    width: 100%;
+    height: 75vh;
+
+    @media (min-width: 768px) {
+      height: 50vh;
+    }
+    @media (min-width: 1024px) {
+      height: 75vh;
+    }
+  }
+
+  &__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(to bottom, white 0%, transparent 10% 90%, white 100%);
+  }
+}

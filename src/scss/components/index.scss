@@ -4,16 +4,14 @@
 
 
 @forward 'header';
-@forward 'footer';
 @forward 'menu';
-@forward 'sidenav';
 
-@forward 'columns';
 @forward 'buttons';
-@forward 'forms';
 @forward 'card';
+@forward 'page-header/page-header';
+@forward 'info/info';
+@forward 'tabs/tabs';
+@forward 'title-tabs/title-tabs';
 
-@forward 'images-stack';
-@forward 'accordion';
+
 @forward 'loading';
-@forward 'soundwave';

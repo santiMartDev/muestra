@@ -1,0 +1,21 @@
+// --------------------------------------------------
+//		Components: Info
+// --------------------------------------------------
+
+@use "helper" as *;
+@use "tools" as *;
+
+.info {
+    display: flex;
+    @extend %module-vertical-small;
+    border-bottom: 1px solid color("gray", "light");
+
+    section {
+        width: 33%;
+
+        p:first-of-type {
+            padding-bottom: 10px;
+            color: color('gray', 'light');
+        }
+    }
+}

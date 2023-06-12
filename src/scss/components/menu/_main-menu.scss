@@ -2,15 +2,84 @@
 //		Components: Menu: Main menu
 // --------------------------------------------------
 
+@use "tools" as *;
+@use "elements" as *;
 
-@use 'tools' as *;
-@use 'elements' as *;
+.navbar {
+  display: flex;
 
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
 
-.main-navigation {
+  li,
+  a {
+    font-weight: 500;
+  }
 
-    ul {
-        @extend %list-inline;
+  li {
+    margin-bottom: 1.5rem;
+
+    span,
+    a {
+      position: relative;
+      padding-bottom: 0.5rem;
     }
 
+    span::before,
+    a::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      background-color: black;
+      width: 0;
+
+      transition: all 0.3s ease-out;
+    }
+
+    &:hover {
+      span::before,
+      a::before {
+        width: 100%;
+        transition: all 0.3s ease-out;
+      }
+    }
+  }
+
+  .nav--menu {
+    width: 35%;
+
+    li {
+      cursor: pointer;
+
+      &.disabled {
+        pointer-events: none;
+      }
+
+      img {
+        width: 14px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .nav--submenu {
+    width: 55%;
+    position: relative;
+  }
+
+  .nav--legal {
+    width: 10%;
+  }
+
+  .submenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+  }
 }

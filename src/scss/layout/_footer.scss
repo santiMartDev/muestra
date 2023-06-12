@@ -1,48 +1,57 @@
 // --------------------------------------------------
-//		Layout
+//		Layout: Footer
 // --------------------------------------------------
 
+@use "helper" as *;
+@use "tools" as *;
 
-@use 'helper' as *;
-@use 'tools' as *;
+.footer {
 
+  article {
+    display: flex;
+    column-gap: 30px;
+  }
 
-.site-footer {
-    background-color: color('secondary', 'light');
+  &__menu {
+    border-bottom: 1px solid color('gray', 'light');
+    padding: 50px 0 30px;
 
-    .footer-top,
-    .footer-bottom {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 5px;
 
-        width: 100%;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        grid-gap: 3rem;
-
-        @include up(lg) {
-            flex-direction: row;
-            justify-content: space-between;
-        }
+      li {
+        font-weight: 500;
+        margin-right: 20px;
+      }
     }
 
-    .footer-top {
-        margin-bottom: 3rem;
-        @include up(lg) {
-            margin-bottom: 8rem;
-        }
-
-        nav ul li a {
-            color: color('gray', 'light');
-            @extend %h6;
-        }
+    &--half {
+        width: 50%
     }
+  }
 
-    .footer-bottom {
-        p {
-            @extend %h6;
-        }
+  &__title {
+    @extend %h4;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      height: 6px;
+      width: 6px;
+      background-image: url("../assets/icons/icon-rombo.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      margin-right: 20px;
     }
-
+  }
 }
+

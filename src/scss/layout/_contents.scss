@@ -2,9 +2,14 @@
 //		Content
 // --------------------------------------------------
 
+@use 'helper' as *;
+@use 'tools' as *;
+
+body {
+    @extend %module-horizontal-small;
+    margin: 0 auto;
+}
 
 #wrapper {
-
     overflow: hidden;
-
 }

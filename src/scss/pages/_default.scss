@@ -11,8 +11,7 @@
 
     #wrapper {
 
-        @extend .module-horizontal-medium;
-        @extend .module-vertical-medium;
+        @extend %module-vertical-medium;
 
         // list
         ul {

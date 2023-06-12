@@ -2,30 +2,30 @@
 //		Cards: Card Value
 // --------------------------------------------------
 
+@use "tools" as *;
 
-@use 'tools' as *;
+.card {
+  picture {
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
 
+  figcaption {
+    padding: 10px 0;
 
-.card-value {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    height: 40rem;
-    padding: 2rem;
-    border-radius: 3rem;
-
-    background: color('lavander');
+    p,
+    small {
+      font-weight: 500;
+    }
 
     p {
-        color: color("black");
+      @extend %h4;
     }
 
-    img {
-        max-width: 137px;
-        object-fit: contain;
-        align-self: flex-end;
+    small {
+      color: color("gray");
     }
-
+  }
 }

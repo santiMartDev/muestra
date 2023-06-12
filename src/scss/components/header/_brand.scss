@@ -2,24 +2,39 @@
 //		Components: Header: Brand
 // --------------------------------------------------
 
-
+@use 'helper' as *;
+@use 'settings' as *;
 @use 'tools' as *;
 
+.header__brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-.header-brand {
-
-    max-width: 18rem;
-
-    @include up(md) {
-        max-width: 20rem;
-    }
-
+  figure {
+    margin: 0;
     @include up(lg) {
-        max-width: 30rem;
+      max-width: 60px;
     }
 
-    img, svg {
-        width: 100%;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .header__breadcrumbs ul {
+    display: flex;
+    align-items: center;
+
+    li {
+      @extend %h5;
+      font-weight: 500;
     }
 
+    img {
+      height: 10px;
+      margin: 0 2rem;
+    }
+  }
 }

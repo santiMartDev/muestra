@@ -1,0 +1,30 @@
+// --------------------------------------------------
+//		Components: Tabs
+// --------------------------------------------------
+
+@use "helper" as *;
+@use "tools" as *;
+
+.tabs {
+  display: flex;
+  align-items: center;
+
+  @extend %module-vertical-medium;
+
+  button {
+    padding: 8px 16px;
+    border: 1px solid color("black");
+    border-radius: 100px;
+    background-color: transparent;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+    &.active,
+    &:hover {
+      color: white;
+      background-color: color("black");
+      transition: all 0.3s ease;
+    }
+  }
+}

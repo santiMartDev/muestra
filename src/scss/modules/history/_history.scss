@@ -1,0 +1,76 @@
+// --------------------------------------------------
+//		Modules: History
+// --------------------------------------------------
+
+@use "settings" as *;
+@use "tools" as *;
+
+.history {
+  &__wrapper {
+    @extend %module-left-medium;
+    @include spacing("margin", "medium");
+
+    border-left: 1px solid color("gray", "light");
+
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 80px;
+  }
+
+  &__content {
+    width: 75%;
+
+    p, h4, figure {
+        @extend %module-bottom-small;
+    }
+
+    p {
+        line-height: 1.5em;
+    }
+
+    h4, strong {
+        font-weight: 500;
+    }
+
+    picture {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::before {
+            display: inline-block;
+
+            content: "";
+            background-image: url("../assets/icons/icon-rombo-green.svg");
+            
+            height: 16px;
+            width: 16px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    figcaption {
+        @extend %h6;
+        text-align: center;
+        padding-top: 10px;
+        color: color("gray");
+        font-style: italic;
+    }
+  }
+
+  aside {
+    height: fit-content;
+    width: 25%;
+    padding-left: 30px;
+    border-left: 1px solid color("gray", "light");
+
+    li {
+      padding-bottom: 10px;
+    }
+  }
+}

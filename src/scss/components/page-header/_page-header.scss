@@ -1,0 +1,35 @@
+// --------------------------------------------------
+//		Components: Page Header
+// --------------------------------------------------
+
+@use "helper" as *;
+@use "tools" as *;
+
+.pageHeader {
+  display: flex;
+  column-gap: 30px;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @extend %module-top-medium;
+  @extend %module-bottom-small;
+  border-bottom: 1px solid color("gray", "light");
+
+  section {
+    width: 50%;
+  }
+
+  h1,
+  p {
+    font-weight: 500;
+  }
+
+  h1 {
+    line-height: 1em;
+  }
+
+  p {
+    @extend %h4;
+    max-width: 70%;
+  }
+}

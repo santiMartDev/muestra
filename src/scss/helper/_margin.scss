@@ -11,7 +11,7 @@
 
 // Block margins vertical ========================================
 
-@each $size, $value in $custom-block-y-spaces {
+@each $size, $value in $clamp-y-spaces {
 
 	@if $size != 'none' {
 
@@ -35,7 +35,7 @@
 
 // Block margins horizontal ========================================
 
-@each $size, $value in $custom-block-x-spaces {
+@each $size, $value in $clamp-x-spaces {
 
 	@if $size != 'none' {
 
