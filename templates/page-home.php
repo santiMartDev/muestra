@@ -2,6 +2,15 @@
 
 <?php get_header(''); ?>
 
+<article class="pageHeader">
+    <section>
+        <h1>IMANÉO</h1>
+    </section>
+    <section>
+        <p>IMAGINAIRES CROISÉS DE L'ARCHITECTURE NÉO-MAURESQUE</p>
+    </section>
+</article>
+
 <?php
 ////////////////////////////////////////////////////////////////
 // Home Grid
@@ -25,7 +34,7 @@ $portfolio = new WP_Query( $args );
 
 <?php if ( $portfolio->have_posts() ) { ?>
 
-	<div class="grid grid-projects">
+	<article class="grid grid-projects">
 
 		<?php while ( $portfolio->have_posts() ) {  $portfolio->the_post();
 
@@ -36,15 +45,11 @@ $portfolio = new WP_Query( $args );
 			$thumb_url = wp_get_attachment_image_src($thumb_id,'theme_vertical', true);
 			?>
 
-			<div class="grid-item">
-				<img src="<?php echo $thumb_url[0]; ?>" alt="" >
-				<h2><?php the_title(); ?></h2>
-				<?php echo $location; ?>
-			</div>
+			<?php  require( TEMPLATEPATH . '/template-parts/partials/cards/card.php' );  ?>
 
 		<?php }  wp_reset_postdata();  ?>
 
-	</div>
+	</article>
 
 <?php } ?>
 

@@ -1,12 +1,12 @@
 import menuHeader from "./modules/header.js";
-import gallery from "./modules/gallery";
-import tabs from "./modules/tabs.js";
-import map from "./modules/map.js";
+// import gallery from "./modules/gallery";
+// import tabs from "./modules/tabs.js";
+// import map from "./modules/map.js";
 
 const beforeStart = () => {
   menuHeader();
-  tabs();
-  gallery();
+  // tabs();
+  // gallery();
 };
 
 const start = () => {};
@@ -22,4 +22,4 @@ window.addEventListener("load", () => {
   }, 1000);
 });
 
-map();
+// map();

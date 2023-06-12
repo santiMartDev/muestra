@@ -14,7 +14,7 @@
 <body <?php body_class() ?>>
 
 	<?php /* ACTIONS init <body> */ do_action('ffTheme_prepend-body');  ?>
-    <?php /* GET part - loading */ get_template_part( 'template-parts/partials/loading'); ?>
+    <?php /* GET part - loading */ //get_template_part( 'template-parts/partials/loading'); ?>
     <?php /* GET part - header */ get_template_part( 'template-parts/layout/header/header'); ?>
 
-    <div id="wrapper">
+    <main id="wrapper">
