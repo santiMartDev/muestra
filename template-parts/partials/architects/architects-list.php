@@ -19,6 +19,18 @@ $architects = new WP_Query( $args );
 
         <?php while ( $architects->have_posts() ) {  $architects->the_post();
 
+            // get projects by architect
+            $projects = get_posts(array(
+                'post_type' => 'project',
+                'meta_query' => array(
+                    array(
+                        'key' => 'projects_project_info_architects', // name of custom field
+                        'value' => '"' . get_the_ID() . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
+                        'compare' => 'LIKE'
+                    )
+                )
+            ));
+
             ?>
 
             <div class="grid-item">

@@ -8,6 +8,70 @@
  * @since        1.0.0
 **/
 
+
+// Post type RESOURCES
+///////////////////////////
+
+// Register RESOURCE Post type
+
+function speaker_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Speaker', 'Project', 'imaneo' ),
+		'singular_name'         => _x( 'Speaker', 'Project', 'imaneo' ),
+		'menu_name'             => __( 'Speaker', 'imaneo' ),
+		'name_admin_bar'        => __( 'Speaker', 'imaneo' ),
+		'archives'              => __( 'Speaker Archives', 'imaneo' ),
+		'attributes'            => __( 'Speaker Attributes', 'imaneo' ),
+		'parent_item_colon'     => __( 'Parent Speaker:', 'imaneo' ),
+		'all_items'             => __( 'All Speaker', 'imaneo' ),
+		'add_new_item'          => __( 'Add New Speaker', 'imaneo' ),
+		'add_new'               => __( 'Add New', 'imaneo' ),
+		'new_item'              => __( 'New Speaker', 'imaneo' ),
+		'edit_item'             => __( 'Edit Speaker', 'imaneo' ),
+		'update_item'           => __( 'Update Speaker', 'imaneo' ),
+		'view_item'             => __( 'View Speaker', 'imaneo' ),
+		'view_items'            => __( 'View Speaker', 'imaneo' ),
+		'search_items'          => __( 'Search Speaker', 'imaneo' ),
+		'not_found'             => __( 'Not found', 'imaneo' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'imaneo' ),
+		'featured_image'        => __( 'Featured Image', 'imaneo' ),
+		'set_featured_image'    => __( 'Set featured image', 'imaneo' ),
+		'remove_featured_image' => __( 'Remove featured image', 'imaneo' ),
+		'use_featured_image'    => __( 'Use as featured image', 'imaneo' ),
+		'insert_into_item'      => __( 'Insert into Speaker', 'imaneo' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Speaker', 'imaneo' ),
+		'items_list'            => __( 'Speaker list', 'imaneo' ),
+		'items_list_navigation' => __( 'Speaker list navigation', 'imaneo' ),
+		'filter_items_list'     => __( 'Filter Speaker list', 'imaneo' ),
+	);
+
+	$args = array(
+		'label'                 => __( 'Speaker', 'imaneo' ),
+		'description'           => __( 'Speaker Description', 'imaneo' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+
+	register_post_type( 'speaker', $args );
+
+}
+
+add_action( 'init', 'speaker_post_type', 0 );
+
+
 // Post type THEMES
 ///////////////////////////
 
@@ -160,7 +224,7 @@ function project_tax_theme() {
 	  'hierarchical' => true,
 	);
 
-	register_taxonomy( 'project_theme', array( 'theme', 'project', 'education' ) , $args );
+	register_taxonomy( 'project_theme', array( 'theme', 'project', 'education', 'speaker' ) , $args );
 
 }
 

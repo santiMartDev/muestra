@@ -48,7 +48,7 @@
 
 <?php // Tab Content History ?>
 <?php if(!empty($project['history'])):  ?>
-    <div id="<?php echo slugify($tab_text_history); ?>">
+    <div id="<?php echo slugify($tab_text_history); ?>" class="history">
         <h3><?php echo $tab_text_history; ?></h3>
         <?php require( TEMPLATEPATH . '/template-parts/project/project-history.php' ); ?>
     </div>
@@ -63,7 +63,7 @@
 <?php endif; ?>
 
 <?php // Tab Content Artist ?>
-<?php if(!empty($project['artist'])):  ?>    
+<?php if(!empty($project['artist'])):  ?>
     <div id="<?php echo slugify($tab_text_artist); ?>">
         <h3><?php echo $tab_text_artist; ?></h3>
         <?php require( TEMPLATEPATH . '/template-parts/project/project-artist.php' ); ?>
