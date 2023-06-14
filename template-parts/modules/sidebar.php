@@ -4,9 +4,16 @@
     <div class="module-sidebar">
         <?php foreach ($sidebar_menus as $menu) { ?>
             <ul class="sidebar-menu">
-                <?php foreach ($menu as $link) { 
-                    $link['target'] = ($link['blank']) ? 'target="_blank"' : ''; ?>
-                    <li><a <?php echo $link['target']; ?>  href="<?php echo $link['link']['url']; ?>"><?php echo $link['title']; ?></a></li>
+                <?php foreach ($menu as $link) {
+                    $target = (!empty($link['blank'])) ? 'target="_blank"' : '';
+                    $href = (!empty($link['link'])) ? 'href="'.$link['link']['url'].'"' : '';
+                    $tag = (!empty($link['link'])) ? 'a' : 'h4';
+                    ?>
+                    <li>
+                        <<?php echo $tag; ?> <?php echo $target; ?> <?php echo $href; ?>>
+                            <?php echo $link['title']; ?>
+                        </<?php echo $tag; ?>>
+                    </li>
                 <?php } ?>
             </ul>
         <?php } ?>

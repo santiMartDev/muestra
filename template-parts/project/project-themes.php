@@ -25,10 +25,10 @@ foreach ($terms as $term) {
 
     // get all projects by term taxonomy
     $themes = new WP_Query( $args );
-        
+
 }
 
-$sidebar_theme = array( array('title' => __('All related topics', 'imaneo'), 'link' => array('url' => get_the_permalink(132)), 'blank' => true) );       
+$sidebar_theme = array( array('title' => __('All related topics', 'imaneo'), 'link' => array('url' => get_the_permalink(132)), 'blank' => true) );
 // $sidebar_theme_extra = '';
 
 $sidebar_menus = array( $sidebar_theme );

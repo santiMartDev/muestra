@@ -1,6 +1,6 @@
 <?php
 
-// argumentos query
+// argumentos query projects
 $args = array(
 	'post_type'       	=> 'project',
 	'posts_per_page'  	=> -1,
@@ -8,7 +8,7 @@ $args = array(
 	'order'				=> 'ASC'
 );
 
-/* recogida de todos los PROJECTS*/
+// get all projects
 $portfolio = new WP_Query( $args );
 
 ?>

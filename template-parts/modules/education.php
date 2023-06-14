@@ -4,11 +4,11 @@
     <?php foreach ($education as $item) {
 
         // get education fields
-        $education_info = get_field('education', $item->ID );        
+        $education_info = get_field('education', $item->ID );
 
         // common sidebar to education
-        $sidebar_education = array( array('title' => __('Download', 'imaneo'), 'link' => array('url' => $education_info['download']['url']), 'blank' => true) );       
-        
+        $sidebar_education = array( array('title' => __('Download', 'imaneo'), 'link' => array('url' => $education_info['download']['url']), 'blank' => true) );
+
         // config menus to education
         $sidebar_menus = array( $sidebar_education, $sidebar_education_extra );
 
