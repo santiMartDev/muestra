@@ -15,10 +15,51 @@
 
 @font-face {
     font-family: 'Archivo';
+    src: url('../assets/fonts/Archivo-ExtraBold.woff2') format('woff2'),
+        url('../assets/fonts/Archivo-ExtraBold.woff') format('woff'),
+        url('../assets/fonts/Archivo-ExtraBold.svg#Archivo-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Archivo';
+    src: url('../assets/fonts/Archivo-Bold.woff2') format('woff2'),
+        url('../assets/fonts/Archivo-Bold.woff') format('woff'),
+        url('../assets/fonts/Archivo-Bold.svg#Archivo-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Archivo';
+    src: url('../assets/fonts/Archivo-SemiBold.woff2') format('woff2'),
+        url('../assets/fonts/Archivo-SemiBold.woff') format('woff'),
+        url('../assets/fonts/Archivo-SemiBold.svg#Archivo-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Archivo';
+    src: url('../assets/fonts/Archivo-Medium.woff2') format('woff2'),
+        url('../assets/fonts/Archivo-Medium.woff') format('woff'),
+        url('../assets/fonts/Archivo-Medium.svg#Archivo-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Archivo';
     src: url('../assets/fonts/Archivo-Regular.woff2') format('woff2'),
         url('../assets/fonts/Archivo-Regular.woff') format('woff'),
         url('../assets/fonts/Archivo-Regular.svg#Archivo-Regular') format('svg');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
@@ -45,50 +86,10 @@
 
 @font-face {
     font-family: 'Archivo';
-    src: url('../assets/fonts/Archivo-Bold.woff2') format('woff2'),
-        url('../assets/fonts/Archivo-Bold.woff') format('woff'),
-        url('../assets/fonts/Archivo-Bold.svg#Archivo-Bold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Archivo';
-    src: url('../assets/fonts/Archivo-ExtraBold.woff2') format('woff2'),
-        url('../assets/fonts/Archivo-ExtraBold.woff') format('woff'),
-        url('../assets/fonts/Archivo-ExtraBold.svg#Archivo-ExtraBold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Archivo';
     src: url('../assets/fonts/Archivo-Thin.woff2') format('woff2'),
         url('../assets/fonts/Archivo-Thin.woff') format('woff'),
         url('../assets/fonts/Archivo-Thin.svg#Archivo-Thin') format('svg');
     font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Archivo';
-    src: url('../assets/fonts/Archivo-SemiBold.woff2') format('woff2'),
-        url('../assets/fonts/Archivo-SemiBold.woff') format('woff'),
-        url('../assets/fonts/Archivo-SemiBold.svg#Archivo-SemiBold') format('svg');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Archivo';
-    src: url('../assets/fonts/Archivo-Medium.woff2') format('woff2'),
-        url('../assets/fonts/Archivo-Medium.woff') format('woff'),
-        url('../assets/fonts/Archivo-Medium.svg#Archivo-Medium') format('svg');
-    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }

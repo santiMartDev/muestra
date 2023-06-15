@@ -49,6 +49,10 @@
         display: flex;
         align-items: center;
 
+        span {
+          font-weight: 600;
+        }
+
         &::after {
             display: inline-block;
             content: "";
