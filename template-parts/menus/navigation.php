@@ -24,8 +24,8 @@
         <ul class="submenu submenu1">
             <li><a href="<?php echo get_the_permalink(24); ?>">Néo-mauresque au Maghreb</a></li>
             <li><a href="<?php echo get_the_permalink(158); ?>">Nationalisme & impérialisme</a></li>
-            <li><a href="<?php echo get_the_permalink(183); ?>">Un style pour les synagogues</a></li>
-            <li><a href="<?php echo get_the_permalink(184); ?>">Diffusion</a></li>
+            <li><a href="<?php echo get_the_permalink(199); ?>">Un style pour les synagogues</a></li>
+            <li><a href="<?php echo get_the_permalink(198); ?>">Diffusion</a></li>
         </ul>
         <ul class="submenu submenu2">
             <li><a href="">Regards artistiques</a></li>
