@@ -1,0 +1,24 @@
+.link {
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+  width: fit-content;
+
+  span::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: black;
+    width: 0;
+
+    transition: all 0.3s ease-out;
+  }
+
+  &:hover span::before {
+      width: 100%;
+      transition: all 0.3s ease-out;
+    }
+  
+}

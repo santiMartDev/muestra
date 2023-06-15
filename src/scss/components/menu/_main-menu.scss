@@ -7,9 +7,12 @@
 
 .navbar {
   display: flex;
+  height: 100%;
 
   ul {
+    height: 100%;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
   }
 
@@ -19,12 +22,11 @@
   }
 
   li {
-    margin-bottom: 1.5rem;
 
     span,
     a {
       position: relative;
-      padding-bottom: 0.5rem;
+      padding-bottom: 5px;
     }
 
     span::before,

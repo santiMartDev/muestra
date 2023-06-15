@@ -28,13 +28,13 @@
     align-items: center;
 
     li {
-      @extend %h5;
+      @extend %h6;
       font-weight: 500;
     }
 
     img {
       height: 10px;
-      margin: 0 2rem;
+      margin: 0 15px;
     }
   }
 }

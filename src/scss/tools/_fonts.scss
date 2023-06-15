@@ -15,34 +15,7 @@
     @return map.get($fonts, $scheme, $tone);
 }
 
-// placeholders fonts [ mejorable - loop automatico ]
-// @each $size, $value in $font-sizes {
-
-// 	%h#{$size} {
-
-// 		font-size: list.nth($value, 1) * 1px ;
-
-// 		@include up(md) {
-// 			font-size: list.nth($value, 2) * 1px ;
-// 		}
-
-// 		@include up(lg) {
-// 			font-size: list.nth($value, 3) * 1px ;
-// 		}
-
-// 		@include up(xl) {
-// 			font-size: list.nth($value, 4) * 1px ;
-// 		}
-
-// 		@include up(xxl) {
-// 			font-size: list.nth($value, 5) * 1px ;
-// 		}
-
-// 	}
-
-// }
-
-@each $heading, $size in $font-sizes-clamp {
+@each $heading, $size in $font-sizes {
 
 	%h#{$heading} {
 
@@ -56,7 +29,7 @@
 }
 
 // heading tags and class
-@each $size, $value in $font-sizes-clamp {
+@each $size, $value in $font-sizes {
 
 	$class : '';
 

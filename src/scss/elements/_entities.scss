@@ -36,7 +36,7 @@ a,
 small, button {
   @extend %font-base;
   color: color('black');
-  line-height: 1.2em;
+  line-height: $line-height-base;
 }
 
 p,

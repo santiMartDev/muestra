@@ -2,6 +2,7 @@
 //		Modules: Grid
 // --------------------------------------------------
 
+@use 'settings' as *;
 @use 'helper' as *;
 @use 'tools' as *;
 
@@ -11,6 +12,6 @@
     grid-template-columns: repeat(4, 1fr);
     grid-auto-flow: row;
 
-    column-gap: 30px;
-    row-gap: 40px;
+    column-gap: $spacer;
+    row-gap: $spacer;
 }

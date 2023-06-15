@@ -1,0 +1,76 @@
+// --------------------------------------------------
+//		Modules: Grid
+// --------------------------------------------------
+
+
+@use 'settings' as *;
+@use 'helper' as *;
+@use 'tools' as *;
+
+.about {
+  header {
+    @extend %module-bottom-small;
+    border-bottom: 1px solid color("gray", "light");
+    p {
+      @extend %h4;
+      font-weight: 500;
+
+      &::before {
+        display: inline-block;
+        content: "";
+        height: 16px;
+        width: 16px;
+        background-image: url("../assets/icons/icon-rombo-blue.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        margin-right: 20px;
+      }
+    }
+  }
+
+  section {
+    @extend %module-top-small;
+
+    display: flex;
+    column-gap: $spacer;
+
+    .about__content {
+      width: 40%;
+
+      p {
+        max-width: 75%;
+      }
+
+      .about__link {
+        @extend %module-top-small;
+        
+        display: flex;
+        align-items: center;
+
+        &::after {
+            display: inline-block;
+            content: "";
+            height: 16px;
+            width: 16px;
+            background-image: url("../assets/icons/icon-arrow-right.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+      
+            margin-left: 20px;
+          }
+      }
+    }
+
+    figure {
+      width: 60%;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+}

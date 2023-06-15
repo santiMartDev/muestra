@@ -2,21 +2,6 @@
 //		Settings: Margin
 // --------------------------------------------------
 
-
-// $custom-block-x-spaces : (
-// 	none:   0,
-// 	small:  (25 50 50 50 85 85),   
-// 	medium: (25 60 60 80 120 140),   
-// 	large:  (30 60 60 180 220 260),   
-// );
-
-// $custom-block-y-spaces : (
-// 	none:   0,
-// 	small:  (70 70 120 120 150 70),   
-// 	medium: (100 100 160 160 220 130), 
-// 	large:  (140 140 200 200 300 300)
-// );
-
 $clamp-x-spaces : (
 	none:   0,
 	small:  (15 50 20 30),   
@@ -35,4 +20,4 @@ $max-width: 1440px;
 $max-width-small: 72rem;
 
 // spacer [basic space gap]
-$spacer:    1rem;
+$spacer:    30px;
