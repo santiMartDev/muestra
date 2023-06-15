@@ -1,5 +1,5 @@
 import menuHeader from "./modules/header.js";
-import lgGallery from "./modules/lightgallery.js";
+// import lgGallery from "./modules/lightgallery.js";
 // import gallery from "./modules/gallery";
 // import tabs from "./modules/tabs.js";
 // import map from "./modules/map.js";

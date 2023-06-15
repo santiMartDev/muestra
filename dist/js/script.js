@@ -1,10 +1,5 @@
-(function (lightGallery, lgVideo) {
+(function () {
   'use strict';
-
-  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-  var lightGallery__default = /*#__PURE__*/_interopDefaultLegacy(lightGallery);
-  var lgVideo__default = /*#__PURE__*/_interopDefaultLegacy(lgVideo);
 
   function _assertThisInitialized(self) {
     if (self === void 0) {
@@ -5267,29 +5262,7 @@
     });
   };
 
-  // Import LIGHTGALLERY
-
-  // lg Gallery
-  function lgGallery() {
-    console.log('lg gallery');
-    var media = document.getElementsByClassName('gallery');
-    for (let item of media) {
-      lightGallery__default["default"](item, {
-        plugins: [lgVideo__default["default"]],
-        share: false,
-        selector: 'a',
-        speed: 500,
-        licenseKey: 'RWGFX-KWFPH-57MZ4-GKE8B',
-        counter: false,
-        mousewheel: true,
-        download: false,
-        mobileSettings: {
-          showCloseIcon: true
-        }
-      });
-    }
-  }
-
+  // import lgGallery from "./modules/lightgallery.js";
   // import gallery from "./modules/gallery";
   // import tabs from "./modules/tabs.js";
   // import map from "./modules/map.js";
@@ -5316,4 +5289,4 @@
 
   // map();
 
-})(lightGallery, lgVideo);
+})();
