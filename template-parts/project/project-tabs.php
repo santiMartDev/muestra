@@ -40,54 +40,54 @@
 
 <?php // Tab Content Gallery ?>
 <?php if(!empty($project['gallery'])):  ?>
-    <div id="<?php echo slugify($tab_text_gallery); ?>">
-        <h3><?php echo $tab_text_gallery; ?></h3>
+    <div class="section" id="<?php echo slugify($tab_text_gallery); ?>">
+        <p class="tabs__title"><?php echo $tab_text_gallery; ?></p>
         <?php require( TEMPLATEPATH . '/template-parts/project/project-gallery.php' ); ?>
     </div>
 <?php endif; ?>
 
 <?php // Tab Content History ?>
 <?php if(!empty($project['history'])):  ?>
-    <div id="<?php echo slugify($tab_text_history); ?>" class="history">
-        <h3><?php echo $tab_text_history; ?></h3>
+    <div class="section" id="<?php echo slugify($tab_text_history); ?>" class="history">
+        <p class="tabs__title"><?php echo $tab_text_history; ?></p>
         <?php require( TEMPLATEPATH . '/template-parts/project/project-history.php' ); ?>
     </div>
 <?php endif; ?>
 
 <?php // Tab Content Map ?>
 <?php if(!empty($project['map'])):  ?>
-    <div id="<?php echo slugify($tab_text_map); ?>">
-        <h3><?php echo $tab_text_map; ?></h3>
+    <div class="section" id="<?php echo slugify($tab_text_map); ?>">
+        <p class="tabs__title"><?php echo $tab_text_map; ?></p>
         <?php require( TEMPLATEPATH . '/template-parts/project/project-map.php' ); ?>
     </div>
 <?php endif; ?>
 
 <?php // Tab Content Artist ?>
 <?php if(!empty($project['artist'])):  ?>
-    <div id="<?php echo slugify($tab_text_artist); ?>">
-        <h3><?php echo $tab_text_artist; ?></h3>
+    <div class="section" id="<?php echo slugify($tab_text_artist); ?>">
+        <p class="tabs__title"><?php echo $tab_text_artist; ?></p>
         <?php require( TEMPLATEPATH . '/template-parts/project/project-artist.php' ); ?>
     </div>
 <?php endif; ?>
 
 <?php // Tab Content Podcast ?>
 <?php if(!empty($project['podcast'])):  ?>
-    <div id="<?php echo slugify($tab_text_podcast); ?>">
-        <h3><?php echo $tab_text_podcast; ?></h3>
+    <div class="section" id="<?php echo slugify($tab_text_podcast); ?>">
+        <p class="tabs__title"><?php echo $tab_text_podcast; ?></p>
         <?php require( TEMPLATEPATH . '/template-parts/project/project-podcast.php' ); ?>
     </div>
 <?php endif; ?>
 
 <?php // Tab Content Theme ?>
-<div id="<?php echo slugify($tab_text_theme); ?>">
-    <h3><?php echo $tab_text_theme; ?></h3>
+<div class="section" id="<?php echo slugify($tab_text_theme); ?>">
+    <p class="tabs__title"><?php echo $tab_text_theme; ?></p>
     <?php require( TEMPLATEPATH . '/template-parts/project/project-themes.php' ); ?>
 </div>
 
 <?php // Tab Content Education ?>
 <?php if($project['education']):  ?>
-    <div id="<?php echo slugify($tab_text_education); ?>">
-        <h3><?php echo $tab_text_education; ?></h3>
+    <div class="section" id="<?php echo slugify($tab_text_education); ?>">
+        <p class="tabs__title"><?php echo $tab_text_education; ?></p>
         <?php require( TEMPLATEPATH . '/template-parts/project/project-education.php' ); ?>
     </div>
 <?php endif; ?>

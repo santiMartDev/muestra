@@ -1,39 +1,39 @@
-import Splide from '@splidejs/splide';
+import Splide from "@splidejs/splide";
 
 const gallery = () => {
-  var main = new Splide( '.gallery', {
-    type       : 'fade',
+  var main = new Splide(".gallery", {
+    type: 'loop',
     heightRatio: 0.5,
-    pagination : false,
-    arrows     : false,
-    cover      : true,
-  } );
-  
-  
-  var thumbnails = new Splide( '.thumbs', {
-    rewind          : true,
-    fixedWidth      : 104,
-    fixedHeight     : 58,
-    isNavigation    : true,
-    gap             : 10,
-    focus           : 'center',
-    pagination      : false,
-    cover           : true,
+    pagination: false,
+    arrows: true,
+    padding: 200,
+    gap: 30
+  });
+
+  var thumbnails = new Splide(".thumbs", {
+    rewind: true,
+    fixedWidth: 120,
+    fixedHeight: 72,
+    isNavigation: true,
+    gap: 30,
+    focus: "center",
+    pagination: false,
+    arrows: false,
     dragMinThreshold: {
       mouse: 4,
       touch: 10,
     },
-    breakpoints : {
+    breakpoints: {
       640: {
-        fixedWidth  : 66,
-        fixedHeight : 38,
+        fixedWidth: 66,
+        fixedHeight: 38,
       },
     },
-  } );
-  
-  main.sync( thumbnails );
+  });
+
+  main.sync(thumbnails);
   main.mount();
   thumbnails.mount();
-}
+};
 
 export default gallery;

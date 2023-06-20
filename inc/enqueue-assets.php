@@ -14,15 +14,19 @@ function ffTheme_assets() {
     // Include jquery
     wp_enqueue_script( 'jquery');
 
-    // Include css
+    // Include CSS Libraries
+    wp_enqueue_style( 'custom-style-leaflet', get_template_directory_uri().'/dist/libs/leaflet/leaflet.css', array(), '1.0', 'all' );
+    
+    // Include CSS
     wp_enqueue_style( 'custom-style', get_template_directory_uri().'/dist/css/style.css', array(), '1.0', 'all' );
 
-    // Include GSAP
+    // Include JS Libraries
     wp_enqueue_script( 'finuras-scripts-gsap', get_template_directory_uri().'/dist/libs/gsap.min.js', array(), '1.0.0' , 'true' );
     wp_enqueue_script( 'finuras-scripts-gsap-scroll', get_template_directory_uri().'/dist/libs/ScrollTrigger.min.js', array(), '1.0.0' , 'true' );
     wp_enqueue_script( 'finuras-scripts-split', get_template_directory_uri().'/dist/libs/SplitText3.min.js', array(), '1.0.0' , 'true' );
+    wp_enqueue_script( 'finuras-scripts-leaflet', get_template_directory_uri().'/dist/libs/leaflet//leaflet.js', array(), '1.0.0' , 'true' );
 
-    // Include js
+    // Include JS
     wp_enqueue_script( 'custom-scripts', get_template_directory_uri().'/dist/js/script.js', array(), '1.0' , 'true' );
 
 

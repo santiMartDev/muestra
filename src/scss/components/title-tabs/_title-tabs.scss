@@ -6,27 +6,25 @@
 @use "tools" as *;
 
 .tabs__title {
-    @extend %module-vertical-medium;
-    border-bottom: 1px solid color("gray", "light");
+  @extend %module-bottom-medium;
 
-    p {
-        @extend %h4;
-        font-weight: 500;
-    
-        display: flex;
-        align-items: center;
+  @extend %h4;
+  font-weight: 500;
+  text-transform: uppercase;
 
-        &::before {
-            display: inline-block;
-            content: "";
-            height: 16px;
-            width: 16px;
-            background-image: url("../assets/icons/icon-rombo-green.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-      
-            margin-right: 20px;
-          }
-    }
+  display: flex;
+  align-items: center;
+
+  &::before {
+    display: inline-block;
+    content: "";
+    height: 16px;
+    width: 16px;
+    background-image: url("../assets/icons/icon-rombo-green.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    margin-right: 20px;
+  }
 }

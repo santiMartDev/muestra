@@ -10,14 +10,14 @@ const beforeStart = () => {
   // animated banner
   const galleryExist = document.getElementsByClassName("gallery");
   if (galleryExist.length > 0) {
-    lgGallery();
+    // lgGallery();
+    gallery();
   }
 
   // animated banner
   const tabsExist = document.getElementsByClassName("tab");
   if (tabsExist.length > 0) {
     tabs();
-    gallery();
     map();
   }
 };

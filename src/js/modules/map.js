@@ -1,9 +1,9 @@
 async function map() {
-  const res = await fetch("locations.json");
+  const res = await fetch("../../../../../../locations.json");
   const data = await res.json();
-  console.log(data[0].lat);
+  console.log(data[0]);
 
-  let map = L.map("map", {
+  let map = L.map("mapID", {
     center: [45.9938059682257, 1.746981380568295],
     zoom: 5,
     scrollWheelZoom: false,
@@ -19,14 +19,19 @@ async function map() {
         "pk.eyJ1IjoiaW1hbmVvIiwiYSI6ImNsaW9ieXU4eDE2dzIzcXBrZW1qcTQzanYifQ.gKI80ipqU4w5RyGNuJYbMA",
     }
   ).addTo(map);
+
+  const mapID = document.querySelector("#mapID");
+  const marker = mapID.dataset.marker;
+  console.log(mapID.dataset.marker);
+
   const myIcon = L.icon({
-    iconUrl: "dist/assets/icons/icon-map-dot.svg",
+    iconUrl: marker,
     iconSize: [24, 24],
     iconAnchor: [12, 12],
   });
 
   data.forEach((el) => {
-    L.marker([el.lat, el.long], {
+    L.marker([el.latitude, el.longitude], {
       icon: myIcon,
     }).addTo(map);
   });

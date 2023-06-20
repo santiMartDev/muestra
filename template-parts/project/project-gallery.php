@@ -4,8 +4,7 @@
 
 // assign gallery to media
 $media['gallery'] = $project['gallery'];
-
-// include module media
-require( TEMPLATEPATH . '/template-parts/modules/media.php' );
-
 ?>
+<article class="project-gallery">
+    <?php require( TEMPLATEPATH . '/template-parts/modules/media.php' ); ?>
+</article>
