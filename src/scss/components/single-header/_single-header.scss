@@ -1,0 +1,27 @@
+// --------------------------------------------------
+//		Components: Page Header
+// --------------------------------------------------
+
+@use "helper" as *;
+@use "tools" as *;
+
+.singleHeader {
+  display: flex;
+  align-items: center;
+
+  @extend %module-top-medium;
+  @extend %module-bottom-small;
+  border-bottom: 1px solid color("gray", "light");
+  
+  img {
+    height: 80px;
+    aspect-ratio: 1 / 1;
+    margin-right: 40px;
+  }
+
+  h1 {
+    font-weight: 500;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+}

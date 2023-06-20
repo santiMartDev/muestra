@@ -91,9 +91,3 @@
         <?php require( TEMPLATEPATH . '/template-parts/project/project-education.php' ); ?>
     </div>
 <?php endif; ?>
-
-<style>
-    a {
-        color: red;
-    }
-</style>

@@ -1,27 +1,31 @@
 import menuHeader from "./modules/header.js";
-// import lgGallery from "./modules/lightgallery.js";
-// import gallery from "./modules/gallery";
-// import tabs from "./modules/tabs.js";
-// import map from "./modules/map.js";
+import tabs from "./modules/tabs.js";
+import lgGallery from "./modules/lightgallery.js";
+import gallery from "./modules/gallery";
+import map from "./modules/map.js";
 
 const beforeStart = () => {
-
   menuHeader();
 
   // animated banner
-  const galleryExist = document.getElementsByClassName('gallery');
-  if (galleryExist.length > 0) { lgGallery(); }
+  const galleryExist = document.getElementsByClassName("gallery");
+  if (galleryExist.length > 0) {
+    lgGallery();
+  }
 
-  // tabs();
-  // gallery();
-
+  // animated banner
+  const tabsExist = document.getElementsByClassName("tab");
+  if (tabsExist.length > 0) {
+    tabs();
+    gallery();
+    map();
+  }
 };
 
 const start = () => {};
 
 // load
 window.addEventListener("load", () => {
-
   beforeStart();
 
   setTimeout(() => {

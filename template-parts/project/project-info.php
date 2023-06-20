@@ -1,20 +1,16 @@
 <?php // Project Info ?>
 
-<div class="project-info">
-
-    <div class="project-info-item">
-        <h5><?php _e('Location', 'imaneo'); ?></h5>
+<article class="info">
+    <section>
+        <p><?php _e('Location', 'imaneo'); ?></p>
         <p><?php echo $project_location ?></p>
-    </div>
-
-    <div class="project-info-item">
-        <h5><?php _e('Location', 'imaneo'); ?></h5>
-        <p><?php echo $project_year ?></p>
-    </div>
-
-    <div class="project-info-item">
-        <h5><?php _e('Architects', 'imaneo'); ?></h5>
+    </section>
+    <section>
+        <p><?php _e('Year of Construction', 'imaneo'); ?></p>
+        <p>1931-1935</p>
+    </section>
+    <section>
+        <p><?php _e('Architect(s)', 'imaneo'); ?></p>
         <p><?php echo $project_architects; ?></p>
-    </div>
-
-</div>
+    </section>
+</article>

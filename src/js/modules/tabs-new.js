@@ -2,15 +2,27 @@
 
 function tabs() {
 
-    console.log('tabs');
 
     // a temp value to cache *what* we're about to show
-    var target = null;
+    let target = null;
 
     // collect all the tabs
-    var tabs = jQuery('.tab').on('click', function () {
+    // var tabs = jQuery('.tab').on('click', function () {
 
-        target = jQuery(this.hash).removeAttr('id');
+    //     target = jQuery(this.hash).removeAttr('id');
+
+    //     // if the URL isn't going to change, then hashchange
+    //     // event doesn't fire, so we trigger the update manually
+    //     if (location.hash === this.hash) {
+    //         // but this has to happen after the DOM update has
+    //         // completed, so we wrap it in a setTimeout 0
+    //         setTimeout(update, 0);
+    //     }
+    // });
+
+    let tabs = document.querySelectorAll('.tab');
+    tabs.addEventListener('click', () => {
+        target = this.hash.removeAttribute('id');
 
         // if the URL isn't going to change, then hashchange
         // event doesn't fire, so we trigger the update manually
@@ -19,16 +31,15 @@ function tabs() {
             // completed, so we wrap it in a setTimeout 0
             setTimeout(update, 0);
         }
-
-    });
+    })
 
     // get an array of the panel ids (from the anchor hash)
-    var targets = tabs.map(function () {
+    let targets = tabs.map(() => {
         return this.hash;
     }).get();
 
     // use those ids to get a jQuery collection of panels
-    var panels = jQuery(targets.join(',')).each(function () {
+    let panels = jQuery(targets.join(',')).each(function () {
         // keep a copy of what the original el.id was
         jQuery(this).data('old-id', this.id);
     });
