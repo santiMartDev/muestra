@@ -1,0 +1,50 @@
+// --------------------------------------------------
+//		Module: Architects List
+// --------------------------------------------------
+
+@use "settings" as *;
+@use "tools" as *;
+
+.module-architects {
+    @extend %module-left-medium;
+    @include spacing("margin", "medium");
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+
+    .profile {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        column-gap: 150px;
+
+        border-left: 1px solid color("gray", "light");
+
+        section {
+            p {
+                &:first-of-type {
+                    @extend %h4;
+                    @extend %module-bottom-small;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        figure {
+            ul {
+                display: flex;
+                row-gap: 20px;
+            }
+            li {
+                display: flex;
+                flex-direction: column;
+            }
+
+            img {
+                width: 40px;
+                aspect-ratio: 1 / 1;
+            }
+        }
+    }
+}

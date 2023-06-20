@@ -15,7 +15,7 @@ $architects = new WP_Query( $args );
 
 <?php if ( $architects->have_posts() ) { ?>
 
-    <div class="grid grid-architects">
+    <article class="module-architects">
 
         <?php while ( $architects->have_posts() ) {  $architects->the_post();
 
@@ -33,14 +33,14 @@ $architects = new WP_Query( $args );
 
             ?>
 
-            <div class="grid-item">
+            <article class="profile">
 
-                <div>
-                    <h2><?php the_title(); ?></h2>
+                <section>
+                    <p><?php the_title(); ?></p>
                     <?php the_content() ?>
-                </div>
+                </section>
 
-                <div>
+                <figure>
                     <?php if( $projects ): ?>
                         <ul>
                             <?php foreach( $projects as $project ):
@@ -58,12 +58,12 @@ $architects = new WP_Query( $args );
                             <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>
-                </div>
+                </figure>
 
-            </div>
+            </article>
 
         <?php }  wp_reset_postdata();  ?>
 
-    </div>
+    </article>
 
 <?php } ?>

@@ -240,7 +240,7 @@ h3, .h3, .fs-3 {
   }
 }
 
-.about header p, .tabs__title p, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
+.module-architects .profile section p:first-of-type, .about header p, .tabs__title p, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
   font-size: clamp(
     1rem,
     0.33vw + 0.92rem,
@@ -248,7 +248,7 @@ h3, .h3, .fs-3 {
   );
 }
 @media (min-width: 992px) {
-  .about header p, .tabs__title p, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
+  .module-architects .profile section p:first-of-type, .about header p, .tabs__title p, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
     font-size: clamp(
     1.25rem,
     0.45vw + 0.97rem,
@@ -274,7 +274,7 @@ h5, .h5, .fs-5 {
   }
 }
 
-.history__content figcaption, .header__brand .header__breadcrumbs ul li, h6, .h6, .fs-6 {
+.header__brand .header__breadcrumbs ul li, h6, .h6, .fs-6 {
   font-size: clamp(
     0.75rem,
     0vw + 0.75rem,
@@ -282,7 +282,7 @@ h5, .h5, .fs-5 {
   );
 }
 @media (min-width: 992px) {
-  .history__content figcaption, .header__brand .header__breadcrumbs ul li, h6, .h6, .fs-6 {
+  .header__brand .header__breadcrumbs ul li, h6, .h6, .fs-6 {
     font-size: clamp(
     0.81rem,
     0vw + 0.81rem,
@@ -380,7 +380,7 @@ h5, .h5, .fs-5 {
   }
 }
 
-.about header, .history__content p, .history__content h4, .history__content figure, .pageHeader, .module-bottom-small {
+.module-architects .profile section p:first-of-type, .about header, .pageHeader, .module-bottom-small {
   padding-bottom: clamp(
     0.94rem,
     2.5vw + 0.33rem,
@@ -388,7 +388,7 @@ h5, .h5, .fs-5 {
   );
 }
 @media (min-width: 992px) {
-  .about header, .history__content p, .history__content h4, .history__content figure, .pageHeader, .module-bottom-small {
+  .module-architects .profile section p:first-of-type, .about header, .pageHeader, .module-bottom-small {
     padding-bottom: clamp(
     1.88rem,
     2.23vw + 0.49rem,
@@ -607,7 +607,7 @@ body, .module-default, .module-max-width, .module-max-width-small, .module-horiz
   }
 }
 
-.history__wrapper, .module-left-medium {
+.module-architects, .module-left-medium {
   padding-left: clamp(
     1.56rem,
     5.82vw + 0.14rem,
@@ -615,7 +615,7 @@ body, .module-default, .module-max-width, .module-max-width-small, .module-horiz
   );
 }
 @media (min-width: 992px) {
-  .history__wrapper, .module-left-medium {
+  .module-architects, .module-left-medium {
     padding-left: clamp(
     3.75rem,
     4.46vw + 0.98rem,
@@ -1730,81 +1730,6 @@ h6, .h6, .fs-6 {
   height: 100%;
 }
 
-.history__wrapper {
-  margin: clamp(
-    1.56rem,
-    5.82vw + 0.14rem,
-    3.75rem
-  );
-  border-left: 1px solid #cccccc;
-  display: flex;
-  flex-direction: row-reverse;
-  -moz-column-gap: 80px;
-       column-gap: 80px;
-}
-@media (min-width: 992px) {
-  .history__wrapper {
-    margin: clamp(
-    3.75rem,
-    4.46vw + 0.98rem,
-    5rem
-  );
-  }
-}
-.history__content {
-  width: 75%;
-}
-.history__content p {
-  line-height: 1.5em;
-}
-.history__content h4, .history__content strong {
-  font-weight: 500;
-}
-.history__content picture {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.history__content picture::before {
-  display: inline-block;
-  content: "";
-  background-image: url("../assets/icons/icon-rombo-green.svg");
-  height: 16px;
-  width: 16px;
-  margin-bottom: 20px;
-}
-.history__content picture img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.history__content figcaption {
-  text-align: center;
-  padding-top: 10px;
-  color: #878787;
-  font-style: italic;
-}
-.history aside {
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 25%;
-  padding-left: 30px;
-  border-left: 1px solid #cccccc;
-}
-.history aside li {
-  padding-bottom: 10px;
-}
-.history .gallery-item {
-  display: none;
-  width: 100% !important;
-}
-.history .gallery-item:first-child {
-  display: block;
-}
-.history .gallery-item img {
-  border: 0 !important;
-}
-
 .mapa {
   position: relative;
 }
@@ -1887,6 +1812,49 @@ h6, .h6, .fs-6 {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+}
+
+.module-architects {
+  margin: clamp(
+    1.56rem,
+    5.82vw + 0.14rem,
+    3.75rem
+  );
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+}
+@media (min-width: 992px) {
+  .module-architects {
+    margin: clamp(
+    3.75rem,
+    4.46vw + 0.98rem,
+    5rem
+  );
+  }
+}
+.module-architects .profile {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  -moz-column-gap: 150px;
+       column-gap: 150px;
+  border-left: 1px solid #cccccc;
+}
+.module-architects .profile section p:first-of-type {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.module-architects .profile figure ul {
+  display: flex;
+  row-gap: 20px;
+}
+.module-architects .profile figure li {
+  display: flex;
+  flex-direction: column;
+}
+.module-architects .profile figure img {
+  width: 40px;
+  aspect-ratio: 1/1;
 }
 
 .page-template-default h2, .page-template-default h3, .page-template-default h4, .page-template-default h5 {
