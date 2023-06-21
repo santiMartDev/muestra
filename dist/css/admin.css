@@ -1,0 +1,815 @@
+@font-face {
+  font-family: "Archivo";
+  src: url("../assets/fonts/Archivo-Black.woff2") format("woff2"), url("../assets/fonts/Archivo-Black.woff") format("woff"), url("../assets/fonts/Archivo-Black.svg#Archivo-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("../assets/fonts/Archivo-ExtraBold.woff2") format("woff2"), url("../assets/fonts/Archivo-ExtraBold.woff") format("woff"), url("../assets/fonts/Archivo-ExtraBold.svg#Archivo-ExtraBold") format("svg");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("../assets/fonts/Archivo-Bold.woff2") format("woff2"), url("../assets/fonts/Archivo-Bold.woff") format("woff"), url("../assets/fonts/Archivo-Bold.svg#Archivo-Bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("../assets/fonts/Archivo-SemiBold.woff2") format("woff2"), url("../assets/fonts/Archivo-SemiBold.woff") format("woff"), url("../assets/fonts/Archivo-SemiBold.svg#Archivo-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("../assets/fonts/Archivo-Medium.woff2") format("woff2"), url("../assets/fonts/Archivo-Medium.woff") format("woff"), url("../assets/fonts/Archivo-Medium.svg#Archivo-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("../assets/fonts/Archivo-Regular.woff2") format("woff2"), url("../assets/fonts/Archivo-Regular.woff") format("woff"), url("../assets/fonts/Archivo-Regular.svg#Archivo-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("../assets/fonts/Archivo-Light.woff2") format("woff2"), url("../assets/fonts/Archivo-Light.woff") format("woff"), url("../assets/fonts/Archivo-Light.svg#Archivo-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("../assets/fonts/Archivo-ExtraLight.woff2") format("woff2"), url("../assets/fonts/Archivo-ExtraLight.woff") format("woff"), url("../assets/fonts/Archivo-ExtraLight.svg#Archivo-ExtraLight") format("svg");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("../assets/fonts/Archivo-Thin.woff2") format("woff2"), url("../assets/fonts/Archivo-Thin.woff") format("woff"), url("../assets/fonts/Archivo-Thin.svg#Archivo-Thin") format("svg");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --color-primary: #131313;
+  --color-primary-light: #414141;
+  --color-gray: #878787;
+  --color-gray-light: #cccccc;
+  --color-gray-dark: #414141;
+  --color-black: #131313;
+  --color-white: #ffffff;
+  --color-spain: #3AD3B7;
+  --color-bosnia: #3532c8;
+  --color-algerie: #fdff7f;
+  --color-france: #18d17d;
+  --color-tunisia: #00a9d1;
+}
+
+.bg-primary {
+  background-color: #131313;
+}
+
+.text-primary {
+  color: #131313;
+}
+
+.bg-primary-light {
+  background-color: #414141;
+}
+
+.text-primary-light {
+  color: #414141;
+}
+
+.bg-gray {
+  background-color: #878787;
+}
+
+.text-gray {
+  color: #878787;
+}
+
+.bg-gray-light {
+  background-color: #cccccc;
+}
+
+.text-gray-light {
+  color: #cccccc;
+}
+
+.bg-gray-dark {
+  background-color: #414141;
+}
+
+.text-gray-dark {
+  color: #414141;
+}
+
+.bg-black {
+  background-color: #131313;
+}
+
+.text-black {
+  color: #131313;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.bg-spain {
+  background-color: #3AD3B7;
+}
+
+.text-spain {
+  color: #3AD3B7;
+}
+
+.bg-bosnia {
+  background-color: #3532c8;
+}
+
+.text-bosnia {
+  color: #3532c8;
+}
+
+.bg-algerie {
+  background-color: #fdff7f;
+}
+
+.text-algerie {
+  color: #fdff7f;
+}
+
+.bg-france {
+  background-color: #18d17d;
+}
+
+.text-france {
+  color: #18d17d;
+}
+
+.bg-tunisia {
+  background-color: #00a9d1;
+}
+
+.text-tunisia {
+  color: #00a9d1;
+}
+
+h1, .h1, .fs-1 {
+  font-size: clamp(
+    2.25rem,
+    0.67vw + 2.09rem,
+    2.5rem
+  );
+}
+@media (min-width: 992px) {
+  h1, .h1, .fs-1 {
+    font-size: clamp(
+    3.75rem,
+    4.46vw + 0.98rem,
+    5rem
+  );
+  }
+}
+
+h2, .h2, .fs-2 {
+  font-size: clamp(
+    1.75rem,
+    0.67vw + 1.59rem,
+    2rem
+  );
+}
+@media (min-width: 992px) {
+  h2, .h2, .fs-2 {
+    font-size: clamp(
+    2.5rem,
+    2.23vw + 1.12rem,
+    3.13rem
+  );
+  }
+}
+
+h3, .h3, .fs-3 {
+  font-size: clamp(
+    1.5rem,
+    2.66vw + 0.85rem,
+    2.5rem
+  );
+}
+@media (min-width: 992px) {
+  h3, .h3, .fs-3 {
+    font-size: clamp(
+    2.19rem,
+    2.23vw + 0.8rem,
+    2.81rem
+  );
+  }
+}
+
+h4, .h4, .fs-4 {
+  font-size: clamp(
+    1rem,
+    0.33vw + 0.92rem,
+    1.13rem
+  );
+}
+@media (min-width: 992px) {
+  h4, .h4, .fs-4 {
+    font-size: clamp(
+    1.25rem,
+    0.45vw + 0.97rem,
+    1.38rem
+  );
+  }
+}
+
+h5, .h5, .fs-5 {
+  font-size: clamp(
+    0.94rem,
+    0.17vw + 0.9rem,
+    1rem
+  );
+}
+@media (min-width: 992px) {
+  h5, .h5, .fs-5 {
+    font-size: clamp(
+    1.13rem,
+    0.45vw + 0.85rem,
+    1.25rem
+  );
+  }
+}
+
+h6, .h6, .fs-6 {
+  font-size: clamp(
+    0.75rem,
+    0vw + 0.75rem,
+    0.75rem
+  );
+}
+@media (min-width: 992px) {
+  h6, .h6, .fs-6 {
+    font-size: clamp(
+    0.81rem,
+    0vw + 0.81rem,
+    0.81rem
+  );
+  }
+}
+
+.btn-primary {
+  background-color: #131313;
+}
+
+.btn-primary-light {
+  background-color: #414141;
+}
+
+.btn-gray {
+  background-color: #878787;
+}
+
+.btn-gray-light {
+  background-color: #cccccc;
+}
+
+.btn-gray-dark {
+  background-color: #414141;
+}
+
+.btn-black {
+  background-color: #131313;
+}
+
+.btn-white {
+  background-color: #ffffff;
+}
+
+.btn-spain {
+  background-color: #3AD3B7;
+}
+
+.btn-bosnia {
+  background-color: #3532c8;
+}
+
+.btn-algerie {
+  background-color: #fdff7f;
+}
+
+.btn-france {
+  background-color: #18d17d;
+}
+
+.btn-tunisia {
+  background-color: #00a9d1;
+}
+
+.module-top-small {
+  padding-top: clamp(
+    0.94rem,
+    2.5vw + 0.33rem,
+    1.88rem
+  );
+}
+@media (min-width: 992px) {
+  .module-top-small {
+    padding-top: clamp(
+    1.88rem,
+    2.23vw + 0.49rem,
+    2.5rem
+  );
+  }
+}
+
+.module-bottom-small {
+  padding-bottom: clamp(
+    0.94rem,
+    2.5vw + 0.33rem,
+    1.88rem
+  );
+}
+@media (min-width: 992px) {
+  .module-bottom-small {
+    padding-bottom: clamp(
+    1.88rem,
+    2.23vw + 0.49rem,
+    2.5rem
+  );
+  }
+}
+
+.module-vertical-small {
+  padding-top: clamp(
+    0.94rem,
+    2.5vw + 0.33rem,
+    1.88rem
+  );
+  padding-bottom: clamp(
+    0.94rem,
+    2.5vw + 0.33rem,
+    1.88rem
+  );
+}
+@media (min-width: 992px) {
+  .module-vertical-small {
+    padding-top: clamp(
+    1.88rem,
+    2.23vw + 0.49rem,
+    2.5rem
+  );
+    padding-bottom: clamp(
+    1.88rem,
+    2.23vw + 0.49rem,
+    2.5rem
+  );
+  }
+}
+
+.module-top-medium {
+  padding-top: clamp(
+    1.25rem,
+    3.33vw + 0.44rem,
+    2.5rem
+  );
+}
+@media (min-width: 992px) {
+  .module-top-medium {
+    padding-top: clamp(
+    3.13rem,
+    6.7vw + -1.03rem,
+    5rem
+  );
+  }
+}
+
+.module-bottom-medium {
+  padding-bottom: clamp(
+    1.25rem,
+    3.33vw + 0.44rem,
+    2.5rem
+  );
+}
+@media (min-width: 992px) {
+  .module-bottom-medium {
+    padding-bottom: clamp(
+    3.13rem,
+    6.7vw + -1.03rem,
+    5rem
+  );
+  }
+}
+
+.module-vertical-medium {
+  padding-top: clamp(
+    1.25rem,
+    3.33vw + 0.44rem,
+    2.5rem
+  );
+  padding-bottom: clamp(
+    1.25rem,
+    3.33vw + 0.44rem,
+    2.5rem
+  );
+}
+@media (min-width: 992px) {
+  .module-vertical-medium {
+    padding-top: clamp(
+    3.13rem,
+    6.7vw + -1.03rem,
+    5rem
+  );
+    padding-bottom: clamp(
+    3.13rem,
+    6.7vw + -1.03rem,
+    5rem
+  );
+  }
+}
+
+.module-top-large {
+  padding-top: clamp(
+    8.75rem,
+    0vw + 8.75rem,
+    8.75rem
+  );
+}
+@media (min-width: 992px) {
+  .module-top-large {
+    padding-top: clamp(
+    12.5rem,
+    0vw + 12.5rem,
+    12.5rem
+  );
+  }
+}
+
+.module-bottom-large {
+  padding-bottom: clamp(
+    8.75rem,
+    0vw + 8.75rem,
+    8.75rem
+  );
+}
+@media (min-width: 992px) {
+  .module-bottom-large {
+    padding-bottom: clamp(
+    12.5rem,
+    0vw + 12.5rem,
+    12.5rem
+  );
+  }
+}
+
+.module-vertical-large {
+  padding-top: clamp(
+    8.75rem,
+    0vw + 8.75rem,
+    8.75rem
+  );
+  padding-bottom: clamp(
+    8.75rem,
+    0vw + 8.75rem,
+    8.75rem
+  );
+}
+@media (min-width: 992px) {
+  .module-vertical-large {
+    padding-top: clamp(
+    12.5rem,
+    0vw + 12.5rem,
+    12.5rem
+  );
+    padding-bottom: clamp(
+    12.5rem,
+    0vw + 12.5rem,
+    12.5rem
+  );
+  }
+}
+
+.module-left-small {
+  padding-left: clamp(
+    0.94rem,
+    5.82vw + -0.48rem,
+    3.13rem
+  );
+}
+@media (min-width: 992px) {
+  .module-left-small {
+    padding-left: clamp(
+    1.25rem,
+    2.23vw + -0.13rem,
+    1.88rem
+  );
+  }
+}
+
+.module-right-small {
+  padding-right: clamp(
+    0.94rem,
+    5.82vw + -0.48rem,
+    3.13rem
+  );
+}
+@media (min-width: 992px) {
+  .module-right-small {
+    padding-right: clamp(
+    1.25rem,
+    2.23vw + -0.13rem,
+    1.88rem
+  );
+  }
+}
+
+.module-default, .module-max-width, .module-max-width-small, .module-horizontal-small {
+  padding-left: clamp(
+    0.94rem,
+    5.82vw + -0.48rem,
+    3.13rem
+  );
+  padding-right: clamp(
+    0.94rem,
+    5.82vw + -0.48rem,
+    3.13rem
+  );
+}
+@media (min-width: 992px) {
+  .module-default, .module-max-width, .module-max-width-small, .module-horizontal-small {
+    padding-left: clamp(
+    1.25rem,
+    2.23vw + -0.13rem,
+    1.88rem
+  );
+    padding-right: clamp(
+    1.25rem,
+    2.23vw + -0.13rem,
+    1.88rem
+  );
+  }
+}
+
+.module-left-medium {
+  padding-left: clamp(
+    1.56rem,
+    5.82vw + 0.14rem,
+    3.75rem
+  );
+}
+@media (min-width: 992px) {
+  .module-left-medium {
+    padding-left: clamp(
+    3.75rem,
+    4.46vw + 0.98rem,
+    5rem
+  );
+  }
+}
+
+.module-right-medium {
+  padding-right: clamp(
+    1.56rem,
+    5.82vw + 0.14rem,
+    3.75rem
+  );
+}
+@media (min-width: 992px) {
+  .module-right-medium {
+    padding-right: clamp(
+    3.75rem,
+    4.46vw + 0.98rem,
+    5rem
+  );
+  }
+}
+
+.module-narrow, .module-horizontal-medium {
+  padding-left: clamp(
+    1.56rem,
+    5.82vw + 0.14rem,
+    3.75rem
+  );
+  padding-right: clamp(
+    1.56rem,
+    5.82vw + 0.14rem,
+    3.75rem
+  );
+}
+@media (min-width: 992px) {
+  .module-narrow, .module-horizontal-medium {
+    padding-left: clamp(
+    3.75rem,
+    4.46vw + 0.98rem,
+    5rem
+  );
+    padding-right: clamp(
+    3.75rem,
+    4.46vw + 0.98rem,
+    5rem
+  );
+  }
+}
+
+.module-left-large {
+  padding-left: clamp(
+    1.88rem,
+    4.99vw + 0.66rem,
+    3.75rem
+  );
+}
+@media (min-width: 992px) {
+  .module-left-large {
+    padding-left: clamp(
+    3.75rem,
+    26.79vw + -12.86rem,
+    11.25rem
+  );
+  }
+}
+
+.module-right-large {
+  padding-right: clamp(
+    1.88rem,
+    4.99vw + 0.66rem,
+    3.75rem
+  );
+}
+@media (min-width: 992px) {
+  .module-right-large {
+    padding-right: clamp(
+    3.75rem,
+    26.79vw + -12.86rem,
+    11.25rem
+  );
+  }
+}
+
+.module-extra, .module-horizontal-large {
+  padding-left: clamp(
+    1.88rem,
+    4.99vw + 0.66rem,
+    3.75rem
+  );
+  padding-right: clamp(
+    1.88rem,
+    4.99vw + 0.66rem,
+    3.75rem
+  );
+}
+@media (min-width: 992px) {
+  .module-extra, .module-horizontal-large {
+    padding-left: clamp(
+    3.75rem,
+    26.79vw + -12.86rem,
+    11.25rem
+  );
+    padding-right: clamp(
+    3.75rem,
+    26.79vw + -12.86rem,
+    11.25rem
+  );
+  }
+}
+
+.link {
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.link span::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background-color: black;
+  width: 0;
+  transition: all 0.3s ease-out;
+}
+.link:hover span::before {
+  width: 100%;
+  transition: all 0.3s ease-out;
+}
+
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .hide-ipad {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .reverse-mobile .columns {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 992px) {
+  .reverse-desktop .columns {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (min-width: 1280px) {
+  .module-max-width {
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+    max-width: 1440px;
+  }
+}
+@media (min-width: 1280px) {
+  .module-max-width-small {
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+    max-width: 72rem;
+  }
+}
+
+body.wp-admin {
+  background-color: #dcdcde;
+}
+
+.acf-field-group,
+.acf-field-repeater {
+  background-color: #f0f0f1;
+}
+.acf-field-group .acf-label,
+.acf-field-repeater .acf-label {
+  font-size: 16px;
+}
+.acf-field-group + .acf-field-group > .acf-label {
+  margin: 0;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  border-radius: 6px 6px 0 0;
+  color: #131313 !important;
+  background-color: #ccc !important;
+}
+
+.acf-field[data-width] + .acf-field[data-width],
+.acf-fields > .acf-field {
+  border-color: #ccc !important;
+}
+
+.acf-field-wysiwyg[data-name=title] .acf-editor-wrap iframe {
+  min-height: 100px !important;
+  height: 100px !important;
+}
+
+.acf-field-wysiwyg[data-name=text] .acf-editor-wrap iframe,
+.acf-field-wysiwyg[data-name=content] .acf-editor-wrap iframe {
+  min-height: 240px !important;
+  height: 240px !important;
+}
+
+.acf-gallery {
+  height: 250px !important;
+}
+
+.acf-accordion-title {
+  background-color: #eee !important;
+}
+.acf-accordion-title label {
+  font-size: 32px !important;
+  line-height: 1em !important;
+}
+.acf-accordion-title .description {
+  font-size: 15px !important;
+}
+
+.acf-fields.-left > .acf-field:before {
+  background-color: #e3dfdf !important;
+}
+/*# sourceMappingURL=admin.css.map */

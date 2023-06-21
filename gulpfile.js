@@ -27,7 +27,7 @@ import { terser } from "rollup-plugin-terser";
 
 const paths = {
   sass: {
-    src: "./src/scss/style.scss",
+    src: [ "./src/scss/style.scss" ,  "./src/scss/admin.scss" ],
     watcher: "./src/scss/**/*.scss",
     dest: "./dist/css/",
   },

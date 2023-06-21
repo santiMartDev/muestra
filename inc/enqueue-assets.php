@@ -34,4 +34,13 @@ function ffTheme_assets() {
 
 add_action( 'wp_enqueue_scripts', 'ffTheme_assets' );
 
+
+// Admin
+
+add_action( 'admin_enqueue_scripts', 'custom_admin_scripts' );
+
+function custom_admin_scripts() {
+    wp_enqueue_style( 'custom-admin-styles', get_template_directory_uri() . '/dist/css/admin.css', array(), wp_get_theme()->get( 'Version' ), 'all' );
+}
+
 ?>

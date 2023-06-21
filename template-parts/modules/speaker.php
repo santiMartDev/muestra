@@ -14,7 +14,7 @@
         <section>
 
             <?php if(!empty($speaker_info['videos'])): ?>
-                <div class="items-videos"></div>
+                <div class="items-videos">
                     <?php foreach ($speaker_info['videos'] as $video) { ?>
                         <div class="item-video">
                             <?php echo $video['title']; ?>
@@ -26,7 +26,7 @@
             <?php endif; ?>
 
             <?php if(!empty($speaker_info['podcasts'])): ?>
-                <div class="items-podcasts"></div>
+                <div class="items-podcasts">
                     <?php foreach ($speaker_info['podcasts'] as $podcast) { ?>
                         <div class="item-podcast">
                             <?php echo $podcast['url']; ?>
