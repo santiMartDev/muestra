@@ -25,7 +25,9 @@ if ( $main->have_posts() ) {
     } wp_reset_postdata();
 }
 
-// var_dump($main_arr);
+var_dump($main_arr);
+
+echo '/////////////////////////////////////////<br/>';
 
 ////////////////////////////////////////////////////
 
@@ -46,11 +48,13 @@ $projects = new WP_Query( $args );
 if ( $projects->have_posts() ) {
     while ( $projects->have_posts() ) {  $projects->the_post(); 
         $project = get_field('projects');
-        $arr[] = array( 'lat'=> $project['project_info']['map']['latitude'], 'long'=> $project['project_info']['map']['longitude'] );
+        if(!empty($project['project_info']['map']['latitude'])) {
+            $secondary_arr[] = array( 'lat'=> $project['project_info']['map']['latitude'], 'long'=> $project['project_info']['map']['longitude'] );
+        }        
     } wp_reset_postdata();
 }
 
-// var_dump($arr);
+var_dump($secondary_arr);
 
 //$arr = [['lat' => 40.46414168984538, 'long' => -3.711470916474365], ['lat' => 48.85714041668663, 'long' => 2.3539304445125113], ['lat' => 37.33684741750186, 'long' => -6.165581046815576]];
 $arr = $project['map']['location'];
