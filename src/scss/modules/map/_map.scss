@@ -14,6 +14,13 @@
     @media (min-width: 1024px) {
       height: 75vh;
     }
+
+    .leaflet-marker-pane {
+      img[alt="mainMarker"] {
+        z-index: 2000 !important;
+        transform-origin: center;
+      }
+    }
   }
 
   .map__layer {
@@ -25,5 +32,7 @@
     height: 100%;
 
     background-image: linear-gradient(to bottom, white 0%, transparent 10% 90%, white 100%);
+
+    
   }
 }

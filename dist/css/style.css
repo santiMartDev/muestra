@@ -1779,6 +1779,10 @@ h6, .h6, .fs-6 {
     height: 75vh;
   }
 }
+.project-map #mapID .leaflet-marker-pane img[alt=mainMarker] {
+  z-index: 2000 !important;
+  transform-origin: center;
+}
 .project-map .map__layer {
   position: absolute;
   top: 0;

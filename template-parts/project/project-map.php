@@ -1,7 +1,7 @@
 <?php // Project Map ?>
 
 <?php
-
+/*
 $id = get_the_ID();
 
 // argumentos query architects
@@ -25,9 +25,9 @@ if ( $main->have_posts() ) {
     } wp_reset_postdata();
 }
 
-var_dump($main_arr);
+//var_dump($main_arr);
 
-echo '/////////////////////////////////////////<br/>';
+//echo '/////////////////////////////////////////<br/>';
 
 ////////////////////////////////////////////////////
 
@@ -54,17 +54,21 @@ if ( $projects->have_posts() ) {
     } wp_reset_postdata();
 }
 
-var_dump($secondary_arr);
+//var_dump($secondary_arr);
 
 //$arr = [['lat' => 40.46414168984538, 'long' => -3.711470916474365], ['lat' => 48.85714041668663, 'long' => 2.3539304445125113], ['lat' => 37.33684741750186, 'long' => -6.165581046815576]];
-$arr = $project['map']['location'];
-$data = json_encode($arr); 
 
-$locations = fopen('locations.json', "w");
+$data_main = json_encode($main_arr); 
+$data_secondary = json_encode($secondary_arr); 
 
-fwrite($locations, $data);
-fclose($locations);
+$main_location = fopen('mainLocation.json', "w");
+$secondary_location = fopen('secondaryLocations.json', "w");
 
+fwrite($main_location, $data_main);
+fwrite($secondary_location, $data_secondary);
+fclose($main_location);
+fclose($secondary_location);
+*/
 ?>
 
 <article class="project-map">

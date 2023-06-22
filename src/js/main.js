@@ -18,7 +18,6 @@ const beforeStart = () => {
   const tabsExist = document.getElementsByClassName("tab");
   if (tabsExist.length > 0) {
     tabs();
-    map();
   }
 };
 
@@ -32,7 +31,8 @@ window.addEventListener("load", () => {
     // const body = document.querySelector("body");
     // body.classList.add("loaded");
     start();
+
   }, 1000);
 });
 
-// map();
+map();

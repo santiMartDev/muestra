@@ -1,7 +1,6 @@
+import gsap from 'gsap';
+
 async function map() {
-  const res = await fetch("../../../../../../locations.json");
-  const data = await res.json();
-  console.log(data[0]);
 
   let map = L.map("mapID", {
     center: [45.9938059682257, 1.746981380568295],
@@ -20,21 +19,58 @@ async function map() {
     }
   ).addTo(map);
 
-  const mapID = document.querySelector("#mapID");
-  const marker = mapID.dataset.marker;
-  console.log(mapID.dataset.marker);
+  /////////////////////////////////////////////////////////////////////////
 
-  const myIcon = L.icon({
-    iconUrl: marker,
+  const res = await fetch('http://imaneo.local/wp-json/wp/v2/project?per_page=20');
+  const data = await res.json();
+  
+  const mapID = document.querySelector("#mapID");
+  const markerBK = mapID.dataset.marker;
+  const markerHL = mapID.dataset.highlight;
+  const postID = mapID.dataset.id;
+  
+  const main = data.filter( (el) => {
+    return el.id === Number(postID);
+  })
+  const secondaries = data.filter( (el) => {
+    return el.id !== Number(postID);
+  })
+
+  const mainIcon = L.icon({
+    iconUrl: markerHL,
+    iconSize: [24, 24],
+    iconAnchor: [12, 12],
+  });
+  const secIcon = L.icon({
+    iconUrl: markerBK,
     iconSize: [24, 24],
     iconAnchor: [12, 12],
   });
 
-  data.forEach((el) => {
-    L.marker([el.latitude, el.longitude], {
-      icon: myIcon,
+  main.forEach((el) => {
+    L.marker([el.acf.projects.project_info.map.longitude, el.acf.projects.project_info.map.latitude], {
+      icon: mainIcon,
+      alt: "mainMarker",
     }).addTo(map);
   });
+
+  secondaries.forEach((el) => {
+    L.marker([el.acf.projects.project_info.map.longitude, el.acf.projects.project_info.map.latitude], {
+      icon: secIcon,
+    }).addTo(map);
+  });
+
+  const greenMarker = document.querySelector('.leaflet-marker-pane img[alt="mainMarker"]');
+  console.log(greenMarker)
+
+  gsap
+    .timeline({
+      repeat: -1
+    })
+    .to(greenMarker, {scale: 1,ease: "power2.out", duration: 0.6})
+    .to(greenMarker, {scale: 1.3,ease: "power2.out", duration: 0.6})
+    .to(greenMarker, {scale: 1,ease: "power2.out", duration: 0.6});
+
 }
 
 export default map;

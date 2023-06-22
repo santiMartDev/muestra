@@ -13,9 +13,9 @@
     <?php endif; ?>
 
     <?php // Tab Link Map ?>
-    <?php if(!empty($project['map'])): ?>
+    <?php //if(!empty($project['map'])): ?>
         <li><a class="tab" href="#<?php echo slugify($tab_text_map); ?>"><?php echo $tab_text_map; ?></a></li>
-    <?php endif; ?>
+    <?php //endif; ?>
 
     <?php // Tab Link Artist ?>
     <?php if(!empty($project['artist'])): ?>
@@ -55,12 +55,12 @@
 <?php endif; ?>
 
 <?php // Tab Content Map ?>
-<?php if(!empty($project['map'])):  ?>
+<?php //if(!empty($project['map'])):  ?>
     <div class="section" id="<?php echo slugify($tab_text_map); ?>">
         <p class="tabs__title"><?php echo $tab_text_map; ?></p>
         <?php require( TEMPLATEPATH . '/template-parts/project/project-map.php' ); ?>
     </div>
-<?php endif; ?>
+<?php //endif; ?>
 
 <?php // Tab Content Artist ?>
 <?php if(!empty($project['artist'])):  ?>
