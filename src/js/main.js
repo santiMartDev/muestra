@@ -2,22 +2,23 @@ import menuHeader from "./modules/header.js";
 import tabs from "./modules/tabs.js";
 import lgGallery from "./modules/lightgallery.js";
 import gallery from "./modules/gallery";
+import artworks from "./modules/artworks";
 import map from "./modules/map.js";
 
 const beforeStart = () => {
   menuHeader();
 
-  // animated banner
   const galleryExist = document.getElementsByClassName("gallery");
   if (galleryExist.length > 0) {
     // lgGallery();
     gallery();
+
   }
 
-  // animated banner
   const tabsExist = document.getElementsByClassName("tab");
   if (tabsExist.length > 0) {
     tabs();
+    artworks();
   }
 };
 

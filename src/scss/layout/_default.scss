@@ -84,3 +84,19 @@
     }
   }
 }
+
+.module-credits {
+  .item {
+    &:not(:last-of-type) {
+      @extend %module-bottom-small;
+    }
+
+    p {
+      padding: 0;
+    }
+    
+    p:first-of-type {
+      color: color("gray", "light");
+    }
+  }
+}

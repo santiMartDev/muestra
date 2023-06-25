@@ -1,4 +1,5 @@
-<?php // Module Artist ?>
+<?php // Module Artist 
+?>
 
 <?php
 
@@ -8,15 +9,17 @@ $media = (!empty($artist['media'])) ? $artist['media'] : '';
 $content = (!empty($artist['content'])) ? $artist['content'] : '';
 ?>
 
-<div>
+<article class="artwoks">
+    <?php require(TEMPLATEPATH . '/template-parts/modules/media.php'); ?>
+</article>
 
-    <?php require( TEMPLATEPATH . '/template-parts/modules/media.php' ); ?>
+<section class="module-default">
 
-    <div>
+    <section>
         <?php echo $content; ?>
-        <?php require( TEMPLATEPATH . '/template-parts/modules/credits.php' ); ?>
-    </div>
+        <?php require(TEMPLATEPATH . '/template-parts/modules/credits.php'); ?>
+    </section>
 
-    <?php require( TEMPLATEPATH . '/template-parts/modules/sidebar.php' ); ?>
+    <?php require(TEMPLATEPATH . '/template-parts/modules/sidebar.php'); ?>
 
-</div>
+</section>

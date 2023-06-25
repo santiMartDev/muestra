@@ -7997,8 +7997,10 @@
   Splide.defaults = {};
   Splide.STATES = STATES;
 
+  const projectGallery = document.querySelector(".project-gallery .gallery");
+  const projectThumbs = document.querySelector(".project-gallery .thumbs");
   const gallery = () => {
-    var main = new Splide(".gallery", {
+    var main = new Splide(projectGallery, {
       type: 'loop',
       pagination: false,
       arrows: true,
@@ -8006,7 +8008,43 @@
       autoWidth: true,
       gap: 30
     });
-    var thumbnails = new Splide(".thumbs", {
+    var thumbnails = new Splide(projectThumbs, {
+      rewind: true,
+      fixedWidth: 120,
+      fixedHeight: 72,
+      isNavigation: true,
+      gap: 30,
+      focus: "center",
+      pagination: false,
+      arrows: false,
+      dragMinThreshold: {
+        mouse: 4,
+        touch: 10
+      },
+      breakpoints: {
+        640: {
+          fixedWidth: 66,
+          fixedHeight: 38
+        }
+      }
+    });
+    main.sync(thumbnails);
+    main.mount();
+    thumbnails.mount();
+  };
+
+  const artworksGallery = document.querySelector(".project-artwoks .gallery");
+  const artworksThumbs = document.querySelector(".project-artwoks .thumbs");
+  const artworks = () => {
+    var main = new Splide(artworksGallery, {
+      type: 'loop',
+      pagination: false,
+      arrows: true,
+      padding: 200,
+      autoWidth: true,
+      gap: 30
+    });
+    var thumbnails = new Splide(artworksThumbs, {
       rewind: true,
       fixedWidth: 120,
       fixedHeight: 72,
@@ -8046,7 +8084,7 @@
 
     /////////////////////////////////////////////////////////////////////////
 
-    const res = await fetch('https://imaneo.hotpixel.es/wp-json/wp/v2/project?per_page=20');
+    const res = await fetch('http://imaneo.local/wp-json/wp/v2/project?per_page=20');
     const data = await res.json();
     const mapID = document.querySelector("#mapID");
     const markerBK = mapID.dataset.marker;
@@ -8100,18 +8138,15 @@
 
   const beforeStart = () => {
     menuHeader();
-
-    // animated banner
     const galleryExist = document.getElementsByClassName("gallery");
     if (galleryExist.length > 0) {
       // lgGallery();
       gallery();
     }
-
-    // animated banner
     const tabsExist = document.getElementsByClassName("tab");
     if (tabsExist.length > 0) {
       tabs();
+      artworks();
     }
   };
 

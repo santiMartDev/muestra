@@ -1,10 +1,11 @@
 import Splide from "@splidejs/splide";
 
-const projectGallery = document.querySelector(".project-gallery .gallery");
-const projectThumbs = document.querySelector(".project-gallery .thumbs");
+const artworksGallery = document.querySelector(".project-artwoks .gallery");
+const artworksThumbs = document.querySelector(".project-artwoks .thumbs");
 
-const gallery = () => {
-  var main = new Splide(projectGallery, {
+
+const artworks = () => {
+  var main = new Splide(artworksGallery, {
     type: 'loop',
     pagination: false,
     arrows: true,
@@ -13,7 +14,7 @@ const gallery = () => {
     gap: 30
   });
 
-  var thumbnails = new Splide(projectThumbs, {
+  var thumbnails = new Splide(artworksThumbs, {
     rewind: true,
     fixedWidth: 120,
     fixedHeight: 72,
@@ -39,4 +40,4 @@ const gallery = () => {
   thumbnails.mount();
 };
 
-export default gallery;
+export default artworks;

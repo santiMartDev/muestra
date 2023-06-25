@@ -1,7 +1,3 @@
-<?php //  var_dump($media); 
-?>
-
-
 <?php if (!empty($media['video'])) : ?>
 
     <?php echo $media['video']; ?>
@@ -40,5 +36,3 @@
     </article>
 
 <?php endif; ?>
-
-<?php include "template-parts/partials/tabs-title/tabs-title.php"; ?>

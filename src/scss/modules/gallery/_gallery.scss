@@ -7,7 +7,7 @@
 @use 'tools' as *;
 
 
-.project-gallery {
+.project-gallery, .artwoks {
     @extend %module-vertical-medium; 
 
     height: 100%;

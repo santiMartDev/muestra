@@ -3,8 +3,10 @@
 <?php if(!empty($credits)) : ?>
     <div class="module-credits">
         <?php foreach ($credits as $credit) { ?>
-            <h3><?php echo $credit['title']; ?></h3>
+            <div class="item">
+            <p><?php echo $credit['title']; ?></p>
             <?php echo $credit['content']; ?>
+            </div>
         <?php } ?>
     </div>
 <?php endif; ?>

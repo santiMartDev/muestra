@@ -13,7 +13,7 @@ $sidebar = array_merge($sidebar_artist_all, $sidebar);
 // config menus from artist
 $sidebar_menus = array($sidebar);
 
-// include module education
-require( TEMPLATEPATH . '/template-parts/modules/artist.php' );
-
-?>
+// include module artistic works; ?>
+<article class="project-artwoks">
+    <?php require( TEMPLATEPATH . '/template-parts/modules/artist.php' ); ?>
+</article>

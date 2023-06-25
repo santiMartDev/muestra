@@ -363,7 +363,7 @@ h5, .h5, .fs-5 {
   background-color: #00a9d1;
 }
 
-.about section, .about section .about__content .about__link, .project-gallery .thumbs, .module-top-small {
+.about section, .about section .about__content .about__link, .project-gallery .thumbs, .artwoks .thumbs, .module-top-small {
   padding-top: clamp(
     0.94rem,
     2.5vw + 0.33rem,
@@ -371,7 +371,7 @@ h5, .h5, .fs-5 {
   );
 }
 @media (min-width: 992px) {
-  .about section, .about section .about__content .about__link, .project-gallery .thumbs, .module-top-small {
+  .about section, .about section .about__content .about__link, .project-gallery .thumbs, .artwoks .thumbs, .module-top-small {
     padding-top: clamp(
     1.88rem,
     2.23vw + 0.49rem,
@@ -382,7 +382,7 @@ h5, .h5, .fs-5 {
 
 .module-architects .profile section p:first-of-type, .about header, .singleHeader, .pageHeader, .module-default section p,
 .module-default section h4,
-.module-default section figure, .module-bottom-small {
+.module-default section figure, .module-credits .item:not(:last-of-type), .module-bottom-small {
   padding-bottom: clamp(
     0.94rem,
     2.5vw + 0.33rem,
@@ -392,7 +392,7 @@ h5, .h5, .fs-5 {
 @media (min-width: 992px) {
   .module-architects .profile section p:first-of-type, .about header, .singleHeader, .pageHeader, .module-default section p,
   .module-default section h4,
-  .module-default section figure, .module-bottom-small {
+  .module-default section figure, .module-credits .item:not(:last-of-type), .module-bottom-small {
     padding-bottom: clamp(
     1.88rem,
     2.23vw + 0.49rem,
@@ -462,7 +462,7 @@ h5, .h5, .fs-5 {
   }
 }
 
-.page-template-default #wrapper, .project-gallery, .grid, .tabs, .module-vertical-medium {
+.page-template-default #wrapper, .project-gallery, .artwoks, .grid, .tabs, .module-vertical-medium {
   padding-top: clamp(
     1.25rem,
     3.33vw + 0.44rem,
@@ -475,7 +475,7 @@ h5, .h5, .fs-5 {
   );
 }
 @media (min-width: 992px) {
-  .page-template-default #wrapper, .project-gallery, .grid, .tabs, .module-vertical-medium {
+  .page-template-default #wrapper, .project-gallery, .artwoks, .grid, .tabs, .module-vertical-medium {
     padding-top: clamp(
     3.13rem,
     6.7vw + -1.03rem,
@@ -1081,6 +1081,13 @@ body {
 }
 .module-default .gallery-item img {
   border: 0 !important;
+}
+
+.module-credits .item p {
+  padding: 0;
+}
+.module-credits .item p:first-of-type {
+  color: #cccccc;
 }
 
 .header__brand {
@@ -1821,25 +1828,25 @@ h6, .h6, .fs-6 {
   height: 100%;
 }
 
-.project-gallery {
+.project-gallery, .artwoks {
   height: 100%;
   background-color: #131313;
 }
-.project-gallery .splide__arrow {
+.project-gallery .splide__arrow, .artwoks .splide__arrow {
   background: none !important;
   height: 48px;
   width: 48px;
 }
-.project-gallery .splide__arrow--prev {
+.project-gallery .splide__arrow--prev, .artwoks .splide__arrow--prev {
   left: 2vw;
 }
-.project-gallery .splide__arrow--next {
+.project-gallery .splide__arrow--next, .artwoks .splide__arrow--next {
   right: 2vw;
 }
-.project-gallery .gallery .splide__slide {
+.project-gallery .gallery .splide__slide, .artwoks .gallery .splide__slide {
   height: 50vh;
 }
-.project-gallery .gallery .splide__slide img {
+.project-gallery .gallery .splide__slide img, .artwoks .gallery .splide__slide img {
   -o-object-fit: contain;
      object-fit: contain;
   height: 100%;
