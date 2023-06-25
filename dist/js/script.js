@@ -8000,7 +8000,6 @@
   const gallery = () => {
     var main = new Splide(".gallery", {
       type: 'loop',
-      heightRatio: 0.5,
       pagination: false,
       arrows: true,
       padding: 200,

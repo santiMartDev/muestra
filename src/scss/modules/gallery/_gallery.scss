@@ -30,5 +30,17 @@
     .splide__arrow--next {
         right: 2vw;
     }
-}
+    
+    .gallery {
+        .splide__slide {
+            height: 50vh;
 
+            img {
+                object-fit: contain;
+                height: 100%;
+            }
+        }
+
+    }
+
+}
