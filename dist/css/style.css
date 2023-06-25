@@ -240,7 +240,7 @@ h3, .h3, .fs-3 {
   }
 }
 
-.module-architects .profile section p:first-of-type, .about header p, .tabs__title, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
+.module-architects .profile section p:first-of-type, .about header p, .tabs__title, .pageHeader p, .project-education .title__edu, .footer__title, h4, .h4, .fs-4 {
   font-size: clamp(
     1rem,
     0.33vw + 0.92rem,
@@ -248,7 +248,7 @@ h3, .h3, .fs-3 {
   );
 }
 @media (min-width: 992px) {
-  .module-architects .profile section p:first-of-type, .about header p, .tabs__title, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
+  .module-architects .profile section p:first-of-type, .about header p, .tabs__title, .pageHeader p, .project-education .title__edu, .footer__title, h4, .h4, .fs-4 {
     font-size: clamp(
     1.25rem,
     0.45vw + 0.97rem,
@@ -1088,6 +1088,24 @@ body {
 }
 .module-credits .item p:first-of-type {
   color: #cccccc;
+}
+
+.project-education .title__edu {
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.project-education .title__edu::before {
+  display: inline-block;
+  content: "";
+  height: 16px;
+  width: 16px;
+  background-image: url("../assets/icons/icon-rombo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-right: 20px;
 }
 
 .header__brand {

@@ -100,3 +100,27 @@
     }
   }
 }
+
+.project-education {
+  .title__edu {
+    @extend %h4;
+    font-weight: 500;
+    text-transform: uppercase;
+  
+    display: flex;
+    align-items: center;
+  
+    &::before {
+      display: inline-block;
+      content: "";
+      height: 16px;
+      width: 16px;
+      background-image: url("../assets/icons/icon-rombo.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+  
+      margin-right: 20px;
+    }
+  }
+}

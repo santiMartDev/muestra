@@ -1,30 +1,31 @@
-<?php // Module Education ?>
+<?php // Module Education 
+?>
 
-<?php if($education): ?>
+<?php if ($education) : ?>
     <?php foreach ($education as $item) {
 
         // get education fields
-        $education_info = get_field('education', $item->ID );
+        $education_info = get_field('education', $item->ID);
 
         // common sidebar to education
-        $sidebar_education = array( array('title' => __('Download', 'imaneo'), 'link' => array('url' => $education_info['download']['url']), 'blank' => true) );
+        $sidebar_education = array(array('title' => __('Download', 'imaneo'), 'link' => array('url' => $education_info['download']['url']), 'blank' => true));
 
         // config menus to education
-        $sidebar_menus = array( $sidebar_education, $sidebar_education_extra );
+        $sidebar_menus = array($sidebar_education, $sidebar_education_extra);
 
-        ?>
-
-        <section>
+    ?>
+        <p class="title__edu"><?php echo get_the_title($item->ID);  ?></p>
+        <section class="module-default">
 
             <!-- Education content -->
-            <div>
-                <h2><?php echo get_the_title($item->ID);  ?></h2>
+            <section>
                 <?php echo $item->post_content;  ?>
-            </div>
+            </section>
 
-            <?php require( TEMPLATEPATH . '/template-parts/modules/sidebar.php' ); ?>
+            <?php require(TEMPLATEPATH . '/template-parts/modules/sidebar.php'); ?>
 
         </section>
+
 
     <?php } ?>
 <?php endif; ?>
