@@ -19,3 +19,4 @@ function ffTheme_theme_support() {
 }
 
 add_action( 'after_setup_theme', 'ffTheme_theme_support' );
+

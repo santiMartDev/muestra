@@ -1,7 +1,7 @@
 <?php // Module Sidebar ?>
 
 <?php if(!empty($sidebar_menus)) : ?>
-    <div class="module-sidebar">
+    <aside class="module-sidebar">
         <?php foreach ($sidebar_menus as $menu) { ?>
             <ul class="sidebar-menu">
                 <?php foreach ($menu as $link) {
@@ -17,5 +17,5 @@
                 <?php } ?>
             </ul>
         <?php } ?>
-    </div>
+    </aside>
 <?php endif; ?>

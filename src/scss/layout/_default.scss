@@ -6,87 +6,81 @@
 @use "tools" as *;
 
 .module-default {
-    &__wrapper {
-        @extend %module-left-medium;
-        @include spacing("margin", "medium");
+  @extend %module-left-medium;
+  @include spacing("margin", "medium");
 
-        border-left: 1px solid color("gray", "light");
+  border-left: 1px solid color("gray", "light");
 
-        display: flex;
-        flex-direction: row-reverse;
-        column-gap: 80px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 80px;
+
+  section {
+    width: 75%;
+
+    p,
+    h4,
+    figure {
+      @extend %module-bottom-small;
     }
 
-    &__content {
-        width: 75%;
-
-        p,
-        h4,
-        figure {
-            @extend %module-bottom-small;
-        }
-
-        p {
-            line-height: 1.5em;
-        }
-
-        h4,
-        strong {
-            font-weight: 500;
-        }
-
-        picture {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            &::before {
-                display: inline-block;
-
-                content: "";
-                background-image: url("../assets/icons/icon-rombo-green.svg");
-
-                height: 16px;
-                width: 16px;
-                margin-bottom: 20px;
-            }
-
-            img {
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-
-        figcaption {
-            @extend %h6;
-            text-align: center;
-            padding-top: 10px;
-            color: color("gray");
-            font-style: italic;
-        }
+    p {
+      line-height: 1.5em;
     }
 
-    aside {
-        height: fit-content;
-        width: 25%;
-        padding-left: 30px;
-        border-left: 1px solid color("gray", "light");
-
-        li {
-            padding-bottom: 10px;
-        }
+    h4,
+    strong {
+      font-weight: 500;
     }
 
-    .gallery-item {
-        display: none;
-        width: 100% !important;
+    img {
+      width: 100%;
+      object-fit: cover;
 
-        &:first-child {
-            display: block;
-        }
+      &::before {
+        display: inline-block;
 
-        img {
-            border: 0 !important;
-        }
+        content: "";
+        background-image: url("../assets/icons/icon-rombo-green.svg");
+
+        height: 16px;
+        width: 16px;
+        margin-bottom: 20px;
+      }
     }
+
+    em {
+      @extend %h6;
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      padding-top: 10px;
+      color: color("gray");
+      font-style: italic;
+    }
+  }
+
+  aside.module-sidebar {
+    height: fit-content;
+    width: 25%;
+    padding-left: 30px;
+    border-left: 1px solid color("gray", "light");
+
+    li {
+      padding-bottom: 10px;
+    }
+  }
+
+  .gallery-item {
+    display: none;
+    width: 100% !important;
+
+    &:first-child {
+      display: block;
+    }
+
+    img {
+      border: 0 !important;
+    }
+  }
 }

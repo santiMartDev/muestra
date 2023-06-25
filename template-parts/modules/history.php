@@ -6,12 +6,12 @@
 $content = (!empty($history['content'])) ? $history['content'] : '';
 ?>
 
-<div>
+<article class="module-default">
 
-    <div>
+    <section>
         <?php echo $content; ?>
-    </div>
+    </section>
 
     <?php require( TEMPLATEPATH . '/template-parts/modules/sidebar.php' ); ?>
 
-</div>
+</article>
