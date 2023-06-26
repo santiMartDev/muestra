@@ -15,7 +15,7 @@ $themes = new WP_Query( $args );
 
 <?php if ( $themes->have_posts() ) { ?>
 
-    <div class="grid grid-themes">
+    <article class="themes">
 
         <?php while ( $themes->have_posts() ) {  $themes->the_post();
 
@@ -51,24 +51,24 @@ $themes = new WP_Query( $args );
                 if ( $projects->have_posts() ) {
                     while ( $projects->have_posts() ) {  $projects->the_post();
                         $project = get_field('projects');
-                        $project_icon .= (!empty($project['project_info']['icon'])) ? '<img src="'.$project['project_info']['icon']['sizes']['theme_small'].'">' : '' ;
+                        $project_icon .= (!empty($project['project_info']['icon'])) ? '<img src="'.$project['project_info']['icon']['sizes']['theme_full'].'">' : '' ;
                     } wp_reset_postdata();
                 }
 
             } ?>
 
-            <div class="grid-item">
-                <div>
-                    <h2><?php echo $theme_title ?></h2>
-                    <div class="grid-icons">
+            <article class="theme-item">
+                <section>
+                    <p><?php echo $theme_title ?></p>
+                    <picture class="theme-icons">
                         <?php echo $project_icon; ?>
-                    </div>
-                    <a href="<?php echo $theme_permalink; ?>"><?php _e('Read more', 'imaneo'); ?></a>
-                </div>
-            </div>
+                    </picture>
+                </section>
+                <a href="<?php echo $theme_permalink; ?>"><?php _e('Read more', 'imaneo'); ?></a>
+            </article>
 
         <?php }  wp_reset_postdata();  ?>
 
-    </div>
+    </article>
 
 <?php } ?>

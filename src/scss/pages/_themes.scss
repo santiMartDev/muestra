@@ -1,0 +1,40 @@
+// --------------------------------------------------
+//		Pages: Themes
+// --------------------------------------------------
+
+@use 'helper' as *;
+@use 'tools' as *;
+
+.themes {
+    .theme-item {
+        @extend %module-vertical-medium;
+
+
+        section {
+            display: flex;
+            align-items: center;
+
+            p {
+                @extend %h2;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            picture {
+                height: 38px;
+                margin-left: 30px;
+
+                display: flex;
+                align-items: center;
+
+                img {
+                    height: 100%;
+                    object-fit: contain;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+
+    }
+}

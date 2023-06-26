@@ -3,7 +3,10 @@ import tabs from "./modules/tabs.js";
 import lgGallery from "./modules/lightgallery.js";
 import gallery from "./modules/gallery";
 import artworks from "./modules/artworks";
+import podcast from "./modules/podcast";
 import map from "./modules/map.js";
+
+// podcast()
 
 const beforeStart = () => {
   menuHeader();

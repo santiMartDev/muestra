@@ -46,12 +46,14 @@ $architects = new WP_Query( $args );
                             <?php foreach( $projects as $project ):
                                 // project info
                                 $project_info = get_field('projects', $project);
-                                $project_icon = (!empty($project_info['project_info']['icon'])) ? '<img src="'.$project_info['project_info']['icon']['sizes']['theme_small'].'">' : '' ;
+                                $project_icon = (!empty($project_info['project_info']['icon'])) ? '<img src="'.$project_info['project_info']['icon']['sizes']['theme_full'].'">' : '' ;
                                 $project_location = (!empty($project_info['project_info']['location'])) ? '<span>'.$project_info['project_info']['location'].'</span>' : '' ;
                                 ?>
                                 <li>
-                                    <?php echo $project_icon; ?>
-                                    <?php echo get_the_title($project); ?>
+                                    <picture>
+                                        <?php echo $project_icon; ?>
+                                    </picture>
+                                    <p><?php echo get_the_title($project); ?></p>
                                     <?php echo $project_location; ?>
                                     <a href="<?php echo get_permalink($project) ?>"><?php _e('Read more', 'imaneo'); ?></a>
                                 </li>

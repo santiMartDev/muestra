@@ -7,7 +7,7 @@
     </section>
     <section>
         <p><?php _e('Year of Construction', 'imaneo'); ?></p>
-        <p>1931-1935</p>
+        <p><?php echo $project_year; ?></p>
     </section>
     <section>
         <p><?php _e('Architect(s)', 'imaneo'); ?></p>

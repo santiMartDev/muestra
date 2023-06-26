@@ -3,48 +3,87 @@
 // --------------------------------------------------
 
 @use "settings" as *;
+@use "helper" as *;
 @use "tools" as *;
 
 .module-architects {
-    @extend %module-left-medium;
-    @include spacing("margin", "medium");
+  @extend %module-left-medium;
+  @include spacing("margin", "medium");
 
-    display: flex;
-    flex-direction: column;
-    row-gap: 80px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
 
-    .profile {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        column-gap: 150px;
+  .profile {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 150px;
 
-        border-left: 1px solid color("gray", "light");
+    border-left: 1px solid color("gray", "light");
 
-        section {
-            p {
-                &:first-of-type {
-                    @extend %h4;
-                    @extend %module-bottom-small;
-                    text-transform: uppercase;
-                    font-weight: 500;
-                }
-            }
+    section {
+      padding-left: 30px;
+      p {
+        &:first-of-type {
+          @extend %h4;
+          @extend %module-bottom-small;
+          text-transform: uppercase;
+          font-weight: 500;
+
+          &::before {
+            display: inline-block;
+            content: "";
+            height: 16px;
+            width: 16px;
+            background-image: url("../assets/icons/icon-rombo.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            margin-right: 20px;
+          }
         }
-
-        figure {
-            ul {
-                display: flex;
-                row-gap: 20px;
-            }
-            li {
-                display: flex;
-                flex-direction: column;
-            }
-
-            img {
-                width: 40px;
-                aspect-ratio: 1 / 1;
-            }
-        }
+      }
     }
+
+    figure {
+      ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        li {
+          display: flex;
+          flex-direction: column;
+
+          picture {
+            height: 50px;
+            padding-bottom: 10px;
+            img {
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+          p,
+          span,
+          a {
+            font-weight: 500;
+          }
+          span,
+          a {
+            @extend %h5;
+          }
+          p {
+            @extend %h4;
+            line-height: 1.2em;
+          }
+          span {
+            color: color("gray", "light");
+          }
+          a {
+            padding-top: 15px;
+          }
+        }
+      }
+    }
+  }
 }

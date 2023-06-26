@@ -2,6 +2,8 @@
 
     <?php echo $media['video']; ?>
 
+    
+
 <?php elseif (!empty($media['gallery'])) : ?>
 
     <article class="gallery splide">

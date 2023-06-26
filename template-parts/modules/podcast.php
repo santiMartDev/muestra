@@ -8,19 +8,21 @@ $podcasts = (!empty($podcast['podcast'])) ? $podcast['podcast'] : '';
 $content = (!empty($podcast['content'])) ? $podcast['content'] : '';
 ?>
 
-<div>
+<article>
 
-    <?php if($podcasts): ?>
-        <?php foreach ($podcasts as $item) { ?>
-            <?php echo $item['url'] ?>
-        <?php } ?>
-    <?php endif; ?>
+    <?php //if($podcasts): ?>
+        <?php //foreach ($podcasts as $item) { ?>
+            <?php //echo $item['url'] ?>
+        <?php //} ?>
+    <?php //endif; ?>
 
-    <div>
+    <section class="podcast"></section>
+
+    <section>
         <?php echo $content; ?>
         <?php require( TEMPLATEPATH . '/template-parts/modules/credits.php' ); ?>
-    </div>
+    </section>
 
     <?php require( TEMPLATEPATH . '/template-parts/modules/sidebar.php' ); ?>
 
-</div>
+</article>

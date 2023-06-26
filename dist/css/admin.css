@@ -242,17 +242,17 @@ h4, .h4, .fs-4 {
 
 h5, .h5, .fs-5 {
   font-size: clamp(
-    0.94rem,
-    0.17vw + 0.9rem,
-    1rem
+    0.81rem,
+    0.33vw + 0.73rem,
+    0.94rem
   );
 }
 @media (min-width: 992px) {
   h5, .h5, .fs-5 {
     font-size: clamp(
-    1.13rem,
-    0.45vw + 0.85rem,
-    1.25rem
+    0.88rem,
+    0.45vw + 0.6rem,
+    1rem
   );
   }
 }

@@ -8069,6 +8069,24 @@
     thumbnails.mount();
   };
 
+  typeof window !== "undefined" ? /mobile/i.test(window.navigator.userAgent) : false;
+  let supportsPassive = false;
+  if (typeof window !== "undefined") {
+    try {
+      const opts = Object.defineProperty({}, "passive", {
+        get: function () {
+          supportsPassive = true;
+          return false;
+        }
+      });
+      window.addEventListener("testPassvie", null, opts);
+      window.removeEventListener("testPassvie", null, opts);
+    } catch (e) {
+      supportsPassive = false;
+    }
+  }
+  console.log(`%c\u{1F34A}%c Shikwasa Podcast Player v2.2.1 %c https://shikwasa.js.org`, "background-color:#00869B40;padding:4px;", "background:#00869B80;color:#fff;padding:4px 0", "padding: 2px 0;");
+
   async function map() {
     let map = L.map("mapID", {
       center: [45.9938059682257, 1.746981380568295],
@@ -8135,6 +8153,8 @@
       duration: 0.6
     });
   }
+
+  // podcast()
 
   const beforeStart = () => {
     menuHeader();
