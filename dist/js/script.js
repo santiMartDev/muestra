@@ -9,21 +9,20 @@
   // import podcast from "./modules/podcast";
   // import map from "./modules/map.js";
 
-  // const instance = axios.create({
-  //   method: 'post',
-  //   // url: 'https://accounts.spotify.com/api/token',
-  //   headers: {
-  //     'Content-Type': 'application/x-www-form-urlencoded'
-  //   }, 
-  //   params: {
-  //     grant_type: 'client_credentials',
-  //     client_id: 'ecaf665a18ec4a92979a7ae31f4ccbb6',
-  //     client_secret: '9d744aa03a024388b02429b100e61bd5'
-  //   }
-  // });
-
+  const instance = axios.create({
+    method: 'post',
+    // url: 'https://accounts.spotify.com/api/token',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    params: {
+      grant_type: 'client_credentials',
+      client_id: 'ecaf665a18ec4a92979a7ae31f4ccbb6',
+      client_secret: '9d744aa03a024388b02429b100e61bd5'
+    }
+  });
   async function request() {
-    const res = await axios.post('https://accounts.spotify.com/api/token');
+    const res = await instance.post('https://accounts.spotify.com/api/token');
     console.log(res);
   }
   request();
