@@ -6,8 +6,7 @@ import artworks from "./modules/artworks";
 import podcast from "./modules/podcast";
 import map from "./modules/map.js";
 
-podcast()
-
+podcast();
 
 const beforeStart = () => {
   menuHeader();
@@ -40,4 +39,8 @@ window.addEventListener("load", () => {
   }, 1000);
 });
 
-map();
+
+const mapExist = document.getElementsByClassName("project-map");
+if (mapExist.length > 0) {
+  map();
+}

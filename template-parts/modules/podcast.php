@@ -17,7 +17,19 @@ $content = (!empty($podcast['content'])) ? $podcast['content'] : '';
     <?php //endif; ?>
 
     <section class="podcast">
-        
+        <figure>
+            <picture>
+                <img src="<?php bloginfo('template_url') ?>/dist/assets/logos/logo-header.png" alt="">
+            </picture>
+        </figure>
+        <section>
+            <p></p>
+            <div>
+                <button class="spotify__play">
+                    <img src="<?php bloginfo('template_url') ?>/dist/assets/icons/icon-player-play" alt="">
+                </button>
+            </div>
+        </section>
     </section>
 
     <section>
