@@ -8,14 +8,14 @@
 .pageHeader {
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 20px;
 
   @extend %module-top-medium;
   @extend %module-bottom-small;
   
   border-bottom: 1px solid color("gray", "light");
 
-  @include up(md) {
+  @include up(lg) {
     flex-direction: row;
     column-gap: 30px;
     justify-content: space-between;
@@ -23,7 +23,11 @@
 	}
 
   section {
-    width: 50%;
+    width: 100%;
+
+    @include up(lg) {
+      width: 50%;
+    }
   }
 
   h1,
@@ -38,6 +42,10 @@
 
   p {
     @extend %h4;
-    max-width: 70%;
+    max-width: 100%;
+
+    @include up(lg) {
+      max-width: 70%;
+    }
   }
 }

@@ -5199,7 +5199,6 @@
     gsapWithCSS.core.Tween;
 
   const menuHeader = () => {
-    console.log("hello");
     const btns = document.querySelectorAll(".btnSubmenu");
     btns.forEach(btn => {
       btn.addEventListener("click", e => {
@@ -5265,8 +5264,6 @@
   // tabs
 
   function tabs() {
-    console.log('tabs');
-
     // a temp value to cache *what* we're about to show
     var target = null;
 
@@ -7997,8 +7994,41 @@
   Splide.defaults = {};
   Splide.STATES = STATES;
 
-  document.querySelector(".project-gallery .gallery");
-  document.querySelector(".project-gallery .thumbs");
+  const projectGallery = document.querySelector(".project-gallery .gallery");
+  const projectThumbs = document.querySelector(".project-gallery .thumbs");
+  const gallery = () => {
+    var main = new Splide(projectGallery, {
+      type: 'loop',
+      pagination: false,
+      arrows: true,
+      padding: 200,
+      autoWidth: true,
+      gap: 30
+    });
+    var thumbnails = new Splide(projectThumbs, {
+      rewind: true,
+      fixedWidth: 120,
+      fixedHeight: 72,
+      isNavigation: true,
+      gap: 30,
+      focus: "center",
+      pagination: false,
+      arrows: false,
+      dragMinThreshold: {
+        mouse: 4,
+        touch: 10
+      },
+      breakpoints: {
+        640: {
+          fixedWidth: 66,
+          fixedHeight: 38
+        }
+      }
+    });
+    main.sync(thumbnails);
+    main.mount();
+    thumbnails.mount();
+  };
 
   const artworksGallery = document.querySelector(".project-artwoks .gallery");
   const artworksThumbs = document.querySelector(".project-artwoks .thumbs");
@@ -8040,7 +8070,6 @@
     new Accordion(".navbar--mobile", {
       onOpen: () => {
         const acNotActive = document.querySelectorAll('.ac:not(.is-active)');
-        console.log(acNotActive);
         acNotActive.forEach(el => {
           el.classList.add('is-disable');
         });
@@ -8103,7 +8132,6 @@
       }).addTo(map);
     });
     const greenMarker = document.querySelector('.leaflet-marker-pane img[alt="mainMarker"]');
-    console.log(greenMarker);
     gsapWithCSS.timeline({
       repeat: -1
     }).to(greenMarker, {
@@ -8170,11 +8198,22 @@
     accordionMenu();
     menu();
     const galleryExist = document.getElementsByClassName("gallery");
-    if (galleryExist.length > 0) ;
+    if (galleryExist.length > 0) {
+      gallery();
+    }
     const tabsExist = document.getElementsByClassName("tab");
     if (tabsExist.length > 0) {
       tabs();
+    }
+    const artworksExist = document.querySelector(".artworks > .gallery");
+    if (artworksExist != null) {
       artworks();
+    }
+  };
+  const start = () => {
+    const mapExist = document.getElementsByClassName("project-map");
+    if (mapExist.length > 0) {
+      map();
     }
   };
 
@@ -8182,11 +8221,10 @@
   window.addEventListener("load", () => {
     beforeStart();
     setTimeout(() => {
+      // const body = document.querySelector("body");
+      // body.classList.add("loaded");
+      start();
     }, 1000);
   });
-  const mapExist = document.getElementsByClassName("project-map");
-  if (mapExist.length > 0) {
-    map();
-  }
 
 })();

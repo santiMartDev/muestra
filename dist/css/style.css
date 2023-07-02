@@ -251,8 +251,8 @@ h1, .h1, .fs-1 {
   .project-education .title__edu, .education-list .title__edu, .module-architects .profile section p:first-of-type, .module-architects .profile figure ul li p, .about header p, .tabs__title, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
     font-size: clamp(
     1.25rem,
-    0.45vw + 0.97rem,
-    1.38rem
+    1.12vw + 0.56rem,
+    1.56rem
   );
   }
 }
@@ -1586,8 +1586,8 @@ h3, .h3, .fs-3 {
   .card figcaption p, h4, .h4, .fs-4 {
     font-size: clamp(
     1.25rem,
-    0.45vw + 0.97rem,
-    1.38rem
+    1.12vw + 0.56rem,
+    1.56rem
   );
   }
 }
@@ -1716,10 +1716,10 @@ h6, .h6, .fs-6 {
 .pageHeader {
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 20px;
   border-bottom: 1px solid #cccccc;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .pageHeader {
     flex-direction: row;
     -moz-column-gap: 30px;
@@ -1729,7 +1729,12 @@ h6, .h6, .fs-6 {
   }
 }
 .pageHeader section {
-  width: 50%;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .pageHeader section {
+    width: 50%;
+  }
 }
 .pageHeader h1,
 .pageHeader p {
@@ -1740,7 +1745,12 @@ h6, .h6, .fs-6 {
   text-transform: uppercase;
 }
 .pageHeader p {
-  max-width: 70%;
+  max-width: 100%;
+}
+@media (min-width: 992px) {
+  .pageHeader p {
+    max-width: 70%;
+  }
 }
 
 .singleHeader {
@@ -1889,7 +1899,7 @@ h6, .h6, .fs-6 {
 }
 .sidenav .navbar--mobile .ac .ac-trigger .btnSubmenuMobile img {
   margin-left: 30px;
-  height: 30px;
+  height: 20px;
   aspect-ratio: 1/1;
 }
 .sidenav .navbar--mobile .ac .ac-panel {

@@ -1,6 +1,5 @@
 import menuHeader from "./modules/header.js";
 import tabs from "./modules/tabs.js";
-import lgGallery from "./modules/lightgallery.js";
 import gallery from "./modules/gallery";
 import artworks from "./modules/artworks";
 import accordionMenu from "./modules/accordionMenu";
@@ -10,23 +9,30 @@ import menu from "./init/menu.js";
 const beforeStart = () => {
   menuHeader();
   accordionMenu();
-  menu()
+  menu();
 
   const galleryExist = document.getElementsByClassName("gallery");
   if (galleryExist.length > 0) {
-    // lgGallery();
-    // gallery();
-
+    gallery();
   }
 
   const tabsExist = document.getElementsByClassName("tab");
   if (tabsExist.length > 0) {
     tabs();
+  }
+
+  const artworksExist = document.querySelector(".artworks > .gallery");
+  if (artworksExist != null) {
     artworks();
   }
 };
 
-const start = () => {};
+const start = () => {
+  const mapExist = document.getElementsByClassName("project-map");
+  if (mapExist.length > 0) {
+    map();
+  }
+};
 
 // load
 window.addEventListener("load", () => {
@@ -36,12 +42,5 @@ window.addEventListener("load", () => {
     // const body = document.querySelector("body");
     // body.classList.add("loaded");
     start();
-
   }, 1000);
 });
-
-
-const mapExist = document.getElementsByClassName("project-map");
-if (mapExist.length > 0) {
-  map();
-}

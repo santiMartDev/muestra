@@ -1,7 +1,6 @@
 import { gsap } from "gsap";
 
 const menuHeader = () => {
-  console.log("hello");
   const btns = document.querySelectorAll(".btnSubmenu");
 
   btns.forEach((btn) => {

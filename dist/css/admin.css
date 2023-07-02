@@ -234,8 +234,8 @@ h4, .h4, .fs-4 {
   h4, .h4, .fs-4 {
     font-size: clamp(
     1.25rem,
-    0.45vw + 0.97rem,
-    1.38rem
+    1.12vw + 0.56rem,
+    1.56rem
   );
   }
 }

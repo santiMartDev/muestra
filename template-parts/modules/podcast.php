@@ -10,14 +10,13 @@ $content = (!empty($podcast['content'])) ? $podcast['content'] : '';
 
 <article>
 
-    <section class="player" id="embed-iframe"></section>
-
     <?php if($podcasts): ?>
     <section class="podcast">
         <?php foreach ($podcasts as $item) { ?>
             <?php echo $item['url'] ?>
             <?php echo $item['title'] ?>
         <?php } ?>
+        <?php //echo do_shortcode( '[podcastplayer feed_url="https://feeds.simplecast.com/54nAGcIl"]' ); ?>
     </section>
     <?php endif; ?>
 

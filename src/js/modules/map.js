@@ -61,7 +61,6 @@ async function map() {
   });
 
   const greenMarker = document.querySelector('.leaflet-marker-pane img[alt="mainMarker"]');
-  console.log(greenMarker)
 
   gsap
     .timeline({

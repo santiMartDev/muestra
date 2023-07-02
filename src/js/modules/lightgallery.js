@@ -5,8 +5,6 @@ import lgVideo from 'lightgallery/plugins/video';
 // lg Gallery
 function lgGallery() {
 
-    console.log('lg gallery');
-
     var media = document.getElementsByClassName('gallery');
 
     for (let item of media) {
