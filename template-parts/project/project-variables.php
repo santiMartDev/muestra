@@ -18,7 +18,7 @@ $project = get_field('projects');
 $project_info = $project['project_info'];
 
 // project info / icon, location & year
-$project_icon = (!empty($project_info['icon'])) ? '<img src="'.$project_info['icon']['sizes']['theme_small'].'">' : '' ;
+$project_icon = (!empty($project_info['icon'])) ? '<img src="'.$project_info['icon']['sizes']['theme_full'].'">' : '' ;
 $project_location = (!empty($project_info['location'])) ? $project_info['location'] : '--';
 $project_year = (!empty($project_info['year'])) ? $project_info['year'] : '--';
 

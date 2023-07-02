@@ -1,0 +1,12 @@
+
+@use "settings" as *;
+@use "tools" as *;
+
+
+.module-sidebar {
+    h4 {
+        @extend %font-base;
+        color: color('black');
+        line-height: $line-height-base;
+    }
+}

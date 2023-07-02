@@ -1,0 +1,12 @@
+.sidenav {
+
+    display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-between;
+
+	@include up(lg) {
+		display: none;
+	}
+
+}

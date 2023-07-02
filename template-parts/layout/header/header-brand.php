@@ -5,11 +5,11 @@
             <img src="<?php bloginfo( 'template_url' ) ?>/dist/assets/logos/logo-header.png" alt="">
         </a>
     </figure>
-    <nav class="header__breadcrumbs">
+    <!-- <nav class="header__breadcrumbs">
         <ul>
             <li>Acceuil</li>
-            <img src="<?php bloginfo( 'template_url' ) ?>/dist/assets/icons/icon-bc.svg" alt="">
+            <img src="<?php //bloginfo( 'template_url' ) ?>/dist/assets/icons/icon-bc.svg" alt="">
             <li>Bâtiments</li>
         </ul>
-    </nav>
+    </nav> -->
 </section>

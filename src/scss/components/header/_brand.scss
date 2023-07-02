@@ -12,9 +12,10 @@
   justify-content: space-between;
 
   figure {
+    width: 60px;
     margin: 0;
     @include up(lg) {
-      max-width: 60px;
+      width: 60px;
     }
 
     img {

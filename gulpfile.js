@@ -37,7 +37,7 @@ const paths = {
   },
   scripts: {
     src: "./src/js/main.js",
-    watcher: ["./src/js/modules/**/**.js", "./src/js/main.js"],
+    watcher: ["./src/js/modules/**/**.js", "./src/js/init/**/**.js", "./src/js/main.js"],
     dest: "./dist/js/",
   },
   images: {

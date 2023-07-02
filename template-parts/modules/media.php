@@ -1,8 +1,8 @@
 <?php if (!empty($media['video'])) : ?>
 
-    <?php echo $media['video']; ?>
-
-    
+    <article class="video">
+        <iframe width="1280" height="720" src="<?php echo $media['video']; ?>" allowfullscreen></iframe>
+    </article>
 
 <?php elseif (!empty($media['gallery'])) : ?>
 

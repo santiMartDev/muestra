@@ -10,7 +10,12 @@
 
   article {
     display: flex;
+    flex-direction: column;
     column-gap: $spacer;
+
+    @include up(lg) {
+      flex-direction: row;
+    }
   }
 
   &__menu {
@@ -25,11 +30,21 @@
       li {
         font-weight: 500;
         margin-right: 20px;
+
+        a {
+          @include down(lg) {
+            text-decoration: underline;
+          }
+        }
       }
     }
 
     &--half {
-        width: 50%
+      width: 100%;
+
+        @include up(lg) {
+          width: 50%;
+        }
     }
   }
 

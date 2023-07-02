@@ -7,13 +7,20 @@
 
 .pageHeader {
   display: flex;
-  column-gap: 30px;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  row-gap: 30px;
 
   @extend %module-top-medium;
   @extend %module-bottom-small;
+  
   border-bottom: 1px solid color("gray", "light");
+
+  @include up(md) {
+    flex-direction: row;
+    column-gap: 30px;
+    justify-content: space-between;
+    align-items: flex-end;
+	}
 
   section {
     width: 50%;

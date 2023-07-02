@@ -1,8 +1,6 @@
 // --------------------------------------------------
-//		Pages
+//		Components: Sidenav
 // --------------------------------------------------
 
 
-@forward 'default';
-@forward 'education/education-list';
-@forward 'themes/themes-list';
+@import 'sidenav';

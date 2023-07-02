@@ -6,8 +6,12 @@
 @use "elements" as *;
 
 .navbar {
-  display: flex;
-  height: 100%;
+  display: none;
+
+  @include up(lg) {
+    display: flex;
+    height: 100%;
+	}
 
   ul {
     height: 100%;

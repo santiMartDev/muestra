@@ -21,5 +21,12 @@
     
     &__menu {
         width: 50%;
+
+        display: flex;
+        justify-content: flex-end;
+
+        @include up(lg) {
+            display: block;
+        }
     }
 }

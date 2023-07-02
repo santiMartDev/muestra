@@ -34,16 +34,30 @@
     @extend %module-top-small;
 
     display: flex;
+    flex-direction: column;
     column-gap: $spacer;
 
+    @include up(lg) {
+      flex-direction: row;
+    }
+
     .about__content {
-      width: 40%;
+      width: 100%;
+
+      @include up(lg) {
+        width: 40%;
+      }
 
       p {
-        max-width: 75%;
+        max-width: 100%;
+
+        @include up(lg) {
+          max-width: 75%;
+        }
       }
 
       .about__link {
+        
         @extend %module-top-small;
         
         display: flex;
@@ -69,7 +83,11 @@
     }
 
     figure {
-      width: 60%;
+      width: 100%;
+
+      @include up(lg) {
+        width: 60%;
+      }
 
       img {
         object-fit: cover;

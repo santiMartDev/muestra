@@ -15,7 +15,7 @@ $educations = new WP_Query( $args );
 
 <?php if ( $educations->have_posts() ) { ?>
 
-    <div class="grid grid-education">
+    <div class="education-list">
 
         <?php while ( $educations->have_posts() ) {  $educations->the_post();
 

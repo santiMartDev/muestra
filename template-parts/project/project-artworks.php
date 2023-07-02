@@ -14,6 +14,6 @@ $sidebar = array_merge($sidebar_artist_all, $sidebar);
 $sidebar_menus = array($sidebar);
 
 // include module artistic works; ?>
-<article class="project-artwoks">
-    <?php require( TEMPLATEPATH . '/template-parts/modules/artist.php' ); ?>
+<article class="project-artworks">
+    <?php require( TEMPLATEPATH . '/template-parts/modules/artworks.php' ); ?>
 </article>

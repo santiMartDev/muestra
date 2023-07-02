@@ -66,7 +66,7 @@
 <?php if(!empty($project['artist'])):  ?>
     <div class="section" id="<?php echo slugify($tab_text_artist); ?>">
         <p class="tabs__title"><?php echo $tab_text_artist; ?></p>
-        <?php require( TEMPLATEPATH . '/template-parts/project/project-artist.php' ); ?>
+        <?php require( TEMPLATEPATH . '/template-parts/project/project-artworks.php' ); ?>
     </div>
 <?php endif; ?>
 

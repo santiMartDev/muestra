@@ -7,16 +7,30 @@
 
 .singleHeader {
   display: flex;
-  align-items: center;
+  row-gap: 15px;
+  flex-direction: column;
+
 
   @extend %module-top-medium;
   @extend %module-bottom-small;
   border-bottom: 1px solid color("gray", "light");
+
+  @include up(md) {
+    flex-direction: row;
+    align-items: center;
+    column-gap: 30px;
+	}
   
   img {
-    height: 80px;
-    aspect-ratio: 1 / 1;
-    margin-right: 40px;
+    object-fit: contain;
+    height: 40px;
+
+    @include down(md) {
+      align-self: flex-start;
+    }
+    @include up(md) {
+      height: 80px;
+    }
   }
 
   h1 {

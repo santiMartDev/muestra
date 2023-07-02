@@ -7997,41 +7997,8 @@
   Splide.defaults = {};
   Splide.STATES = STATES;
 
-  const projectGallery = document.querySelector(".project-gallery .gallery");
-  const projectThumbs = document.querySelector(".project-gallery .thumbs");
-  const gallery = () => {
-    var main = new Splide(projectGallery, {
-      type: 'loop',
-      pagination: false,
-      arrows: true,
-      padding: 200,
-      autoWidth: true,
-      gap: 30
-    });
-    var thumbnails = new Splide(projectThumbs, {
-      rewind: true,
-      fixedWidth: 120,
-      fixedHeight: 72,
-      isNavigation: true,
-      gap: 30,
-      focus: "center",
-      pagination: false,
-      arrows: false,
-      dragMinThreshold: {
-        mouse: 4,
-        touch: 10
-      },
-      breakpoints: {
-        640: {
-          fixedWidth: 66,
-          fixedHeight: 38
-        }
-      }
-    });
-    main.sync(thumbnails);
-    main.mount();
-    thumbnails.mount();
-  };
+  document.querySelector(".project-gallery .gallery");
+  document.querySelector(".project-gallery .thumbs");
 
   const artworksGallery = document.querySelector(".project-artwoks .gallery");
   const artworksThumbs = document.querySelector(".project-artwoks .thumbs");
@@ -8069,45 +8036,23 @@
     thumbnails.mount();
   };
 
-  // const optionsGet = {
-  //   method: "GET",
-  //   headers: {
-  //     "Content-Type": "application/x-www-form-urlencoded",
-  //   },
-  //   mode: "cors",
-  //   cache: "default",
-  // };
-
-  function podcast() {
-    // const res = await fetch("https://accounts.spotify.com/api/token", optionsPost);
-    // const data = await res.json();
-
-    window.onSpotifyWebPlaybackSDKReady = () => {
-      const token = "BQAAUy0SCRa3WshbVYnPGFoZKxsX_oqh3ZOjkCA_QJUc981J9LISNlmqmmm7M9223iKAzMyLR7ICLrD1dbYhcgYuTVwcQuQ-FRYvUaijFB1xCZqfO_BTcqnOoNkFXnxs8MoW5RFy3OGBtp5HcdlZxy0vavFbCyO4Hyl8vTyEo6Wg0sG-Lt0toDgWR1TJcORFeCCICg";
-      const player = new Spotify.Player({
-        name: "Imaneo Player",
-        getOAuthToken: cb => {
-          cb(token);
-        },
-        volume: 0.5
-      });
-      console.log("funca");
-
-      // Ready
-      player.addListener("ready", ({
-        device_id
-      }) => {
-        console.log("Ready with Device ID", device_id);
-      });
-
-      // Not Ready
-      player.addListener("not_ready", ({
-        device_id
-      }) => {
-        console.log("Device ID has gone offline", device_id);
-      });
-    };
-  }
+  const accordionMenu = () => {
+    new Accordion(".navbar--mobile", {
+      onOpen: () => {
+        const acNotActive = document.querySelectorAll('.ac:not(.is-active)');
+        console.log(acNotActive);
+        acNotActive.forEach(el => {
+          el.classList.add('is-disable');
+        });
+      },
+      onClose: () => {
+        const acNotActive = document.querySelectorAll('.ac:not(.is-active)');
+        acNotActive.forEach(el => {
+          el.classList.remove('is-disable');
+        });
+      }
+    });
+  };
 
   async function map() {
     let map = L.map("mapID", {
@@ -8176,14 +8121,56 @@
     });
   }
 
-  podcast();
+  // Menu function
+
+  function menu() {
+    let bodyEl = document.body,
+      content = document.querySelector("#wrapper"),
+      openbtn = document.getElementById("menu-open"),
+      closebtn = document.getElementById("menu-close"),
+      botones = document.querySelectorAll(".sidenav a"),
+      isOpen = false;
+    function init() {
+      initEvents();
+    }
+    function initEvents() {
+      openbtn.addEventListener("click", toggleMenu);
+      if (closebtn) {
+        closebtn.addEventListener("click", toggleMenu);
+      }
+      botones.forEach(function (element) {
+        element.addEventListener("click", toggleMenu);
+      });
+
+      // close the menu element if the target it´s not the menu element or one of its descendants..
+      content.addEventListener("click", function (ev) {
+        var target = ev.target;
+        if (isOpen && target !== openbtn) {
+          toggleMenu();
+        }
+      });
+    }
+
+    // toggle menu
+    function toggleMenu() {
+      if (isOpen) {
+        bodyEl.classList.remove("menu-open");
+      } else {
+        bodyEl.classList.add("menu-open");
+      }
+      isOpen = !isOpen;
+    }
+
+    // init
+    init();
+  }
+
   const beforeStart = () => {
     menuHeader();
+    accordionMenu();
+    menu();
     const galleryExist = document.getElementsByClassName("gallery");
-    if (galleryExist.length > 0) {
-      // lgGallery();
-      gallery();
-    }
+    if (galleryExist.length > 0) ;
     const tabsExist = document.getElementsByClassName("tab");
     if (tabsExist.length > 0) {
       tabs();

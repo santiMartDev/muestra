@@ -10,33 +10,22 @@ $content = (!empty($podcast['content'])) ? $podcast['content'] : '';
 
 <article>
 
-    <?php //if($podcasts): ?>
-        <?php //foreach ($podcasts as $item) { ?>
-            <?php //echo $item['url'] ?>
-        <?php //} ?>
-    <?php //endif; ?>
+    <section class="player" id="embed-iframe"></section>
 
+    <?php if($podcasts): ?>
     <section class="podcast">
-        <figure>
-            <picture>
-                <img src="<?php bloginfo('template_url') ?>/dist/assets/logos/logo-header.png" alt="">
-            </picture>
-        </figure>
-        <section>
-            <p></p>
-            <div>
-                <button class="spotify__play">
-                    <img src="<?php bloginfo('template_url') ?>/dist/assets/icons/icon-player-play" alt="">
-                </button>
-            </div>
-        </section>
+        <?php foreach ($podcasts as $item) { ?>
+            <?php echo $item['url'] ?>
+            <?php echo $item['title'] ?>
+        <?php } ?>
     </section>
+    <?php endif; ?>
 
     <section>
-        <?php //echo $content; ?>
-        <?php //require( TEMPLATEPATH . '/template-parts/modules/credits.php' ); ?>
+        <?php echo $content; ?>
+        <?php require( TEMPLATEPATH . '/template-parts/modules/credits.php' ); ?>
     </section>
 
-    <?php //require( TEMPLATEPATH . '/template-parts/modules/sidebar.php' ); ?>
+    <?php require( TEMPLATEPATH . '/template-parts/modules/sidebar.php' ); ?>
 
 </article>

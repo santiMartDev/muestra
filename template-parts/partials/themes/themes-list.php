@@ -15,7 +15,7 @@ $themes = new WP_Query( $args );
 
 <?php if ( $themes->have_posts() ) { ?>
 
-    <article class="themes">
+    <article class="themes-list">
 
         <?php while ( $themes->have_posts() ) {  $themes->the_post();
 

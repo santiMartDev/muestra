@@ -7,9 +7,10 @@
     <?php //get_template_part( 'template-parts/menus/languages'); ?>
 
     <!-- burger -->
-    <!-- <a class="header__burger" id="menu-open">
+    <a class="header__burger" id="menu-open">
         <span></span>
         <span></span>
-    </a> -->
+        <span></span>
+    </a>
 
 </div>

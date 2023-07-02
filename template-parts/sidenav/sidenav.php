@@ -1,10 +1,5 @@
-<div class="sidenav">
+<aside class="sidenav">
 
-    <div class="sidenav-bg"></div>
+	<?php get_template_part( 'template-parts/menus/mobile' ); ?>
 
-    <div class="sidenav-content">
-        <?php /* Sidenav navigation */ ?>
-		<?php get_template_part( 'template-parts/menus/navigation' ); ?>
-    </div>
-
-</div>
+</aside>

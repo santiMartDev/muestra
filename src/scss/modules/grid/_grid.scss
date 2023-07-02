@@ -2,16 +2,23 @@
 //		Modules: Grid
 // --------------------------------------------------
 
-@use 'settings' as *;
-@use 'helper' as *;
-@use 'tools' as *;
+@use "settings" as *;
+@use "helper" as *;
+@use "tools" as *;
 
 .grid {
-    @extend %module-vertical-medium;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-flow: row;
+  @extend %module-vertical-medium;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-flow: row;
 
-    column-gap: $spacer;
-    row-gap: $spacer;
+  column-gap: $spacer;
+  row-gap: $spacer;
+
+  @include up(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include up(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
