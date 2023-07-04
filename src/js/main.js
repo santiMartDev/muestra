@@ -2,6 +2,7 @@ import menuHeader from "./modules/header.js";
 import tabs from "./modules/tabs.js";
 import gallery from "./modules/gallery";
 import artworks from "./modules/artworks";
+import podcast from "./modules/podcast";
 import accordionMenu from "./modules/accordionMenu";
 import map from "./modules/map.js";
 import menu from "./init/menu.js";
@@ -10,6 +11,12 @@ const beforeStart = () => {
   menuHeader();
   accordionMenu();
   menu();
+
+  const mapExist = document.getElementsByClassName("project-map");
+  if (mapExist.length > 0) {
+    console.log("map funca")
+    map();
+  }
 
   const galleryExist = document.getElementsByClassName("gallery");
   if (galleryExist.length > 0) {
@@ -28,10 +35,9 @@ const beforeStart = () => {
 };
 
 const start = () => {
-  const mapExist = document.getElementsByClassName("project-map");
-  if (mapExist.length > 0) {
-    map();
-  }
+
+
+  podcast();
 };
 
 // load
@@ -44,3 +50,5 @@ window.addEventListener("load", () => {
     start();
   }, 1000);
 });
+
+

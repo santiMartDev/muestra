@@ -8,8 +8,6 @@ if ( $themes->have_posts() ) {
 
         $theme = get_field('themes', get_the_ID() );
 
-        // var_dump($theme);
-
         $credits = (!empty($theme['credits'])) ? $theme['credits'] : '';
         $media = (!empty($theme['media'])) ? $theme['media'] : '';
         $content = (!empty($theme['content'])) ? $theme['content'] : '';

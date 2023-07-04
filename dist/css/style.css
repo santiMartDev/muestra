@@ -382,7 +382,7 @@ h1, .h1, .fs-1 {
   }
 }
 
-.module-architects .profile section p:first-of-type, .about header, .singleHeader, .pageHeader, .module-default section p,
+.module-architects .profile section p:first-of-type, .about header, .podcast .shk, .singleHeader, .pageHeader, .module-default section p,
 .module-default section h4,
 .module-default section figure, .module-credits .item:not(:last-of-type), .module-bottom-small {
   padding-bottom: clamp(
@@ -392,7 +392,7 @@ h1, .h1, .fs-1 {
   );
 }
 @media (min-width: 992px) {
-  .module-architects .profile section p:first-of-type, .about header, .singleHeader, .pageHeader, .module-default section p,
+  .module-architects .profile section p:first-of-type, .about header, .podcast .shk, .singleHeader, .pageHeader, .module-default section p,
   .module-default section h4,
   .module-default section figure, .module-credits .item:not(:last-of-type), .module-bottom-small {
     padding-bottom: clamp(
@@ -681,7 +681,7 @@ body {
   }
 }
 
-.module-narrow, .module-horizontal-medium {
+.podcast .shk, .module-narrow, .module-horizontal-medium {
   padding-left: clamp(
     1.56rem,
     5.82vw + 0.14rem,
@@ -694,7 +694,7 @@ body {
   );
 }
 @media (min-width: 992px) {
-  .module-narrow, .module-horizontal-medium {
+  .podcast .shk, .module-narrow, .module-horizontal-medium {
     padding-left: clamp(
     3.75rem,
     4.46vw + 0.98rem,
@@ -1909,6 +1909,25 @@ h6, .h6, .fs-6 {
 .menu-open .sidenav {
   transform: translateX(0);
   transition: all 0.3s;
+}
+
+.podcast .shk {
+  --background-body: #cccccc;
+  --color-title: black;
+  --color-artist: black;
+  --color-button: black;
+  --color-button-disabled: black;
+  --color-handle: black;
+  --color-handle-disabled:var(--color-handle);
+  --color-bar-loaded: #fdff7f;
+  --color-bar-played: black;
+  --color-time: black;
+  --color-spinner: black;
+}
+
+.podcast .shk-player {
+  box-shadow: none;
+  border-radius: 0 0 10px 10px;
 }
 
 .tabs__title {

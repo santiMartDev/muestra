@@ -1,0 +1,29 @@
+
+@use 'helper' as *;
+@use 'settings' as *;
+@use 'tools' as *;
+
+.podcast .shk {
+    --background-body: #cccccc;                           
+    --color-title: black;                               
+    --color-artist: black;                             
+    --color-button: black;       
+    --color-button-disabled: black;                  
+    --color-handle: black;     
+    --color-handle-disabled:var(--color-handle);            
+    --color-bar-loaded: #fdff7f;                   
+    --color-bar-played: black;
+    --color-time: black;                             
+    --color-spinner: black;      
+}
+
+
+.podcast .shk {
+    @extend %module-horizontal-medium;
+    @extend %module-bottom-small;
+
+    &-player {
+        box-shadow: none;
+        border-radius: 0 0 10px 10px;
+    }
+}

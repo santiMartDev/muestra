@@ -19,6 +19,15 @@ async function map() {
     }
   ).addTo(map);
 
+  const mapTab = document.querySelector('.tab[href="#map"]');
+
+  mapTab.addEventListener('click', () => {
+    setTimeout(() => {
+      L.remove(map);
+
+    }, 500);
+  })
+
   /////////////////////////////////////////////////////////////////////////
 
   const res = await fetch('http://imaneo.local/wp-json/wp/v2/project?per_page=20');

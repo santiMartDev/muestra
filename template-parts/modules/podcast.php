@@ -1,4 +1,5 @@
-<?php // Module Artist ?>
+<?php // Module Artist 
+?>
 
 <?php
 
@@ -10,21 +11,28 @@ $content = (!empty($podcast['content'])) ? $podcast['content'] : '';
 
 <article>
 
-    <?php if($podcasts): ?>
-    <section class="podcast">
+    <?php if ($podcasts) : ?>
         <?php foreach ($podcasts as $item) { ?>
-            <?php echo $item['url'] ?>
-            <?php echo $item['title'] ?>
+            <section 
+                class="podcast" 
+                data-file="<?php echo $item['audio']; ?>"
+                data-title="<?php echo $item['title']; ?>"
+                data-intervenants="<?php echo $item['intervenants']; ?>"
+                data-cover="<?php echo $item['cover']; ?>"
+                >
+            </section>
         <?php } ?>
-        <?php //echo do_shortcode( '[podcastplayer feed_url="https://feeds.simplecast.com/54nAGcIl"]' ); ?>
-    </section>
     <?php endif; ?>
 
-    <section>
-        <?php echo $content; ?>
-        <?php require( TEMPLATEPATH . '/template-parts/modules/credits.php' ); ?>
-    </section>
+    <section class="module-default">
+        
+        <section>
+            <?php echo $content; ?>
+            <?php require(TEMPLATEPATH . '/template-parts/modules/credits.php'); ?>
+        </section>
 
-    <?php require( TEMPLATEPATH . '/template-parts/modules/sidebar.php' ); ?>
+        <?php require(TEMPLATEPATH . '/template-parts/modules/sidebar.php'); ?>
+
+    </section>
 
 </article>

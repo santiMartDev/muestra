@@ -24,8 +24,8 @@ function ffTheme_assets() {
     // Include JS Libraries
     wp_enqueue_script( 'finuras-scripts-gsap', get_template_directory_uri().'/dist/libs/gsap.min.js', array(), '1.0.0' , 'true' );
     wp_enqueue_script( 'finuras-scripts-gsap-scroll', get_template_directory_uri().'/dist/libs/ScrollTrigger.min.js', array(), '1.0.0' , 'true' );
-    wp_enqueue_script( 'finuras-scripts-split', get_template_directory_uri().'/dist/libs/SplitText3.min.js', array(), '1.0.0' , 'true' );
     wp_enqueue_script( 'finuras-scripts-leaflet', get_template_directory_uri().'/dist/libs/leaflet//leaflet.js', array(), '1.0.0' , 'true' );
+    wp_enqueue_script( 'finuras-scripts-accordion', get_template_directory_uri().'/dist/libs/accordion.min.js', array(), '1.0.0' , 'true' );
     wp_enqueue_script( 'finuras-scripts-accordion', get_template_directory_uri().'/dist/libs/accordion.min.js', array(), '1.0.0' , 'true' );
 
     // Include JS
