@@ -16,16 +16,16 @@ if ( $themes->have_posts() ) {
 
         <?php require( TEMPLATEPATH . '/template-parts/modules/media.php' ); ?>
 
-        <div>
+        <article class="module-default">
 
-            <div>
-                <?php echo $content;?>
+            <section>
+                <?php echo $content; ?>
                 <?php require( TEMPLATEPATH . '/template-parts/modules/credits.php' ); ?>
-            </div>
+            </section>
 
             <?php require( TEMPLATEPATH . '/template-parts/modules/sidebar.php' ); ?>
 
-        </div>
+        </article>
 
         <?php
 

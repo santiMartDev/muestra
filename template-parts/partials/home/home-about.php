@@ -7,7 +7,9 @@ $about = $template['about'];
 // contents
 $about_title = (!empty($about['title'])) ? '<p>' . $about['title'] . '</p>' : '';
 $about_content = (!empty($about['content'])) ? $about['content'] : '';
-$about_image = (!empty($about['image'])) ? '<img src="' . $about['image']['sizes']['theme_full'] . '" alt="" >' : '';
+$about_image = (!empty($about['image'])) ? '<figure><img src="' . $about['image']['sizes']['theme_full'] . '" alt="" ></figure>' : '';
+
+$button_echo = '';
 
 // buttons
 if (!empty($about['buttons'])) :
@@ -25,8 +27,6 @@ endif;
 			<?php echo $about_content; ?>
 			<?php echo $button_echo; ?>
 		</div>
-		<figure>
-			<?php echo $about_image; ?>
-		</figure>
+		<?php echo $about_image; ?>
 	</section>
 </article>
