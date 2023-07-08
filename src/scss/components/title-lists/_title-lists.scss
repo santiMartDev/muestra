@@ -1,0 +1,20 @@
+@use 'helper' as *;
+@use 'tools' as *;
+
+.lists-title {
+	@extend %module-top-medium;
+	@extend %module-bottom-small;
+
+	display: flex;
+	align-items: center;
+
+	img {
+		height: 25px;
+		margin-right: 10px;
+	}
+
+	p {
+		@extend %h4;
+		text-transform: uppercase;
+	}
+}

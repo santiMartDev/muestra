@@ -240,7 +240,7 @@ h1, .h1, .fs-1 {
   }
 }
 
-.artworks-item > p, .podcast-item > p, .project-education .title__edu, .education-list .title__edu, .module-architects .profile section p:first-of-type, .module-architects .profile figure ul li p, .about header p, .tabs__title, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
+.project-education .title__edu, .education-list .title__edu, .module-architects .profile section p:first-of-type, .module-architects .profile figure ul li p, .about header p, .lists-title p, .tabs__title, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
   font-size: clamp(
     1rem,
     0.33vw + 0.92rem,
@@ -248,7 +248,7 @@ h1, .h1, .fs-1 {
   );
 }
 @media (min-width: 992px) {
-  .artworks-item > p, .podcast-item > p, .project-education .title__edu, .education-list .title__edu, .module-architects .profile section p:first-of-type, .module-architects .profile figure ul li p, .about header p, .tabs__title, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
+  .project-education .title__edu, .education-list .title__edu, .module-architects .profile section p:first-of-type, .module-architects .profile figure ul li p, .about header p, .lists-title p, .tabs__title, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
     font-size: clamp(
     1.25rem,
     1.12vw + 0.56rem,
@@ -382,7 +382,7 @@ h1, .h1, .fs-1 {
   }
 }
 
-.artworks-item > p, .podcast-item > p, .module-architects .profile section p:first-of-type, .about header, .podcast .shk, .singleHeader, .pageHeader, .module-default section p,
+.module-architects .profile section p:first-of-type, .about header, .lists-title, .podcast .shk, .singleHeader, .pageHeader, .module-default section p,
 .module-default section h4,
 .module-default section figure, .module-credits .item:not(:last-of-type), .module-bottom-small {
   padding-bottom: clamp(
@@ -392,7 +392,7 @@ h1, .h1, .fs-1 {
   );
 }
 @media (min-width: 992px) {
-  .artworks-item > p, .podcast-item > p, .module-architects .profile section p:first-of-type, .about header, .podcast .shk, .singleHeader, .pageHeader, .module-default section p,
+  .module-architects .profile section p:first-of-type, .about header, .lists-title, .podcast .shk, .singleHeader, .pageHeader, .module-default section p,
   .module-default section h4,
   .module-default section figure, .module-credits .item:not(:last-of-type), .module-bottom-small {
     padding-bottom: clamp(
@@ -430,7 +430,7 @@ h1, .h1, .fs-1 {
   }
 }
 
-.artworks-item, .podcast-item, .education-list, .singleHeader, .pageHeader, .module-top-medium {
+.education-list, .lists-title, .singleHeader, .pageHeader, .module-top-medium {
   padding-top: clamp(
     1.25rem,
     3.33vw + 0.44rem,
@@ -438,7 +438,7 @@ h1, .h1, .fs-1 {
   );
 }
 @media (min-width: 992px) {
-  .artworks-item, .podcast-item, .education-list, .singleHeader, .pageHeader, .module-top-medium {
+  .education-list, .lists-title, .singleHeader, .pageHeader, .module-top-medium {
     padding-top: clamp(
     3.13rem,
     6.7vw + -1.03rem,
@@ -1948,6 +1948,18 @@ h6, .h6, .fs-6 {
   margin-right: 20px;
 }
 
+.lists-title {
+  display: flex;
+  align-items: center;
+}
+.lists-title img {
+  height: 25px;
+  margin-right: 10px;
+}
+.lists-title p {
+  text-transform: uppercase;
+}
+
 .module-video-gallery {
   height: 100%;
   background-color: #131313;
@@ -2115,7 +2127,7 @@ h6, .h6, .fs-6 {
 }
 .project-map .map__layer .card {
   position: relative;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   left: 0;
   display: inline-block;
@@ -2331,14 +2343,6 @@ h6, .h6, .fs-6 {
      object-fit: contain;
   margin-right: 10px;
 }
-.podcast-item > p {
-  text-transform: uppercase;
-}
-
-.artworks-item > p {
-  text-transform: uppercase;
-}
-
 @font-face {
   font-family: "lg";
   src: url("../fonts/lg.woff2?io9a6k") format("woff2"), url("../fonts/lg.ttf?io9a6k") format("truetype"), url("../fonts/lg.woff?io9a6k") format("woff"), url("../fonts/lg.svg?io9a6k#lg") format("svg");

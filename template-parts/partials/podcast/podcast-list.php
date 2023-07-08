@@ -15,9 +15,9 @@ $projects = new WP_Query($args);
 
 <?php if ($projects->have_posts()) { ?>
 
-    <div class="podcast-list">
+<div class="podcast-list">
 
-        <?php while ($projects->have_posts()) {
+    <?php while ($projects->have_posts()) {
             $projects->the_post();
 
             $project = get_field('projects');
@@ -25,6 +25,7 @@ $projects = new WP_Query($args);
 
             // assign artist field to module artist
             $podcast = $project['podcast'];
+            $info = $project['project_info'];
 
             $sidebar = array(
                 array('title' => __('Related Project', 'imaneo'), 'link' => '', 'blank' => false),
@@ -36,18 +37,21 @@ $projects = new WP_Query($args);
 
             if ($podcasts) : ?>
 
-                <div class="podcast-item">
+    <div class="podcast-item">
 
-                    <p><?php echo get_the_title(); ?></p>
-                    <?php require(TEMPLATEPATH . '/template-parts/modules/podcast.php'); ?>
-
-                </div>
-
-            <?php endif; ?>
-
-        <?php }
-        wp_reset_postdata();  ?>
+        <div class="lists-title">
+            <img src="<?php echo $info['icon']['url']; ?>" alt="">
+            <p><?php echo get_the_title(); ?></p>
+        </div>
+        <?php require(TEMPLATEPATH . '/template-parts/modules/podcast.php'); ?>
 
     </div>
+
+    <?php endif; ?>
+
+    <?php }
+        wp_reset_postdata();  ?>
+
+</div>
 
 <?php } ?>
