@@ -1,0 +1,78 @@
+// --------------------------------------------------
+//		Modules: Gallery
+// --------------------------------------------------
+
+@use 'settings' as *;
+@use 'helper' as *;
+@use 'tools' as *;
+
+.module-video-gallery {
+	height: 100%;
+	@extend %module-vertical-medium;
+
+	background-color: color('black');
+
+	.module-wrapper {
+		height: 60vh;
+
+		display: flex;
+		gap: 30px;
+
+		overflow: hidden;
+	}
+
+	.videos {
+		height: 100%;
+		width: 80%;
+
+		video {
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+
+	.covers {
+		height: 100%;
+		width: 20%;
+
+		.splide__slide {
+			position: relative;
+
+			&:hover {
+				img {
+					filter: brightness(0.2);
+					transition: all 0.4s ease;
+				}
+
+				p {
+					opacity: 1;
+					transition: all 0.4s ease;
+				}
+			}
+
+			img {
+				position: relative;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				height: 100%;
+				filter: brightness(1);
+				transition: all 0.4s ease;
+			}
+
+			p {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 2;
+				opacity: 0;
+
+				transition: all 0.4s ease;
+
+				color: white;
+				text-align: center;
+			}
+		}
+	}
+}

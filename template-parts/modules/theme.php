@@ -1,37 +1,36 @@
-<?php // Module Theme ?>
+<?php // Module Theme 
+?>
 
 <?php
 
 // loop projects by term taxonomy
-if ( $themes->have_posts() ) {
-    while ( $themes->have_posts() ) {  $themes->the_post();
+// if ($themes->have_posts()) {
+//     while ($themes->have_posts()) {
+//         $themes->the_post();
 
-        $theme = get_field('themes', get_the_ID() );
+//         $theme = get_field('themes', get_the_ID());
+//     }
+//     wp_reset_postdata();
+// }
 
-        $credits = (!empty($theme['credits'])) ? $theme['credits'] : '';
-        $media = (!empty($theme['media'])) ? $theme['media'] : '';
-        $content = (!empty($theme['content'])) ? $theme['content'] : '';
+$topics = $project['related_topics'];
 
-        ?>
-
-        <?php require( TEMPLATEPATH . '/template-parts/modules/media.php' ); ?>
-
-        <article class="module-default">
-
-            <section>
-                <?php echo $content; ?>
-                <?php require( TEMPLATEPATH . '/template-parts/modules/credits.php' ); ?>
-            </section>
-
-            <?php require( TEMPLATEPATH . '/template-parts/modules/sidebar.php' ); ?>
-
-        </article>
-
-        <?php
-
-
-    } wp_reset_postdata();
-
-}
+$credits = (!empty($topics['credits'])) ? $topics['credits'] : '';
+$videos = (!empty($topics['videos'])) ? $topics['videos'] : '';
+$content = (!empty($topics['content'])) ? $topics['content'] : '';
 
 ?>
+<article class="module-video-gallery">
+    <?php require(TEMPLATEPATH . '/template-parts/modules/topics.php'); ?>
+</article>
+
+<article class="module-default">
+
+    <section>
+        <?php echo $content; ?>
+        <?php require(TEMPLATEPATH . '/template-parts/modules/credits.php'); ?>
+    </section>
+
+    <?php require(TEMPLATEPATH . '/template-parts/modules/sidebar.php'); ?>
+
+</article>

@@ -5,11 +5,5 @@
 // Librerias Externas (NODE)
 @use './node_modules/lightgallery/scss/lightgallery-bundle';
 @use './node_modules/@splidejs/splide/dist/css/splide.min.css';
+@use './node_modules/@splidejs/splide-extension-video/dist/css/splide-extension-video.min.css';
 @use './shikwasa';
-
-// Customize libraries
-// @import 'gdpr';
-// @import 'splide';
-// @import 'swiper';
-
-// @import 'lightgallery';
