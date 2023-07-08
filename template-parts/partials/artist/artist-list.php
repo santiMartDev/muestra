@@ -2,22 +2,23 @@
 
 // argumentos query architects
 $args = array(
-    'post_type'       	=> 'project',
-    'posts_per_page'  	=> -1,
-    'orderby' 			=> 'menu-order',
-    'order'				=> 'ASC'
+    'post_type'           => 'project',
+    'posts_per_page'      => -1,
+    'orderby'             => 'menu-order',
+    'order'                => 'ASC'
 );
 
 // get all architects
-$projects = new WP_Query( $args );
+$projects = new WP_Query($args);
 
 ?>
 
-<?php if ( $projects->have_posts() ) { ?>
+<?php if ($projects->have_posts()) { ?>
 
-    <div class="grid grid-artist">
+    <div class="artworks-list">
 
-        <?php while ( $projects->have_posts() ) {  $projects->the_post();
+        <?php while ($projects->have_posts()) {
+            $projects->the_post();
 
             $project = get_field('projects');
 
@@ -32,19 +33,21 @@ $projects = new WP_Query( $args );
             );
 
             $sidebar_menus = array($sidebar);
+            $media = (!empty($artist['media'])) ? $artist['media'] : '';
 
-            echo '<div class="grid-item">';
+            if ($media) : ?>
 
-            echo get_the_title();
+                <div class="artworks-item">
 
-                // include module education
-                require( TEMPLATEPATH . '/template-parts/modules/artist.php' );
+                    <p><?php echo get_the_title(); ?></p>
+                    <?php require(TEMPLATEPATH . '/template-parts/modules/artworks.php'); ?>
 
-            echo '</div>';
+                </div>
 
-            ?>
+            <?php endif; ?>
 
-        <?php }  wp_reset_postdata();  ?>
+        <?php }
+        wp_reset_postdata();  ?>
 
     </div>
 

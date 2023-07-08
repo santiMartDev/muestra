@@ -1,6 +1,3 @@
-import Splide from '@splidejs/splide';
-import { Video } from '@splidejs/splide-extension-video';
-
 import menuHeader from './modules/header.js';
 import tabs from './modules/tabs.js';
 import gallery from './modules/gallery';
@@ -11,8 +8,6 @@ import map from './modules/map.js';
 import videoGallery from './modules/videoGallery.js';
 import menu from './init/menu.js';
 
-videoGallery();
-
 const beforeStart = () => {
 	menuHeader();
 	accordionMenu();
@@ -20,7 +15,6 @@ const beforeStart = () => {
 
 	const mapExist = document.getElementsByClassName('project-map');
 	if (mapExist.length > 0) {
-		console.log('map funca');
 		map();
 	}
 
@@ -38,10 +32,18 @@ const beforeStart = () => {
 	if (artworksExist != null) {
 		artworks();
 	}
+
+	const videoGalleryExist = document.querySelector('.videos');
+	if (videoGalleryExist != null) {
+		videoGallery();
+	}
 };
 
 const start = () => {
-	podcast();
+	const podcastExist = document.querySelector('.podcast');
+	if (podcastExist != null) {
+		podcast();
+	}
 };
 
 // load

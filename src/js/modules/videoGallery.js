@@ -5,11 +5,16 @@ import { Video } from '@splidejs/splide-extension-video';
 const videoGallery = () => {
 	const galleryVideos = document.querySelector('.videos.splide');
 	const galleryCovers = document.querySelector('.covers.splide');
+	const module = document.querySelector(
+		'.module-video-gallery .module-wrapper'
+	);
 
-	const galleryHeight = galleryVideos.offsetHeight;
+	const galleryHeight = module.offsetHeight;
+	console.log(galleryHeight);
 
 	const videosSlider = new Splide(galleryVideos, {
 		heightRatio: 0.5625,
+		height: '60vh',
 		cover: true,
 		pagination: false,
 		arrows: false,
@@ -21,9 +26,9 @@ const videoGallery = () => {
 	const coversSlider = new Splide(galleryCovers, {
 		direction: 'ttb',
 		type: 'loop',
-		height: galleryHeight,
 		rewind: true,
 		autoHeight: true,
+		height: '60vh',
 		isNavigation: true,
 		pagination: false,
 		arrows: false,

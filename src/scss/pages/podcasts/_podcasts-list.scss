@@ -1,0 +1,11 @@
+@use 'settings' as *;
+@use 'tools' as *;
+
+.podcast-item {
+	@extend %module-top-medium;
+	& > p {
+		@extend %module-bottom-small;
+		@extend %h4;
+		text-transform: uppercase;
+	}
+}

@@ -2,26 +2,26 @@
 
 // argumentos query architects
 $args = array(
-    'post_type'       	=> 'project',
-    'posts_per_page'  	=> -1,
-    'orderby' 			=> 'menu-order',
-    'order'				=> 'ASC'
+    'post_type'           => 'project',
+    'posts_per_page'      => -1,
+    'orderby'             => 'menu-order',
+    'order'                => 'ASC'
 );
 
 // get all architects
-$projects = new WP_Query( $args );
+$projects = new WP_Query($args);
 
 ?>
 
-<?php if ( $projects->have_posts() ) { ?>
+<?php if ($projects->have_posts()) { ?>
 
-    <div class="grid grid-podcast">
+    <div class="podcast-list">
 
-        <?php while ( $projects->have_posts() ) {  $projects->the_post();
+        <?php while ($projects->have_posts()) {
+            $projects->the_post();
 
             $project = get_field('projects');
 
-            // var_dump($project);
 
             // assign artist field to module artist
             $podcast = $project['podcast'];
@@ -32,19 +32,21 @@ $projects = new WP_Query( $args );
             );
 
             $sidebar_menus = array($sidebar);
+            $podcasts = (!empty($podcast['podcast'])) ? $podcast['podcast'] : '';
 
-            echo '<div class="grid-item">';
+            if ($podcasts) : ?>
 
-            echo get_the_title();
+                <div class="podcast-item">
 
-                // include module education
-                require( TEMPLATEPATH . '/template-parts/modules/podcast.php' );
+                    <p><?php echo get_the_title(); ?></p>
+                    <?php require(TEMPLATEPATH . '/template-parts/modules/podcast.php'); ?>
 
-            echo '</div>';
+                </div>
 
-            ?>
+            <?php endif; ?>
 
-        <?php }  wp_reset_postdata();  ?>
+        <?php }
+        wp_reset_postdata();  ?>
 
     </div>
 
