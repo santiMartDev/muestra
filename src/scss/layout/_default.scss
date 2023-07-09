@@ -2,101 +2,128 @@
 //		Layout: Default
 // --------------------------------------------------
 
-@use "settings" as *;
-@use "tools" as *;
+@use 'settings' as *;
+@use 'tools' as *;
 
 .module-default {
-  @extend %module-left-medium;
-  @include spacing("margin", "medium");
+	@extend %module-left-medium;
 
-  border-left: 1px solid color("gray", "light");
+	display: flex;
+	flex-direction: column-reverse;
+	row-gap: 40px;
 
-  display: flex;
-  flex-direction: row;
-  column-gap: 80px;
+	@include down(lg) {
+		padding: 0 !important;
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
 
-  section {
-    width: 75%;
+	@include down(md) {
+		padding: 0 !important;
+		margin-top: 20px;
+		margin-bottom: 40px;
+	}
 
-    p,
-    h4,
-    figure {
-      @extend %module-bottom-small;
-    }
+	@include up(lg) {
+		@include spacing('margin', 'medium');
 
-    p {
-      line-height: 1.5em;
-    }
+		border-left: 1px solid color('gray', 'light');
 
-    h4,
-    strong {
-      font-weight: 500;
-    }
+		display: flex;
+		flex-direction: row;
+		column-gap: 80px;
+	}
 
-    img {
-      width: 100%;
-      object-fit: cover;
+	section {
+		width: 100%;
 
-      &::before {
-        display: inline-block;
+		@include up(lg) {
+			width: 75%;
+		}
 
-        content: "";
-        background-image: url("../assets/icons/icon-rombo-green.svg");
+		p,
+		h4,
+		figure {
+			@extend %module-bottom-small;
+		}
 
-        height: 16px;
-        width: 16px;
-        margin-bottom: 20px;
-      }
-    }
+		p {
+			line-height: 1.5em;
+		}
 
-    em {
-      @extend %h6;
-      width: 100%;
-      display: inline-block;
-      text-align: center;
-      padding-top: 10px;
-      color: color("gray");
-      font-style: italic;
-    }
-  }
+		h4,
+		strong {
+			font-weight: 500;
+		}
 
-  aside.module-sidebar {
-    height: fit-content;
-    width: 25%;
-    padding-left: 30px;
-    border-left: 1px solid color("gray", "light");
+		img {
+			width: 100%;
+			object-fit: cover;
 
-    li {
-      padding-bottom: 10px;
-    }
-  }
+			&::before {
+				display: inline-block;
 
-  .gallery-item {
-    display: none;
-    width: 100% !important;
+				content: '';
+				background-image: url('../assets/icons/icon-rombo-green.svg');
 
-    &:first-child {
-      display: block;
-    }
+				height: 16px;
+				width: 16px;
+				margin-bottom: 20px;
+			}
+		}
 
-    img {
-      border: 0 !important;
-    }
-  }
+		em {
+			@extend %h6;
+			width: 100%;
+			display: inline-block;
+			text-align: center;
+			padding-top: 10px;
+			color: color('gray');
+			font-style: italic;
+		}
+	}
+
+	aside.module-sidebar {
+		height: fit-content;
+		width: 100%;
+		padding-left: 30px;
+		border-left: 1px solid color('gray', 'light');
+
+		@include up(lg) {
+			width: 25%;
+		}
+
+		li {
+			padding-bottom: 10px;
+		}
+	}
+
+	.gallery-item {
+		display: none;
+		width: 100% !important;
+
+		&:first-child {
+			display: block;
+		}
+
+		img {
+			border: 0 !important;
+		}
+	}
 }
 
 .module-credits {
-  .item {
-    &:not(:last-of-type) {
-      @extend %module-bottom-small;
-    }
+	.item {
+		&:not(:last-of-type) {
+			@extend %module-bottom-small;
+		}
 
-    p {
-      padding: 0;
-    }
-    
-    p:first-of-type {
-      color: color("gray", "light");
-    }
-  }
+		p {
+			padding: 0;
+		}
+
+		p:first-of-type {
+			color: color('gray', 'light');
+		}
+	}
 }

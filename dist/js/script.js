@@ -7999,19 +7999,27 @@
 
   const gallery = () => {
     // get animated titles
-    const galleries = document.querySelectorAll(".gallery-wrap");
+    const galleries = document.querySelectorAll('.gallery-wrap');
 
     // animation for each title
     galleries.forEach(gallery => {
-      const galleryMain = gallery.querySelector(".gallery");
-      const galleryThumbs = gallery.querySelector(".thumbs");
+      const galleryMain = gallery.querySelector('.gallery');
+      const galleryThumbs = gallery.querySelector('.thumbs');
       var main = new Splide(galleryMain, {
         type: 'loop',
         pagination: false,
         arrows: true,
         padding: 200,
         autoWidth: true,
-        gap: 30
+        gap: 30,
+        breakpoints: {
+          992: {
+            arrows: false,
+            padding: 0,
+            autoWidth: false,
+            perPage: 1
+          }
+        }
       });
       var thumbnails = new Splide(galleryThumbs, {
         rewind: true,
@@ -8019,7 +8027,7 @@
         fixedHeight: 72,
         isNavigation: true,
         gap: 30,
-        focus: "center",
+        focus: 'center',
         pagination: false,
         arrows: false,
         dragMinThreshold: {
@@ -9127,7 +9135,7 @@
   console.log(`%c\u{1F34A}%c Shikwasa Podcast Player v2.2.1 %c https://shikwasa.js.org`, "background-color:#00869B40;padding:4px;", "background:#00869B80;color:#fff;padding:4px 0", "padding: 2px 0;");
 
   const podcast = () => {
-    const podcasts = document.querySelectorAll(".podcast");
+    const podcasts = document.querySelectorAll('.podcast');
     console.log(podcasts);
     podcasts.forEach(item => {
       const title = item.dataset.title;
@@ -9142,6 +9150,9 @@
           artist: intervenants,
           cover: cover,
           src: file
+        },
+        fixed: {
+          type: 'static'
         }
       });
     });
@@ -9165,13 +9176,27 @@
   };
 
   async function map() {
-    let map = L.map('mapID', {
-      center: [45.9938059682257, 1.746981380568295],
-      zoom: 5,
-      scrollWheelZoom: false,
-      attributionControl: false,
-      zoomControl: false
-    });
+    let options = {};
+    if (window.innerWidth >= 992) {
+      options = {
+        center: [45.9938059682257, 1.746981380568295],
+        zoom: 5,
+        scrollWheelZoom: false,
+        attributionControl: false,
+        zoomControl: false
+      };
+    } else if (window.innerWidth < 992) {
+      options = {
+        center: [41.385426500377, 2.1748621070164464],
+        zoom: 4.4,
+        scrollWheelZoom: true,
+        attributionControl: false,
+        zoomControl: false,
+        dragging: true,
+        doubleClickZoom: true
+      };
+    }
+    let map = L.map('mapID', options);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
       id: 'imaneo/cliocwqxc000501o1fenj57fa',
       accessToken: 'pk.eyJ1IjoiaW1hbmVvIiwiYSI6ImNsaW9ieXU4eDE2dzIzcXBrZW1qcTQzanYifQ.gKI80ipqU4w5RyGNuJYbMA'

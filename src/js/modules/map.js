@@ -1,13 +1,29 @@
 import gsap from 'gsap';
 
 async function map() {
-	let map = L.map('mapID', {
-		center: [45.9938059682257, 1.746981380568295],
-		zoom: 5,
-		scrollWheelZoom: false,
-		attributionControl: false,
-		zoomControl: false,
-	});
+	let options = {};
+
+	if (window.innerWidth >= 992) {
+		options = {
+			center: [45.9938059682257, 1.746981380568295],
+			zoom: 5,
+			scrollWheelZoom: false,
+			attributionControl: false,
+			zoomControl: false,
+		};
+	} else if (window.innerWidth < 992) {
+		options = {
+			center: [41.385426500377, 2.1748621070164464],
+			zoom: 4.4,
+			scrollWheelZoom: true,
+			attributionControl: false,
+			zoomControl: false,
+			dragging: true,
+			doubleClickZoom: true,
+		};
+	}
+
+	let map = L.map('mapID', options);
 
 	L.tileLayer(
 		'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',

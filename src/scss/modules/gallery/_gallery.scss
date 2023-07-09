@@ -6,41 +6,43 @@
 @use 'helper' as *;
 @use 'tools' as *;
 
+.project-gallery,
+.artwoks {
+	@extend %module-vertical-medium;
 
-.project-gallery, .artwoks {
-    @extend %module-vertical-medium; 
+	height: 100%;
+	background-color: color('black');
 
-    height: 100%;
-    background-color: color('black');
+	.thumbs {
+		@extend %module-top-small;
+	}
 
-    .thumbs {
-        @extend %module-top-small; 
-    }
+	.splide__arrow {
+		background: none !important;
+		height: 48px;
+		width: 48px;
+	}
 
-    .splide__arrow {
-        background: none !important;
-        height: 48px;
-        width: 48px;
-    }
+	.splide__arrow--prev {
+		left: 2vw;
+	}
 
-    .splide__arrow--prev {
-        left: 2vw;
-    }
+	.splide__arrow--next {
+		right: 2vw;
+	}
 
-    .splide__arrow--next {
-        right: 2vw;
-    }
-    
-    .gallery {
-        .splide__slide {
-            height: 50vh;
+	.gallery {
+		.splide__slide {
+			height: 100%;
 
-            img {
-                object-fit: contain;
-                height: 100%;
-            }
-        }
+			@include up(lg) {
+				height: 50vh;
+			}
 
-    }
-
+			img {
+				object-fit: contain;
+				height: 100%;
+			}
+		}
+	}
 }

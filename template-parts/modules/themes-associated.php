@@ -20,8 +20,8 @@ $videos = (!empty($topics['videos'])) ? $topics['videos'] : '';
 $content = (!empty($topics['content'])) ? $topics['content'] : '';
 
 ?>
-<article class="module-video">
-    <video src="https://vimeo.com/783453912"></video>
+<article class="module-video-gallery">
+    <?php require(TEMPLATEPATH . '/template-parts/modules/topics.php'); ?>
 </article>
 
 <article class="module-default">

@@ -34,6 +34,6 @@ $sidebar_theme_extra = '';
 
 $sidebar_menus = array($sidebar_theme);
 
-require(TEMPLATEPATH . '/template-parts/modules/theme.php');
+require(TEMPLATEPATH . '/template-parts/modules/themes-associated.php');
 
 ?>
