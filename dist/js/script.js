@@ -12487,10 +12487,16 @@
       isNavigation: true,
       pagination: false,
       arrows: false,
-      gap: 10
-      // padding: { top: 0, bottom: -40 },
+      gap: 10,
+      breakpoints: {
+        991: {
+          direction: 'ltr',
+          autoWidth: true,
+          autoheight: false,
+          height: '10vh'
+        }
+      }
     });
-
     videosSlider.sync(coversSlider);
     videosSlider.mount({
       Video
