@@ -19,6 +19,8 @@ $themes = new WP_Query( $args );
 
         <?php while ( $themes->have_posts() ) {  $themes->the_post();
 
+            $project_icon = '';
+
             // theme contenrs
             $theme_title 		= get_the_title();
             $theme_permalink 	= get_the_permalink();
