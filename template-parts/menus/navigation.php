@@ -24,21 +24,25 @@
     </nav>
 
     <nav class="nav--submenu" role="navigation">
+
         <ul class="submenu submenu1">
             <li><a href="<?php echo get_the_permalink(24); ?>">Néo-mauresque au Maghreb</a></li>
             <li><a href="<?php echo get_the_permalink(158); ?>">Nationalisme & impérialisme</a></li>
             <li><a href="<?php echo get_the_permalink(199); ?>">Un style pour les synagogues</a></li>
             <li><a href="<?php echo get_the_permalink(198); ?>">Diffusion</a></li>
         </ul>
+
         <ul class="submenu submenu2">
-            <li><a href="<?php echo get_the_permalink(132); ?>">Regards artistiques</a></li>
-            <li><a href="<?php echo get_the_permalink(140); ?>">Parole de gens</a></li>
-            <li><a href="<?php echo get_the_permalink(142); ?>">Activité pédagogique</a></li>
+            <li><a href="<?php echo get_the_permalink(132); ?>"><?php ('Artistic looks', 'imaneo'); ?></a></li>
+            <li><a href="<?php echo get_the_permalink(140); ?>"><?php ('People’s words', 'imaneo'); ?></a></li>
+            <li><a href="<?php echo get_the_permalink(142); ?>"><?php ('Educational activities', 'imaneo'); ?></a></li>
         </ul>
+
         <ul class="submenu submenu3">
-            <li><a href="<?php echo get_the_permalink(129); ?>">Acteurs de la construction</a></li>
-            <li><a href="<?php echo get_the_permalink(130); ?>">Bibliographie</a></li>
-            <li><a href="<?php echo get_the_permalink(131); ?>">Intervenants</a></li>
+            <li><a href="<?php echo get_the_permalink(129); ?>"><?php ('Construction actors', 'imaneo'); ?></a></li>
+            <li><a href="<?php echo get_the_permalink(130); ?>"><?php ('Bibliographiy', 'imaneo'); ?></a></li>
+            <li><a href="<?php echo get_the_permalink(131); ?>"><?php ('Specialists', 'imaneo'); ?></a></li>
         </ul>
+
     </nav>
 </section>
