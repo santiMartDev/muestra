@@ -1,7 +1,7 @@
 <?php
 
 // get_fields
-$template = get_field('template');
+$template = get_field( 'template', 670 );
 
 // contents
 $about_title = (!empty($template['about']['title'])) ? '<p>' . $template['about']['title'] . '</p>' : '';
@@ -11,9 +11,11 @@ $about_image = (!empty($template['about']['image'])) ? '<figure><img src="' . $t
 $button_echo = '';
 
 // buttons
-if (!empty($about['buttons'])) :
-	foreach ($about['buttons'] as $button) {
-		$button_echo .= '<a href="' . $button['link'] . '" class="about__link link"><span>' . $button['title'] . '</span></a>';
+if (!empty($template['about']['buttons'])) :
+	foreach ($template['about']['buttons'] as $button) {
+		$link = (!empty($button['link']['url'])) ? $button['link']['url'] : '';
+		$title = (!empty($button['title'])) ? $button['title'] : '';
+		$button_echo .= '<a href="' . $link . '" class="about__link link"><span>' . $title . '</span></a>';
 	}
 endif;
 
