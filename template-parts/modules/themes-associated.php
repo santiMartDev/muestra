@@ -1,4 +1,4 @@
-<?php // Module Theme 
+<?php // Module Theme
 ?>
 
 <?php
@@ -16,13 +16,14 @@
 $topics = $project['related_topics'];
 
 $credits = (!empty($topics['credits'])) ? $topics['credits'] : '';
-$videos = (!empty($topics['videos'])) ? $topics['videos'] : '';
 $content = (!empty($topics['content'])) ? $topics['content'] : '';
 
+// media
+$media['videos'] = (!empty($topics['videos'])) ? $topics['videos'] : '';
+
 ?>
-<article class="module-video-gallery">
-    <?php require(TEMPLATEPATH . '/template-parts/modules/topics.php'); ?>
-</article>
+
+<?php require(TEMPLATEPATH . '/template-parts/modules/media.php'); ?>
 
 <article class="module-default">
 

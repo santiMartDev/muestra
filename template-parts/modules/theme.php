@@ -1,4 +1,4 @@
-<?php // Module Theme 
+<?php // Module Theme
 ?>
 
 <?php
@@ -13,16 +13,18 @@
 //     wp_reset_postdata();
 // }
 
-$topics = $project['related_topics'];
+$theme = get_field('themes');
 
-$credits = (!empty($topics['credits'])) ? $topics['credits'] : '';
-$videos = (!empty($topics['videos'])) ? $topics['videos'] : '';
-$content = (!empty($topics['content'])) ? $topics['content'] : '';
+$credits = (!empty($theme['credits'])) ? $theme['credits'] : '';
+$content = (!empty($theme['content'])) ? $theme['content'] : '';
+
+// media
+$media = (!empty($theme['media'])) ? $theme['media'] : '';
 
 ?>
-<article class="module-video">
-    <video src="https://vimeo.com/783453912"></video>
-</article>
+
+
+<?php require(TEMPLATEPATH . '/template-parts/modules/media.php'); ?>
 
 <article class="module-default">
 

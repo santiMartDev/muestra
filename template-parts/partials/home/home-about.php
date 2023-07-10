@@ -1,13 +1,12 @@
 <?php
 
 // get_fields
-$template = get_field('template', 'options');
-$about = $template['about'];
+$template = get_field('template');
 
 // contents
-$about_title = (!empty($about['title'])) ? '<p>' . $about['title'] . '</p>' : '';
-$about_content = (!empty($about['content'])) ? $about['content'] : '';
-$about_image = (!empty($about['image'])) ? '<figure><img src="' . $about['image']['sizes']['theme_full'] . '" alt="" ></figure>' : '';
+$about_title = (!empty($template['about']['title'])) ? '<p>' . $template['about']['title'] . '</p>' : '';
+$about_content = (!empty($template['about']['content'])) ? $template['about']['content'] : '';
+$about_image = (!empty($template['about']['image'])) ? '<figure><img src="' . $template['about']['image']['sizes']['theme_full'] . '" alt="" ></figure>' : '';
 
 $button_echo = '';
 
