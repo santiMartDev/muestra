@@ -33,15 +33,15 @@
         </ul>
 
         <ul class="submenu submenu2">
-            <li><a href="<?php echo get_the_permalink(132); ?>"><?php ('Artistic looks', 'imaneo'); ?></a></li>
-            <li><a href="<?php echo get_the_permalink(140); ?>"><?php ('People’s words', 'imaneo'); ?></a></li>
-            <li><a href="<?php echo get_the_permalink(142); ?>"><?php ('Educational activities', 'imaneo'); ?></a></li>
+            <li><a href="<?php echo get_the_permalink(132); ?>"><?php ('Artistic looks','imaneo'); ?></a></li>
+            <li><a href="<?php echo get_the_permalink(140); ?>"><?php ('People’s words','imaneo'); ?></a></li>
+            <li><a href="<?php echo get_the_permalink(142); ?>"><?php ('Educational activities','imaneo'); ?></a></li>
         </ul>
 
         <ul class="submenu submenu3">
-            <li><a href="<?php echo get_the_permalink(129); ?>"><?php ('Construction actors', 'imaneo'); ?></a></li>
-            <li><a href="<?php echo get_the_permalink(130); ?>"><?php ('Bibliographiy', 'imaneo'); ?></a></li>
-            <li><a href="<?php echo get_the_permalink(131); ?>"><?php ('Specialists', 'imaneo'); ?></a></li>
+            <li><a href="<?php echo get_the_permalink(129); ?>"><?php ('Construction actors','imaneo'); ?></a></li>
+            <li><a href="<?php echo get_the_permalink(130); ?>"><?php ('Bibliographiy','imaneo'); ?></a></li>
+            <li><a href="<?php echo get_the_permalink(131); ?>"><?php ('Specialists','imaneo'); ?></a></li>
         </ul>
 
     </nav>
