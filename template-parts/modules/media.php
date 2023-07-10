@@ -4,40 +4,43 @@
 
     <article class="video">
         <iframe src="https://player.vimeo.com/video/<?php echo $media['video']; ?>" frameborder="0" webkitallowfullscreen
-            mozallowfullscreen allowfullscreen></iframe>
+            mozallowfullscreen allowfullscreen>
+        </iframe>
     </article>
 
 <?php // Video Single ?>
 
 <?php elseif (!empty($media['videos'])): ?>
 
-    <article class="module-wrapper">
+    <article class="module-video-gallery">
+        <article class="module-wrapper">
 
-        <section class="videos splide">
-            <div class="splide__track">
-                <div class="splide__list">
-                    <?php foreach ($media['videos'] as $video) { ?>
-                    <li class="splide__slide" data-splide-vimeo="<?php echo $video['link']; ?>">
-                        <img src="<?php echo $video['img']; ?>">
-                    </li>
-                    <?php } ?>
-                </div>
-            </div>
-        </section>
-
-        <section class="covers splide">
-            <div class="splide__track">
-                <div class="splide__list">
-                    <?php foreach ($media['videos'] as $video) { ?>
-                    <div class="splide__slide">
-                        <img src="<?php echo $video['img']; ?>" alt="">
-                        <p><?php echo $video['title']; ?></p>
+            <section class="videos splide">
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <?php foreach ($media['videos'] as $video) { ?>
+                        <li class="splide__slide" data-splide-vimeo="<?php echo $video['link']; ?>">
+                            <img src="<?php echo $video['img']; ?>">
+                        </li>
+                        <?php } ?>
                     </div>
-                    <?php } ?>
                 </div>
-            </div>
-        </section>
+            </section>
 
+            <section class="covers splide">
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <?php foreach ($media['videos'] as $video) { ?>
+                        <div class="splide__slide">
+                            <img src="<?php echo $video['img']; ?>" alt="">
+                            <p><?php echo $video['title']; ?></p>
+                        </div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </section>
+
+        </article>
     </article>
 
 <?php // Gallery ?>

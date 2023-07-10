@@ -1,17 +1,6 @@
-<?php // Module Theme
-?>
+<?php // Module Theme ?>
 
 <?php
-
-// loop projects by term taxonomy
-// if ($themes->have_posts()) {
-//     while ($themes->have_posts()) {
-//         $themes->the_post();
-
-//         $theme = get_field('themes', get_the_ID());
-//     }
-//     wp_reset_postdata();
-// }
 
 $topics = $project['related_topics'];
 
