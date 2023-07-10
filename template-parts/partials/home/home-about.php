@@ -1,7 +1,7 @@
 <?php
 
 // get_fields
-$template = get_field( 'template', 670 );
+$template = get_field( 'template', apply_filters( 'wpml_object_id', 670, 'page' ) );
 
 // contents
 $about_title = (!empty($template['about']['title'])) ? '<p>' . $template['about']['title'] . '</p>' : '';
