@@ -1,31 +1,14 @@
-<?php // Module Education 
-?>
+<?php // Module Education  ?>
 
-<?php if ($education) : ?>
-    <?php foreach ($education as $item) {
+<p class="title__edu"><?php echo get_the_title(get_the_ID());  ?></p>
 
-        // get education fields
-        $education_info = get_field('education', $item->ID);
+<section class="module-default">
 
-        // common sidebar to education
-        $sidebar_education = array(array('title' => __('Download', 'imaneo'), 'link' => array('url' => $education_info['download']['url']), 'blank' => true));
+    <!-- Education content -->
+    <section>
+        <?php echo the_content();  ?>
+    </section>
 
-        // config menus to education
-        $sidebar_menus = array($sidebar_education, $sidebar_education_extra);
+    <?php require(TEMPLATEPATH . '/template-parts/modules/sidebar.php'); ?>
 
-    ?>
-        <p class="title__edu"><?php echo get_the_title($item->ID);  ?></p>
-        <section class="module-default">
-
-            <!-- Education content -->
-            <section>
-                <?php echo $item->post_content;  ?>
-            </section>
-
-            <?php require(TEMPLATEPATH . '/template-parts/modules/sidebar.php'); ?>
-
-        </section>
-
-
-    <?php } ?>
-<?php endif; ?>
+</section>
