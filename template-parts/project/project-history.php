@@ -3,7 +3,7 @@
 <?php
 
 // assign history field to module artist
-// $history = $project['history'];
+$history = $project['history'];
 
 // // sidebar default
 // $sidebar_history = array(
