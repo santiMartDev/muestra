@@ -19,7 +19,7 @@ $architects = new WP_Query( $args );
 
         <?php while ( $architects->have_posts() ) {  $architects->the_post();
 
-            var_dump(apply_filters( 'wpml_object_id', get_the_ID(), 'architect', TRUE, 'fr' ));
+            // var_dump(apply_filters( 'wpml_object_id', get_the_ID(), 'architect', TRUE, 'fr' ));
 
             // get projects by architect
             $projects = get_posts(array(
@@ -34,7 +34,7 @@ $architects = new WP_Query( $args );
                 )
             ));
 
-            var_dump($projects)
+            // var_dump($projects)
 
             ?>
 
