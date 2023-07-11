@@ -19,17 +19,22 @@ $architects = new WP_Query( $args );
 
         <?php while ( $architects->have_posts() ) {  $architects->the_post();
 
+            var_dump(apply_filters( 'wpml_object_id', get_the_ID(), 'architect', TRUE, 'fr' ));
+
             // get projects by architect
             $projects = get_posts(array(
                 'post_type' => 'project',
+                'suppress_filters' => false,
                 'meta_query' => array(
                     array(
                         'key' => 'projects_project_info_architects', // name of custom field
-                        'value' => '"' . get_the_ID() . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
+                        'value' => '"' . apply_filters( 'wpml_object_id', get_the_ID(), 'architect', TRUE, 'fr' ) . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
                         'compare' => 'LIKE'
                     )
                 )
             ));
+
+            var_dump($projects)
 
             ?>
 
@@ -44,8 +49,13 @@ $architects = new WP_Query( $args );
                     <?php if( $projects ): ?>
                         <ul>
                             <?php foreach( $projects as $project ):
+
+                            // var_dump($project);
+
+                                $project_id = apply_filters( 'wpml_object_id', $project->ID, 'project', TRUE );
+
                                 // project info
-                                $project_info = get_field('projects', $project);
+                                $project_info = get_field('projects', $project_id);
                                 $project_icon = (!empty($project_info['project_info']['icon'])) ? '<img src="'.$project_info['project_info']['icon']['sizes']['theme_full'].'">' : '' ;
                                 $project_location = (!empty($project_info['project_info']['location'])) ? '<span>'.$project_info['project_info']['location'].'</span>' : '' ;
                                 ?>
@@ -53,9 +63,9 @@ $architects = new WP_Query( $args );
                                     <picture>
                                         <?php echo $project_icon; ?>
                                     </picture>
-                                    <p><?php echo get_the_title($project); ?></p>
+                                    <p><?php echo get_the_title($project_id); ?></p>
                                     <?php echo $project_location; ?>
-                                    <a href="<?php echo get_permalink($project) ?>"><?php _e('Read more', 'imaneo'); ?></a>
+                                    <a href="<?php echo get_permalink($project_id) ?>"><?php _e('Read more', 'imaneo'); ?></a>
                                 </li>
                             <?php endforeach; ?>
                         </ul>
