@@ -66,7 +66,7 @@ $educations = new WP_Query( $args );
                 }
 
                 // config extra education menu - title and buttons
-                $sidebar_education_extra = array( array('title' => __('Related topcis', 'imaneo'), 'link' => '', 'blank' => false));
+                $sidebar_education_extra = array( array('title' => __('Related topics', 'imaneo'), 'link' => '', 'blank' => false));
                 $sidebar_education_extra = array_merge ($sidebar_education_extra , $sidebar_education_themes );
 
                 // config menus to education
