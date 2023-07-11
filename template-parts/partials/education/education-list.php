@@ -21,6 +21,7 @@ $educations = new WP_Query( $args );
 
             // get info field
             $education_info = get_field('education');
+            $education_id = get_the_ID();
 
             // common sidebar to education
             $sidebar_education = array(
@@ -29,7 +30,7 @@ $educations = new WP_Query( $args );
 
             // get terms taxonomy of this education
             $terms = get_the_terms( get_the_ID(), 'project_theme');
-            
+
             // loop terms taxonomy
             if($terms) {
                 foreach ($terms as $term) {
@@ -60,9 +61,9 @@ $educations = new WP_Query( $args );
                         while ( $themes->have_posts() ) {  $themes->the_post();
                             $sidebar_education_themes[] = array('title' => get_the_title(), 'link' => array('url' => get_the_permalink()), 'blank' => false);
                         } wp_reset_postdata();
-                    }                    
+                    }
 
-                }      
+                }
 
                 // config extra education menu - title and buttons
                 $sidebar_education_extra = array( array('title' => __('Related topcis', 'imaneo'), 'link' => '', 'blank' => false));
@@ -73,7 +74,7 @@ $educations = new WP_Query( $args );
 
             }   else {
                 $sidebar_menus = array( $sidebar_education );
-            }        
+            }
 
             // include module education
             require( TEMPLATEPATH . '/template-parts/modules/education.php' );

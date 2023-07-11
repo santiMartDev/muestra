@@ -1,4 +1,4 @@
-<?php // Project Theme 
+<?php // Project Theme
 ?>
 
 <?php
@@ -29,7 +29,7 @@
 
 // }
 
-$sidebar_theme = array(array('title' => __('All related topics', 'imaneo'), 'link' => array('url' => get_the_permalink(132)), 'blank' => true));
+$sidebar_theme = array(array('title' => __('All related topics', 'imaneo'), 'link' => array('url' => get_the_permalink(128)), 'blank' => true));
 $sidebar_theme_extra = '';
 
 $sidebar_menus = array($sidebar_theme);
