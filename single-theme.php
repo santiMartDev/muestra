@@ -85,10 +85,17 @@ if (have_posts()) : while (have_posts()) : the_post();
                 wp_reset_postdata();
             }
 
+<<<<<<< Updated upstream
 
             // if ( $educations->have_posts() || $projects->have_posts() ) {
             //     $sidebar_menus[] = array( $sidebar_theme_education , $sidebar_theme_projects );
             // }
+=======
+            if ($educations->have_posts() || $projects->have_posts()) {
+                $sidebar_menus = array($sidebar_theme_education, $sidebar_theme_projects);
+            }
+            var_dump($term);
+>>>>>>> Stashed changes
         }
 
         require(TEMPLATEPATH . '/template-parts/modules/theme.php');

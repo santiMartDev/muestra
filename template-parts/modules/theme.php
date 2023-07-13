@@ -11,17 +11,22 @@ $content = (!empty($theme['content'])) ? $theme['content'] : '';
 $media = (!empty($theme['media'])) ? $theme['media'] : '';
 
 ?>
+<<<<<<< Updated upstream
 
 
 <?php require(TEMPLATEPATH . '/template-parts/modules/media.php'); ?>
+=======
+<article class="module-video">
+>>>>>>> Stashed changes
 
-<article class="module-default">
 
-    <section>
-        <?php echo $content; ?>
-        <?php require(TEMPLATEPATH . '/template-parts/modules/credits.php'); ?>
-    </section>
+    <article class="module-default">
 
-    <?php require(TEMPLATEPATH . '/template-parts/modules/sidebar.php'); ?>
+        <section>
+            <?php echo $content; ?>
+            <?php require(TEMPLATEPATH . '/template-parts/modules/credits.php'); ?>
+        </section>
 
-</article>
+        <?php require(TEMPLATEPATH . '/template-parts/modules/sidebar.php'); ?>
+
+    </article>
