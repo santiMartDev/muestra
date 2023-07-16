@@ -2,72 +2,72 @@
 //		Layout: Footer
 // --------------------------------------------------
 
-@use "settings" as *;
-@use "helper" as *;
-@use "tools" as *;
+@use 'settings' as *;
+@use 'helper' as *;
+@use 'tools' as *;
 
 .footer {
+	border-top: 1px solid color('gray', 'light');
 
-  article {
-    display: flex;
-    flex-direction: column;
-    column-gap: $spacer;
+	article {
+		display: flex;
+		flex-direction: column;
+		column-gap: $spacer;
 
-    @include up(lg) {
-      flex-direction: row;
-    }
-  }
+		@include up(lg) {
+			flex-direction: row;
+		}
+	}
 
-  &__menu {
-    border-bottom: 1px solid color('gray', 'light');
-    @extend %module-vertical-small;
+	&__menu {
+		border-bottom: 1px solid color('gray', 'light');
+		@extend %module-vertical-small;
 
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      row-gap: 5px;
+		nav ul {
+			display: flex;
+			flex-wrap: wrap;
+			row-gap: 5px;
 
-      li {
-        font-weight: 500;
-        margin-right: 20px;
+			li {
+				font-weight: 500;
+				margin-right: 20px;
 
-        a {
-          @include down(lg) {
-            text-decoration: underline;
-          }
-        }
-      }
-    }
+				a {
+					@include down(lg) {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
 
-    &--half {
-      width: 100%;
+		&--half {
+			width: 100%;
 
-        @include up(lg) {
-          width: 50%;
-        }
-    }
-  }
+			@include up(lg) {
+				width: 50%;
+			}
+		}
+	}
 
-  &__title {
-    @extend %h4;
-    font-weight: 500;
+	&__title {
+		@extend %h4;
+		font-weight: 500;
 
-    display: flex;
-    align-items: center;
-    padding-bottom: 15px;
+		display: flex;
+		align-items: center;
+		padding-bottom: 15px;
 
-    &::before {
-      display: inline-block;
-      content: "";
-      height: 7px;
-      width: 7px;
-      background-image: url("../assets/icons/icon-rombo.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+		&::before {
+			display: inline-block;
+			content: '';
+			height: 7px;
+			width: 7px;
+			background-image: url('../assets/icons/icon-rombo.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
 
-      margin-right: 7px;
-    }
-  }
+			margin-right: 7px;
+		}
+	}
 }
-

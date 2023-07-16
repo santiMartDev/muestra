@@ -1,4 +1,5 @@
-<?php // Module Theme ?>
+<?php // Module Theme 
+?>
 
 <?php
 
@@ -11,14 +12,9 @@ $content = (!empty($theme['content'])) ? $theme['content'] : '';
 $media = (!empty($theme['media'])) ? $theme['media'] : '';
 
 ?>
-<<<<<<< Updated upstream
-
-
-<?php require(TEMPLATEPATH . '/template-parts/modules/media.php'); ?>
-=======
 <article class="module-video">
->>>>>>> Stashed changes
 
+    <?php require(TEMPLATEPATH . '/template-parts/modules/media.php'); ?>
 
     <article class="module-default">
 

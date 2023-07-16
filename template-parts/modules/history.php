@@ -5,12 +5,14 @@
 
 // artist variables
 $content = (!empty($history['content'])) ? $history['content'] : '';
+$media = (!empty($history['media'])) ? $history['media'] : '';
 ?>
+
+<?php require(TEMPLATEPATH . '/template-parts/modules/media.php'); ?>
 
 <article class="module-default">
 
     <section>
-        <?php require(TEMPLATEPATH . '/template-parts/modules/media.php'); ?>
         <?php echo $content; ?>
     </section>
 

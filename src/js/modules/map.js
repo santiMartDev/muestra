@@ -5,7 +5,7 @@ async function map() {
 
 	if (window.innerWidth >= 992) {
 		options = {
-			center: [45.9938059682257, 1.746981380568295],
+			center: [43.30233619381413, 5.384768223189564],
 			zoom: 5,
 			scrollWheelZoom: false,
 			attributionControl: false,
@@ -89,16 +89,16 @@ async function map() {
 		).addTo(map);
 	});
 
-	const greenMarker = document.querySelector(
-		'.leaflet-marker-pane img[alt="mainMarker"]'
-	);
+	// const greenMarker = document.querySelector(
+	// 	'.leaflet-marker-pane img[alt="mainMarker"]'
+	// );
 
-	gsap.timeline({
-		repeat: -1,
-	})
-		.to(greenMarker, { scale: 1, ease: 'power2.out', duration: 0.6 })
-		.to(greenMarker, { scale: 1.3, ease: 'power2.out', duration: 0.6 })
-		.to(greenMarker, { scale: 1, ease: 'power2.out', duration: 0.6 });
+	// gsap.timeline({
+	// 	repeat: -1,
+	// })
+	// 	.to(greenMarker, { scale: 1, ease: 'power2.out', duration: 0.6 })
+	// 	.to(greenMarker, { scale: 1.3, ease: 'power2.out', duration: 0.6 })
+	// 	.to(greenMarker, { scale: 1, ease: 'power2.out', duration: 0.6 });
 }
 
 export default map;

@@ -33,7 +33,8 @@ $sidebar_theme = array(array('title' => __('All related topics', 'imaneo'), 'lin
 $sidebar_theme_extra = '';
 
 $sidebar_menus = array($sidebar_theme);
-
-require(TEMPLATEPATH . '/template-parts/modules/themes-associated.php');
-
 ?>
+
+<article class="project-themes">
+    <?php require(TEMPLATEPATH . '/template-parts/modules/themes-associated.php'); ?>
+</article>

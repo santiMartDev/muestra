@@ -17,6 +17,7 @@ const gallery = () => {
 			pagination: false,
 			arrows: true,
 			padding: 200,
+			height: '50vh',
 			autoWidth: true,
 			gap: 30,
 			breakpoints: {

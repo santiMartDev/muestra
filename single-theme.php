@@ -80,22 +80,14 @@ if (have_posts()) : while (have_posts()) : the_post();
                     $sidebar_theme_projects[] = array('title' => get_the_title(),  'link' => array('url' => get_the_permalink()), 'blank' => false);
                 }
 
-                $sidebar_menus[] = $sidebar_theme_projects ;
+                $sidebar_menus[] = $sidebar_theme_projects;
 
                 wp_reset_postdata();
             }
 
-<<<<<<< Updated upstream
-
-            // if ( $educations->have_posts() || $projects->have_posts() ) {
-            //     $sidebar_menus[] = array( $sidebar_theme_education , $sidebar_theme_projects );
-            // }
-=======
             if ($educations->have_posts() || $projects->have_posts()) {
                 $sidebar_menus = array($sidebar_theme_education, $sidebar_theme_projects);
             }
-            var_dump($term);
->>>>>>> Stashed changes
         }
 
         require(TEMPLATEPATH . '/template-parts/modules/theme.php');

@@ -11,6 +11,6 @@
  */
 ?>
 
-<select id="languages" class="languages-navigation" role="navigation" aria-label="<?php esc_attr_e('Main menu', 'kartos'); ?>">
+<div id="languages" class="languages-navigation" role="navigation" aria-label="<?php esc_attr_e('Main menu', 'kartos'); ?>">
 	<?php echo ffTheme_language_switcher()  ?>
-</select>
+</div>

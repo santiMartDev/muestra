@@ -1,4 +1,5 @@
-<?php // Module Theme ?>
+<?php // Module Theme 
+?>
 
 <?php
 
@@ -6,9 +7,7 @@ $topics = $project['related_topics'];
 
 $credits = (!empty($topics['credits'])) ? $topics['credits'] : '';
 $content = (!empty($topics['content'])) ? $topics['content'] : '';
-
-// media
-$media['videos'] = (!empty($topics['videos'])) ? $topics['videos'] : '';
+$media = (!empty($topics['media'])) ? $topics['media'] : '';
 
 ?>
 

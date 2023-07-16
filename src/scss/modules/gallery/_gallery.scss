@@ -6,15 +6,25 @@
 @use 'helper' as *;
 @use 'tools' as *;
 
-.project-gallery,
-.artwoks {
+.gallery-wrap {
 	@extend %module-vertical-medium;
 
 	height: 100%;
 	background-color: color('black');
+}
 
-	.thumbs {
-		@extend %module-top-small;
+.gallery {
+	.splide__slide {
+		height: 100%;
+
+		@include up(lg) {
+			height: 50vh;
+		}
+
+		img {
+			object-fit: contain;
+			height: 100%;
+		}
 	}
 
 	.splide__arrow {
@@ -30,19 +40,8 @@
 	.splide__arrow--next {
 		right: 2vw;
 	}
+}
 
-	.gallery {
-		.splide__slide {
-			height: 100%;
-
-			@include up(lg) {
-				height: 50vh;
-			}
-
-			img {
-				object-fit: contain;
-				height: 100%;
-			}
-		}
-	}
+.thumbs {
+	@extend %module-top-small;
 }

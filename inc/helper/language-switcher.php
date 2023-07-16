@@ -17,8 +17,8 @@ if (!function_exists('ffTheme_language_switcher')) :
 
 		if (1 < count($languages)) {
 			foreach ($languages as $code => $l) {
-				if (!$l['active']) $langs2[] = '<option class="inactive"><a href="' . $l['url'] . '">' . strtoupper($code) . '</a></option>';
-				if ($l['active']) $langs1[] = '<option class="active"><span>' . strtoupper($code) . '</span></option>';
+				if (!$l['active']) $langs2[] = '<li class="inactive"><a href="' . $l['url'] . '">' . strtoupper($code) . '</a></li>';
+				if ($l['active']) $langs1[] = '<li class="active"><span>' . strtoupper($code) . '</span></li>';
 			}
 
 			$lang_ext[] = $langs1[0];

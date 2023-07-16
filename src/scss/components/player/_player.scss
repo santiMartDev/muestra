@@ -30,3 +30,22 @@
 		border-radius: 0 0 10px 10px;
 	}
 }
+
+.pdfs {
+	@extend %module-horizontal-medium;
+	@extend %module-bottom-medium;
+
+	display: flex;
+	gap: 30px;
+
+	@include down(lg) {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	a p {
+		@extend %h5;
+		text-decoration: underline;
+		font-weight: 700;
+	}
+}
