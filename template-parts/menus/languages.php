@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template part for displaying MENU LANGUAGES template part
  *
@@ -10,6 +11,6 @@
  */
 ?>
 
-<div id="languages" class="languages-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Main menu', 'kartos' ); ?>">
-	<?php // echo ffTheme_language_switcher()  ?>
-</div>
+<select id="languages" class="languages-navigation" role="navigation" aria-label="<?php esc_attr_e('Main menu', 'kartos'); ?>">
+	<?php echo ffTheme_language_switcher()  ?>
+</select>

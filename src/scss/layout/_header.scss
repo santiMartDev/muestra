@@ -2,31 +2,36 @@
 //		Layout
 // --------------------------------------------------
 
-
 @use 'helper' as *;
 @use 'tools' as *;
 
-
 .header {
-    display: flex;
-    column-gap: 30px;
-    justify-content: space-between;
-    margin-top: 30px;
-    height: min(12vh, 125px);
+	display: flex;
+	column-gap: 30px;
+	justify-content: space-between;
+	margin-top: 30px;
+	height: min(12vh, 125px);
 
+	&__brand {
+		width: 50%;
+	}
 
-    &__brand {
-        width: 50%;
-    }
-    
-    &__menu {
-        width: 50%;
+	&__menu {
+		width: 50%;
 
-        display: flex;
-        justify-content: flex-end;
+		display: none;
+		grid-template-columns: 1fr 50px;
 
-        @include up(lg) {
-            display: block;
-        }
-    }
+		@include up(lg) {
+			display: grid;
+		}
+
+		.nav--menu {
+		}
+
+		.languages-navigation {
+			justify-self: stretch;
+			align-self: stretch;
+		}
+	}
 }

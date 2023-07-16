@@ -1,4 +1,5 @@
-<?php // Module Artist ?>
+<?php // Module Artist 
+?>
 
 <?php
 
@@ -9,9 +10,10 @@ $content = (!empty($history['content'])) ? $history['content'] : '';
 <article class="module-default">
 
     <section>
+        <?php require(TEMPLATEPATH . '/template-parts/modules/media.php'); ?>
         <?php echo $content; ?>
     </section>
 
-    <?php require( TEMPLATEPATH . '/template-parts/modules/sidebar.php' ); ?>
+    <?php require(TEMPLATEPATH . '/template-parts/modules/sidebar.php'); ?>
 
 </article>

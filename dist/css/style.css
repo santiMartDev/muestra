@@ -966,13 +966,17 @@ li {
 }
 .header__menu {
   width: 50%;
-  display: flex;
-  justify-content: flex-end;
+  display: none;
+  grid-template-columns: 1fr 50px;
 }
 @media (min-width: 992px) {
   .header__menu {
-    display: block;
+    display: grid;
   }
+}
+.header__menu .languages-navigation {
+  justify-self: stretch;
+  align-self: stretch;
 }
 
 .footer article {
