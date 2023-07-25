@@ -432,7 +432,7 @@ h1, .h1, .fs-1 {
   }
 }
 
-.education-list, .lists-title, .singleHeader, .pageHeader, .module-top-medium {
+.education-list, .lists-title, .singleHeader, .pageHeader, .footer, .module-top-medium {
   padding-top: clamp(
     1.88rem,
     1.66vw + 1.47rem,
@@ -440,7 +440,7 @@ h1, .h1, .fs-1 {
   );
 }
 @media (min-width: 992px) {
-  .education-list, .lists-title, .singleHeader, .pageHeader, .module-top-medium {
+  .education-list, .lists-title, .singleHeader, .pageHeader, .footer, .module-top-medium {
     padding-top: clamp(
     3.13rem,
     6.7vw + -1.03rem,
@@ -973,9 +973,6 @@ li {
   align-self: stretch;
 }
 
-.footer {
-  border-top: 1px solid #cccccc;
-}
 .footer article {
   display: flex;
   flex-direction: column;
@@ -989,6 +986,9 @@ li {
 }
 .footer__menu {
   border-bottom: 1px solid #cccccc;
+}
+.footer__menu:first-of-type {
+  border-top: 1px solid #cccccc;
 }
 .footer__menu nav ul {
   display: flex;
@@ -2314,16 +2314,16 @@ h6, .h6, .fs-6 {
   background-size: cover;
   margin-left: 20px;
 }
-.about section figure {
+.about section a {
   width: 100%;
   cursor: pointer;
 }
 @media (min-width: 992px) {
-  .about section figure {
+  .about section a {
     width: 60%;
   }
 }
-.about section figure img {
+.about section a img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
