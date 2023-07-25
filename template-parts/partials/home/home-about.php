@@ -1,12 +1,12 @@
 <?php
 
 // get_fields
-$template = get_field( 'template', apply_filters( 'wpml_object_id', 670, 'page' ) );
+$template = get_field('template', apply_filters('wpml_object_id', 670, 'page'));
 
 // contents
 $about_title = (!empty($template['about']['title'])) ? '<p>' . $template['about']['title'] . '</p>' : '';
 $about_content = (!empty($template['about']['content'])) ? $template['about']['content'] : '';
-$about_image = (!empty($template['about']['image'])) ? '<figure><img src="' . $template['about']['image']['sizes']['theme_full'] . '" alt="" ></figure>' : '';
+$about_image = (!empty($template['about']['image'])) ? '<figure class="about__image"><img src="' . $template['about']['image']['sizes']['theme_full'] . '" alt="" ></figure>' : '';
 
 $button_echo = '';
 

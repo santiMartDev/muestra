@@ -2,68 +2,63 @@
 //		Elements: Entities
 // --------------------------------------------------
 
-@use "settings" as *;
-@use "tools" as *;
+@use 'settings' as *;
+@use 'tools' as *;
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 // html
 html {
-  overflow-x: hidden !important;
+	overflow-x: hidden !important;
 }
 
 // body
 body {
-  position: relative;
-  overflow-x: hidden !important;
-  -webkit-font-smoothing: antialiased;
+	position: relative;
+	overflow-x: hidden !important;
+	-webkit-font-smoothing: antialiased;
 
-  @extend %font-base;
-  @extend %body-horizontal-medium;
+	@extend %font-base;
+	@extend %body-horizontal-medium;
 
-  background-color: $body-bg;
-  color: $body-color;
+	background-color: $body-bg;
+	color: $body-color;
 }
 
 // paragrapgh
 p,
 li,
 a,
-small, button {
-  @extend %font-base;
-  color: color('black');
-  line-height: $line-height-base;
+small,
+button {
+	@extend %font-base;
+	color: color('black');
+	line-height: $line-height-base;
 }
 
 p,
 li,
 a,
 figure {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 // strong
 strong {
-  font-weight: 600;
+	font-weight: 600;
 }
 
 // links
 a {
-  color: $link-color;
-  text-decoration: $link-decoration;
-  transition: all 0.3s;
-  &:hover {
-    color: $link-hover-color;
-  }
-}
-
-// images
-img {
-  max-width: 100%;
-  height: auto;
+	color: $link-color;
+	text-decoration: $link-decoration;
+	transition: all 0.3s;
+	&:hover {
+		color: $link-hover-color;
+	}
 }
 
 // headings
@@ -73,14 +68,14 @@ h3,
 h4,
 h5,
 h6 {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 ul,
 li {
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+	list-style: none;
 }

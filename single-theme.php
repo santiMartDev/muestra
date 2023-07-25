@@ -6,6 +6,8 @@ if (have_posts()) : while (have_posts()) : the_post();
 
         // title
         $page_title = get_the_title();
+        $theme = get_field('themes');
+
         require(TEMPLATEPATH . '/template-parts/partials/page-header.php');
 
         // argumentos query themes

@@ -2,97 +2,96 @@
 //		Modules: Grid
 // --------------------------------------------------
 
-
 @use 'settings' as *;
 @use 'helper' as *;
 @use 'tools' as *;
 
 .about {
-  header {
-    @extend %module-bottom-small;
-    border-bottom: 1px solid color("gray", "light");
-    p {
-      @extend %h4;
-      font-weight: 500;
+	header {
+		@extend %module-bottom-small;
+		border-bottom: 1px solid color('gray', 'light');
+		p {
+			@extend %h4;
+			font-weight: 500;
 
-      &::before {
-        display: inline-block;
-        content: "";
-        height: 16px;
-        width: 16px;
-        background-image: url("../assets/icons/icon-rombo-blue.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+			&::before {
+				display: inline-block;
+				content: '';
+				height: 16px;
+				width: 16px;
+				background-image: url('../assets/icons/icon-rombo-blue.svg');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
 
-        margin-right: 20px;
-      }
-    }
-  }
+				margin-right: 20px;
+			}
+		}
+	}
 
-  section {
-    @extend %module-top-small;
+	section {
+		@extend %module-top-small;
 
-    display: flex;
-    flex-direction: column;
-    column-gap: $spacer;
+		display: flex;
+		flex-direction: column;
+		column-gap: $spacer;
 
-    @include up(lg) {
-      flex-direction: row;
-    }
+		@include up(lg) {
+			flex-direction: row;
+		}
 
-    .about__content {
-      width: 100%;
+		.about__content {
+			width: 100%;
 
-      @include up(lg) {
-        width: 40%;
-      }
+			@include up(lg) {
+				width: 40%;
+			}
 
-      p {
-        max-width: 100%;
+			p {
+				max-width: 100%;
 
-        @include up(lg) {
-          max-width: 75%;
-        }
-      }
+				@include up(lg) {
+					max-width: 75%;
+				}
+			}
 
-      .about__link {
-        
-        @extend %module-top-small;
-        
-        display: flex;
-        align-items: center;
+			.about__link {
+				@extend %module-top-small;
 
-        span {
-          font-weight: 600;
-        }
+				display: flex;
+				align-items: center;
 
-        &::after {
-            display: inline-block;
-            content: "";
-            height: 16px;
-            width: 16px;
-            background-image: url("../assets/icons/icon-arrow-right.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-      
-            margin-left: 20px;
-          }
-      }
-    }
+				span {
+					font-weight: 600;
+				}
 
-    figure {
-      width: 100%;
+				&::after {
+					display: inline-block;
+					content: '';
+					height: 16px;
+					width: 16px;
+					background-image: url('../assets/icons/icon-arrow-right.svg');
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: cover;
 
-      @include up(lg) {
-        width: 60%;
-      }
+					margin-left: 20px;
+				}
+			}
+		}
 
-      img {
-        object-fit: cover;
-        width: 100%;
-      }
-    }
-  }
+		figure {
+			width: 100%;
+			cursor: pointer;
+
+			@include up(lg) {
+				width: 60%;
+			}
+
+			img {
+				object-fit: cover;
+				width: 100%;
+			}
+		}
+	}
 }

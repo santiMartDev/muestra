@@ -175,7 +175,8 @@
 body, p,
 li,
 a,
-small, button {
+small,
+button {
   font-family: "Archivo", sans-serif;
   font-weight: 500;
   font-size: clamp(0.813rem, 0.731rem + 0.333vw, 0.938rem);
@@ -184,7 +185,8 @@ small, button {
   body, p,
   li,
   a,
-  small, button {
+  small,
+  button {
     font-size: 16px;
   }
 }
@@ -276,7 +278,7 @@ h1, .h1, .fs-1 {
   }
 }
 
-.header__brand .header__breadcrumbs ul li, .module-default section em, h6, .h6, .fs-6 {
+.header__brand .header__breadcrumbs ul li, h6, .h6, .fs-6 {
   font-size: clamp(
     0.75rem,
     0vw + 0.75rem,
@@ -284,7 +286,7 @@ h1, .h1, .fs-1 {
   );
 }
 @media (min-width: 992px) {
-  .header__brand .header__breadcrumbs ul li, .module-default section em, h6, .h6, .fs-6 {
+  .header__brand .header__breadcrumbs ul li, h6, .h6, .fs-6 {
     font-size: clamp(
     0.81rem,
     0vw + 0.81rem,
@@ -382,7 +384,7 @@ h1, .h1, .fs-1 {
   }
 }
 
-.module-architects .profile section p:first-of-type, .about header, .lists-title, .podcast .shk, .singleHeader, .pageHeader, .module-default section p,
+.module-architects .profile section p:first-of-type, .about header, .lists-title, .podcast .shk, .singleHeader, .pageHeader, .legal h1, .credits h1, .module-default section p,
 .module-default section h4,
 .module-default section figure, .module-credits .item:not(:last-of-type), .module-bottom-small {
   padding-bottom: clamp(
@@ -392,7 +394,7 @@ h1, .h1, .fs-1 {
   );
 }
 @media (min-width: 992px) {
-  .module-architects .profile section p:first-of-type, .about header, .lists-title, .podcast .shk, .singleHeader, .pageHeader, .module-default section p,
+  .module-architects .profile section p:first-of-type, .about header, .lists-title, .podcast .shk, .singleHeader, .pageHeader, .legal h1, .credits h1, .module-default section p,
   .module-default section h4,
   .module-default section figure, .module-credits .item:not(:last-of-type), .module-bottom-small {
     padding-bottom: clamp(
@@ -837,7 +839,8 @@ body {
 p,
 li,
 a,
-small, button {
+small,
+button {
   color: #131313;
   line-height: 1.6em;
 }
@@ -861,11 +864,6 @@ a {
 }
 a:hover {
   color: var(--color-black);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 h1,
@@ -1110,14 +1108,6 @@ body {
   width: 16px;
   margin-bottom: 20px;
 }
-.module-default section em {
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  padding-top: 10px;
-  color: #878787;
-  font-style: italic;
-}
 .module-default aside.module-sidebar {
   height: -moz-fit-content;
   height: fit-content;
@@ -1161,6 +1151,26 @@ body {
 }
 #languages .active {
   font-weight: 700;
+}
+
+.legal h4 {
+  padding-top: 40px;
+}
+.legal p {
+  padding-bottom: 10px;
+}
+
+.credits h4,
+.legal h4 {
+  padding-top: 40px;
+}
+.credits p,
+.legal p {
+  padding-bottom: 10px;
+}
+.credits a,
+.legal a {
+  text-decoration: underline;
 }
 
 .header__brand {
@@ -1757,20 +1767,12 @@ h6, .h6, .fs-6 {
 .pageHeader h1,
 .pageHeader p {
   font-weight: 500;
+  text-transform: uppercase;
 }
 .pageHeader h1 {
   line-height: 1em;
   text-transform: uppercase;
 }
-.pageHeader p {
-  max-width: 100%;
-}
-@media (min-width: 992px) {
-  .pageHeader p {
-    max-width: 70%;
-  }
-}
-
 .singleHeader {
   display: flex;
   row-gap: 15px;
@@ -2155,6 +2157,12 @@ h6, .h6, .fs-6 {
   right: 2vw;
 }
 
+.thumbs img {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .project-map {
   position: relative;
 }
@@ -2211,21 +2219,31 @@ h6, .h6, .fs-6 {
   position: relative;
   display: flex;
   justify-content: center;
-  height: 100%;
+  max-height: 70vh;
   background-color: #131313;
 }
-.video a::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
+.video a {
+  position: relative;
+  z-index: 100;
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.video a img:first-of-type {
+  position: relative;
+  z-index: 1;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  background-image: url("../assets/icons/icon-play-video.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: opacity(0.4);
+}
+.video a img:last-of-type {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80px;
 }
 
 .module-sidebar h4 {
@@ -2298,6 +2316,7 @@ h6, .h6, .fs-6 {
 }
 .about section figure {
   width: 100%;
+  cursor: pointer;
 }
 @media (min-width: 992px) {
   .about section figure {

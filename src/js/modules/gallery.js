@@ -32,7 +32,7 @@ const gallery = () => {
 
 		var thumbnails = new Splide(galleryThumbs, {
 			rewind: true,
-			fixedWidth: 120,
+			autoWidth: true,
 			fixedHeight: 72,
 			isNavigation: true,
 			gap: 30,
@@ -45,7 +45,6 @@ const gallery = () => {
 			},
 			breakpoints: {
 				640: {
-					fixedWidth: 66,
 					fixedHeight: 38,
 				},
 			},

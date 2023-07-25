@@ -2,50 +2,46 @@
 //		Components: Page Header
 // --------------------------------------------------
 
-@use "helper" as *;
-@use "tools" as *;
+@use 'helper' as *;
+@use 'tools' as *;
 
 .pageHeader {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
 
-  @extend %module-top-medium;
-  @extend %module-bottom-small;
-  
-  border-bottom: 1px solid color("gray", "light");
+	@extend %module-top-medium;
+	@extend %module-bottom-small;
 
-  @include up(lg) {
-    flex-direction: row;
-    column-gap: 30px;
-    justify-content: space-between;
-    align-items: flex-end;
+	border-bottom: 1px solid color('gray', 'light');
+
+	@include up(lg) {
+		flex-direction: row;
+		column-gap: 30px;
+		justify-content: space-between;
+		align-items: flex-end;
 	}
 
-  section {
-    width: 100%;
+	section {
+		width: 100%;
 
-    @include up(lg) {
-      width: 50%;
-    }
-  }
+		@include up(lg) {
+			width: 50%;
+		}
+	}
 
-  h1,
-  p {
-    font-weight: 500;
-  }
+	h1,
+	p {
+		font-weight: 500;
+		text-transform: uppercase;
+	}
 
-  h1 {
-    line-height: 1em;
-    text-transform: uppercase
-  }
+	h1 {
+		line-height: 1em;
+		text-transform: uppercase;
+	}
 
-  p {
-    @extend %h4;
-    max-width: 100%;
-
-    @include up(lg) {
-      max-width: 70%;
-    }
-  }
+	p {
+		@extend %h4;
+	}
 }

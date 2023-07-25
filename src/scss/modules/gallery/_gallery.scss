@@ -44,4 +44,9 @@
 
 .thumbs {
 	@extend %module-top-small;
+
+	img {
+		height: 100%;
+		object-fit: contain;
+	}
 }

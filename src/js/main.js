@@ -7,6 +7,7 @@ import accordionMenu from './modules/accordionMenu';
 import map from './modules/map.js';
 import videoGallery from './modules/videoGallery.js';
 import lgGallery from './modules/lgGallery.js';
+import lgAbout from './modules/lgAbout.js';
 import videoSingle from './modules/videoSingle.js';
 import menu from './init/menu.js';
 
@@ -24,6 +25,11 @@ const beforeStart = () => {
 	if (galleryExist.length > 0) {
 		gallery();
 		lgGallery();
+	}
+
+	const lgAboutExist = document.getElementsByClassName('about__image');
+	if (lgAboutExist.length > 0) {
+		lgAbout();
 	}
 
 	const tabsExist = document.getElementsByClassName('tab');

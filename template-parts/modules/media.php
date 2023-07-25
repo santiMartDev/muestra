@@ -4,9 +4,10 @@
 <?php if (!empty($media['video_single']['number'])) : ?>
 
     <article class="video">
-        <a data-src="//vimeo.com/<?php echo $media['video_single']['number']; ?>" data-poster="<?php echo $media['video_single']['image']['url']; ?>" data-sub-html="<?php //echo $media['video_single']['title']; 
+        <a data-src="//vimeo.com/<?php echo $media['video_single']['number']; ?>" data-poster="<?php echo $media['video_single']['image']['url']; ?>" data-sub-html="<?php //echo $media['video_single']['title'];                                                                                                                                                             
                                                                                                                                                                         ?>">
             <img src="<?php echo $media['video_single']['image']['url']; ?>" alt="">
+            <img src="<?php bloginfo('template_url') ?>/dist/assets/icons/icon-play-video.svg" alt="">
         </a>
     </article>
 

@@ -71,16 +71,6 @@
 				margin-bottom: 20px;
 			}
 		}
-
-		em {
-			@extend %h6;
-			width: 100%;
-			display: inline-block;
-			text-align: center;
-			padding-top: 10px;
-			color: color('gray');
-			font-style: italic;
-		}
 	}
 
 	aside.module-sidebar {

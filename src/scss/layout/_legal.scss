@@ -1,0 +1,39 @@
+// --------------------------------------------------
+//		Layout: Legal
+// --------------------------------------------------
+
+@use 'settings' as *;
+@use 'tools' as *;
+
+.legal {
+	h1 {
+		@extend %module-bottom-small;
+	}
+
+	h4 {
+		padding-top: 40px;
+	}
+
+	p {
+		padding-bottom: 10px;
+	}
+}
+
+.credits,
+.legal {
+	h1 {
+		@extend %module-bottom-small;
+	}
+
+	h4 {
+		padding-top: 40px;
+	}
+
+	p {
+		padding-bottom: 10px;
+	}
+
+	a {
+		text-decoration: underline;
+	}
+}
