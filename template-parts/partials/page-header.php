@@ -1,6 +1,4 @@
 <?php
-phpinfo();
-var_dump(phpinfo());
 
 $page_sub_title = (!empty($theme['extra']['subtitle'])) ?  $theme['extra']['subtitle'] : NULL;
 
