@@ -1,5 +1,8 @@
 <?php
-$page_sub_title = $theme['extra']['subtitle'];
+phpinfo();
+var_dump(phpinfo());
+
+$page_sub_title = (!empty($theme['extra']['subtitle'])) ?  $theme['extra']['subtitle'] : NULL;
 
 if (!empty($page_title) || !empty($page_description)) :  ?>
     <article class="pageHeader">
