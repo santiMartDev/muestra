@@ -1091,6 +1091,12 @@ body {
 .module-default section p {
   line-height: 1.5em;
 }
+.module-default section a {
+  color: #3ad3b7;
+}
+.module-default section a:hover {
+  text-decoration: underline;
+}
 .module-default section h4,
 .module-default section strong {
   font-weight: 500;

@@ -51,6 +51,14 @@
 			line-height: 1.5em;
 		}
 
+		a {
+			color: #3ad3b7;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
 		h4,
 		strong {
 			font-weight: 500;

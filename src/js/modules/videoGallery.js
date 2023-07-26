@@ -10,7 +10,6 @@ const videoGallery = () => {
 	);
 
 	const galleryHeight = module.offsetHeight;
-	console.log(galleryHeight);
 
 	const videosSlider = new Splide(galleryVideos, {
 		heightRatio: 0.5625,

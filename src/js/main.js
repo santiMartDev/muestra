@@ -6,7 +6,6 @@ import podcast from './modules/podcast';
 import accordionMenu from './modules/accordionMenu';
 import map from './modules/map.js';
 import videoGallery from './modules/videoGallery.js';
-import lgGallery from './modules/lgGallery.js';
 import videoSingle from './modules/videoSingle.js';
 import menu from './init/menu.js';
 
@@ -23,7 +22,6 @@ const beforeStart = () => {
 	const galleryExist = document.getElementsByClassName('gallery');
 	if (galleryExist.length > 0) {
 		gallery();
-		lgGallery();
 	}
 
 	const tabsExist = document.getElementsByClassName('tab');

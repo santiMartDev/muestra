@@ -7994,9 +7994,6 @@
   Splide.defaults = {};
   Splide.STATES = STATES;
 
-  // const projectGallery = document.querySelector(".project-gallery .gallery");
-  // const projectThumbs = document.querySelector(".project-gallery .thumbs");
-
   const gallery = () => {
     // get animated titles
     const galleries = document.querySelectorAll('.gallery-wrap');
@@ -8005,7 +8002,9 @@
     galleries.forEach(gallery => {
       const galleryMain = gallery.querySelector('.gallery');
       const galleryThumbs = gallery.querySelector('.thumbs');
-      var main = new Splide(galleryMain, {
+      const media = document.querySelector('.gallery .splide__list');
+      console.log(media);
+      const main = new Splide(galleryMain, {
         type: 'loop',
         pagination: false,
         arrows: true,
@@ -8022,7 +8021,7 @@
           }
         }
       });
-      var thumbnails = new Splide(galleryThumbs, {
+      const thumbnails = new Splide(galleryThumbs, {
         rewind: true,
         autoWidth: true,
         fixedHeight: 72,
@@ -8044,6 +8043,25 @@
       main.sync(thumbnails);
       main.mount();
       thumbnails.mount();
+      const triggers = document.querySelectorAll('.is-trigger');
+      triggers.forEach(trigger => {
+        trigger.addEventListener('click', el => {
+          //Scroll to gallery
+          galleryMain.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'center'
+          });
+
+          //Event to go to slide
+          const order = el.currentTarget.dataset.order;
+          main.go(parseInt(order) - 1);
+        });
+      });
+      lightGallery(media, {
+        licenseKey: 'RWGFX-KWFPH-57MZ4-GKE8B',
+        download: false
+      });
     });
   };
 
@@ -9103,13 +9121,11 @@
 
   const podcast = () => {
     const podcasts = document.querySelectorAll('.podcast');
-    console.log(podcasts);
     podcasts.forEach(item => {
       const title = item.dataset.title;
       const intervenants = item.dataset.intervenants;
       const cover = item.dataset.cover;
       const file = item.dataset.file;
-      console.log(file);
       new Player$2({
         container: item,
         audio: {
@@ -12428,8 +12444,7 @@
     const galleryVideos = document.querySelector('.videos.splide');
     const galleryCovers = document.querySelector('.covers.splide');
     const module = document.querySelector('.module-video-gallery .module-wrapper');
-    const galleryHeight = module.offsetHeight;
-    console.log(galleryHeight);
+    module.offsetHeight;
     const videosSlider = new Splide(galleryVideos, {
       heightRatio: 0.5625,
       height: '60vh',
@@ -14958,21 +14973,8 @@
     };
     return LightGallery;
   }();
-  function lightGallery(el, options) {
+  function lightGallery$1(el, options) {
     return new LightGallery(el, options);
-  }
-
-  // Import LIGHTGALLERY
-  // lg Gallery
-  function lgGallery() {
-    let media = document.querySelectorAll('.gallery .splide__list');
-    console.log(media);
-    media.forEach(item => {
-      lightGallery(item, {
-        licenseKey: 'RWGFX-KWFPH-57MZ4-GKE8B',
-        download: false
-      });
-    });
   }
 
   /*!
@@ -15472,7 +15474,7 @@
   function lgVideoSingle() {
     var media = document.getElementsByClassName('video');
     for (let item of media) {
-      lightGallery(item, {
+      lightGallery$1(item, {
         plugins: [Video],
         share: false,
         selector: 'a',
@@ -15543,7 +15545,6 @@
     const galleryExist = document.getElementsByClassName('gallery');
     if (galleryExist.length > 0) {
       gallery();
-      lgGallery();
     }
     const tabsExist = document.getElementsByClassName('tab');
     if (tabsExist.length > 0) {

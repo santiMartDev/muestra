@@ -1,8 +1,5 @@
 import Splide from '@splidejs/splide';
 
-// const projectGallery = document.querySelector(".project-gallery .gallery");
-// const projectThumbs = document.querySelector(".project-gallery .thumbs");
-
 const gallery = () => {
 	// get animated titles
 	const galleries = document.querySelectorAll('.gallery-wrap');
@@ -12,7 +9,11 @@ const gallery = () => {
 		const galleryMain = gallery.querySelector('.gallery');
 		const galleryThumbs = gallery.querySelector('.thumbs');
 
-		var main = new Splide(galleryMain, {
+		const media = document.querySelector('.gallery .splide__list');
+
+		console.log(media);
+
+		const main = new Splide(galleryMain, {
 			type: 'loop',
 			pagination: false,
 			arrows: true,
@@ -30,7 +31,7 @@ const gallery = () => {
 			},
 		});
 
-		var thumbnails = new Splide(galleryThumbs, {
+		const thumbnails = new Splide(galleryThumbs, {
 			rewind: true,
 			autoWidth: true,
 			fixedHeight: 72,
@@ -53,6 +54,28 @@ const gallery = () => {
 		main.sync(thumbnails);
 		main.mount();
 		thumbnails.mount();
+
+		const triggers = document.querySelectorAll('.is-trigger');
+
+		triggers.forEach((trigger) => {
+			trigger.addEventListener('click', (el) => {
+				//Scroll to gallery
+				galleryMain.scrollIntoView({
+					behavior: 'smooth',
+					block: 'center',
+					inline: 'center',
+				});
+
+				//Event to go to slide
+				const order = el.currentTarget.dataset.order;
+				main.go(parseInt(order) - 1);
+			});
+		});
+
+		lightGallery(media, {
+			licenseKey: 'RWGFX-KWFPH-57MZ4-GKE8B',
+			download: false,
+		});
 	});
 };
 
