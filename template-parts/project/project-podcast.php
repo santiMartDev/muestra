@@ -7,7 +7,7 @@ $podcast = $project['podcast'];
 
 // artist sidebar and all button
 $sidebar_podcast_all = array( array('title' => __('All the words of people', 'imaneo'), 'link' => array('url' => get_the_permalink(140)), 'blank' => false) );
-$sidebar = array_merge($sidebar_podcast_all, $sidebar);
+// $sidebar = array_merge($sidebar_podcast_all, $sidebar);
 
 // sidebar project podcast
 if(!empty($podcast['sidebar'])) {
