@@ -16,7 +16,7 @@
     <li><a class="tab" href="#<?php echo slugify($tab_text_map); ?>"><?php echo $tab_text_map; ?></a></li>
 
     <?php // Tab Link Artist  ?>
-    <?php if (!empty($project['artist'])) : ?>
+    <?php if ( !empty($project['artist']['media']['video_gallery']) || !empty($project['artist']['media']['gallery']) || !empty($project['artist']['media']['video_single']['number']) ) :  ?>
         <li><a class="tab" href="#<?php echo slugify($tab_text_artist); ?>"><?php echo $tab_text_artist; ?></a></li>
     <?php endif; ?>
 
@@ -62,7 +62,7 @@
 </div>
 
 <?php // Tab Content Artist  ?>
-<?php if (!empty($project['artist'])) :  ?>
+<?php if ( !empty($project['artist']['media']['video_gallery']) || !empty($project['artist']['media']['gallery']) || !empty($project['artist']['media']['video_single']['number']) ) :  ?>
     <div class="section" id="<?php echo slugify($tab_text_artist); ?>">
         <p class="tabs__title"><?php echo $tab_text_artist; ?></p>
         <?php require(TEMPLATEPATH . '/template-parts/project/project-artworks.php'); ?>
