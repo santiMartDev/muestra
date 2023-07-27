@@ -25,8 +25,8 @@
         <li><a class="tab" href="#<?php echo slugify($tab_text_podcast); ?>"><?php echo $tab_text_podcast; ?></a></li>
     <?php endif; ?>
 
-    <?php // Tab Link Podcast  ?>
-    <?php if (!empty($project['related_topics'])) : ?>
+    <?php // Tab Link Themes  ?>
+    <?php if ( !empty($project['related_topics']['media']['video_gallery']) || !empty($project['related_topics']['media']['gallery']) || !empty($project['related_topics']['media']['video_single']['number']) || !empty($project['related_topics']['content']) ) :  ?>
         <li><a class="tab" href="#<?php echo slugify($tab_text_theme); ?>"><?php echo $tab_text_theme; ?></a></li>
     <?php endif; ?>
 
@@ -77,11 +77,13 @@
     </div>
 <?php endif; ?>
 
-<?php // Tab Content Theme  ?>
-<div class="section" id="<?php echo slugify($tab_text_theme); ?>">
-    <p class="tabs__title"><?php echo $tab_text_theme; ?></p>
-    <?php require(TEMPLATEPATH . '/template-parts/project/project-themes.php'); ?>
-</div>
+<?php // Tab Content theme  ?>
+<?php if ( !empty($project['related_topics']['media']['video_gallery']) || !empty($project['related_topics']['media']['gallery']) || !empty($project['related_topics']['media']['video_single']['number']) || !empty($project['related_topics']['content']) ) :  ?>
+    <div class="section" id="<?php echo slugify($tab_text_theme); ?>">
+        <p class="tabs__title"><?php echo $tab_text_theme; ?></p>
+        <?php require(TEMPLATEPATH . '/template-parts/project/project-themes.php'); ?>
+    </div>
+<?php endif; ?>
 
 <?php // Tab Content Education  ?>
 <?php if ($project['education']) :  ?>
