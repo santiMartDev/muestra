@@ -1129,6 +1129,9 @@ body {
 .module-default aside.module-sidebar li {
   padding-bottom: 10px;
 }
+.module-default aside.module-sidebar li:last-child {
+  padding: 0;
+}
 .module-default .gallery-item {
   display: none;
   width: 100% !important;
