@@ -16,6 +16,6 @@ $media = (!empty($history['media'])) ? $history['media'] : '';
         <?php echo $content; ?>
     </section>
 
-    <?php require(TEMPLATEPATH . '/template-parts/modules/sidebar.php'); ?>
+    <?php require(TEMPLATEPATH . '/template-parts/partials/history/history-sidebar.php'); ?>
 
 </article>

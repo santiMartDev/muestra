@@ -42,7 +42,6 @@ $architects = new WP_Query( $args );
             <article class="profile">
 
                 <section>
-                    <p><?php the_title(); ?></p>
                     <?php the_content() ?>
                 </section>
 
