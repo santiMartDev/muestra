@@ -1,5 +1,5 @@
 <?php // Module Sidebar ?>
-hello
+
 <?php if(!empty($sidebar_menus)) :  // var_dump($sidebar_menus); ?>
     <aside class="module-sidebar">
 
