@@ -85,9 +85,8 @@ if (have_posts()) : while (have_posts()) : the_post();
                 $sidebar_menus[] = $sidebar_theme_projects;
 
                 wp_reset_postdata();
-            }
-
-            if ($educations->have_posts() || $projects->have_posts()) {
+                
+            } elseif ($educations->have_posts() && $projects->have_posts()) {
                 $sidebar_menus = array($sidebar_theme_education, $sidebar_theme_projects);
             }
         }
