@@ -6,6 +6,8 @@
 $education = $project['education'];
 $education_id = $education[0]->ID;
 
+var_dump($education);
+
 // var_dump($education);
 
 // config extra education menu
