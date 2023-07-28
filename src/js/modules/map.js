@@ -37,7 +37,7 @@ async function map() {
 	/////////////////////////////////////////////////////////////////////////
 
 	const res = await fetch(
-		'http://imaneo.hotpixel.es/wp-json/wp/v2/project?per_page=20'
+		'https://imaneo.hotpixel.es/wp-json/wp/v2/project?per_page=20'
 	);
 	const data = await res.json();
 
