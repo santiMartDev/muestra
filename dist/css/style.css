@@ -172,7 +172,7 @@
   color: #00a9d1;
 }
 
-body, p,
+.single-architect .profile .architect-single-bio p, body, p,
 li,
 a,
 small,
@@ -182,7 +182,7 @@ button {
   font-size: clamp(0.813rem, 0.731rem + 0.333vw, 0.938rem);
 }
 @media (min-width: 992px) {
-  body, p,
+  .single-architect .profile .architect-single-bio p, body, p,
   li,
   a,
   small,
@@ -242,7 +242,7 @@ h1, .h1, .fs-1 {
   }
 }
 
-.project-education .title__edu, .education-list .title__edu, .module-architects .profile section p:first-of-type, .module-architects .profile figure ul li p, .about header p, .lists-title p, .tabs__title, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
+.project-education .title__edu, .education-list .title__edu, .module-architects .profile .architect-bios p:first-of-type, .module-architects .profile figure ul li p, .about header p, .gallery .splide__slide div .slide-title, .lists-title p, .tabs__title, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
   font-size: clamp(
     1rem,
     0.33vw + 0.92rem,
@@ -250,7 +250,7 @@ h1, .h1, .fs-1 {
   );
 }
 @media (min-width: 992px) {
-  .project-education .title__edu, .education-list .title__edu, .module-architects .profile section p:first-of-type, .module-architects .profile figure ul li p, .about header p, .lists-title p, .tabs__title, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
+  .project-education .title__edu, .education-list .title__edu, .module-architects .profile .architect-bios p:first-of-type, .module-architects .profile figure ul li p, .about header p, .gallery .splide__slide div .slide-title, .lists-title p, .tabs__title, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
     font-size: clamp(
     1.25rem,
     1.12vw + 0.56rem,
@@ -260,7 +260,7 @@ h1, .h1, .fs-1 {
 }
 
 .module-architects .profile figure ul li span,
-.module-architects .profile figure ul li a, .module-sidebar h4, .pdfs a p, h5, .h5, .fs-5 {
+.module-architects .profile figure ul li a, .module-sidebar h4, .gallery .splide__slide div .slide-caption, .pdfs a p, h5, .h5, .fs-5 {
   font-size: clamp(
     0.81rem,
     0.33vw + 0.73rem,
@@ -269,7 +269,7 @@ h1, .h1, .fs-1 {
 }
 @media (min-width: 992px) {
   .module-architects .profile figure ul li span,
-  .module-architects .profile figure ul li a, .module-sidebar h4, .pdfs a p, h5, .h5, .fs-5 {
+  .module-architects .profile figure ul li a, .module-sidebar h4, .gallery .splide__slide div .slide-caption, .pdfs a p, h5, .h5, .fs-5 {
     font-size: clamp(
     0.88rem,
     0.45vw + 0.6rem,
@@ -384,9 +384,11 @@ h1, .h1, .fs-1 {
   }
 }
 
-.module-architects .profile section p:first-of-type, .about header, .lists-title, .podcast .shk, .singleHeader, .pageHeader, .legal h1, .credits h1, .module-default section p,
+.module-architects .profile .architect-bios p:first-of-type, .about header, .lists-title, .podcast .shk, .singleHeader, .pageHeader, .legal h1, .credits h1, .module-default section p,
 .module-default section h4,
-.module-default section figure, .module-credits .item:not(:last-of-type), .module-bottom-small {
+.module-default section figure, .module-credits .item:not(:last-of-type), .default p,
+.default h4,
+.default figure, .module-bottom-small {
   padding-bottom: clamp(
     1.25rem,
     1.66vw + 0.84rem,
@@ -394,9 +396,11 @@ h1, .h1, .fs-1 {
   );
 }
 @media (min-width: 992px) {
-  .module-architects .profile section p:first-of-type, .about header, .lists-title, .podcast .shk, .singleHeader, .pageHeader, .legal h1, .credits h1, .module-default section p,
+  .module-architects .profile .architect-bios p:first-of-type, .about header, .lists-title, .podcast .shk, .singleHeader, .pageHeader, .legal h1, .credits h1, .module-default section p,
   .module-default section h4,
-  .module-default section figure, .module-credits .item:not(:last-of-type), .module-bottom-small {
+  .module-default section figure, .module-credits .item:not(:last-of-type), .default p,
+  .default h4,
+  .default figure, .module-bottom-small {
     padding-bottom: clamp(
     1.88rem,
     2.23vw + 0.49rem,
@@ -987,7 +991,7 @@ li {
 .footer__menu {
   border-bottom: 1px solid #cccccc;
 }
-.footer__menu:first-of-type {
+.footer__menu.footer__first {
   border-top: 1px solid #cccccc;
 }
 .footer__menu nav ul {
@@ -1092,10 +1096,10 @@ body {
   line-height: 1.5em;
 }
 .module-default section a {
-  color: #3ad3b7;
+  text-decoration: underline;
 }
 .module-default section a:hover {
-  text-decoration: underline;
+  color: #878787;
 }
 .module-default section h4,
 .module-default section strong {
@@ -1148,6 +1152,20 @@ body {
 }
 .module-credits .item p:first-of-type {
   color: #cccccc;
+}
+
+.default p {
+  line-height: 1.5em;
+}
+.default a {
+  text-decoration: underline;
+}
+.default a:hover {
+  color: #878787;
+}
+.default h4,
+.default strong {
+  font-weight: 500;
 }
 
 .wpml-ls-statics-footer {
@@ -1800,11 +1818,7 @@ h6, .h6, .fs-6 {
   -o-object-fit: contain;
      object-fit: contain;
   height: 40px;
-}
-@media (max-width: 767px) {
-  .singleHeader img {
-    align-self: flex-start;
-  }
+  align-self: flex-start;
 }
 @media (min-width: 768px) {
   .singleHeader img {
@@ -2082,24 +2096,35 @@ h6, .h6, .fs-6 {
   text-align: center;
 }
 
-.loading {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 3000;
-  background-color: #f9f8fd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.01);
-  transition: all 0.5s;
+.module-history-sidebar nav {
+  padding-left: 20px;
 }
-.loading img {
-  max-width: 10rem;
+.module-history-sidebar nav ul li a {
+  font-weight: 300;
 }
 
-.loaded .loading {
-  transform: translateY(-100%);
+.loader {
+  position: fixed;
+  width: 1440px;
+  height: 100%;
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  opacity: 1;
+}
+.loader.hidden {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.loader img {
+  width: 100px;
+}
+.loader img:last-child {
+  transform: translateY(-10px);
+  width: 70px;
 }
 
 .grid {
@@ -2142,17 +2167,61 @@ h6, .h6, .fs-6 {
 }
 
 .gallery .splide__slide {
+  position: relative;
   height: 100%;
+  z-index: 0;
 }
 @media (min-width: 992px) {
   .gallery .splide__slide {
     height: 50vh;
   }
 }
+.gallery .splide__slide:hover img {
+  filter: brightness(0.4);
+  transition: all 0.4s ease;
+}
+.gallery .splide__slide:hover div {
+  opacity: 1;
+  transition: all 0.4s ease;
+}
 .gallery .splide__slide img {
+  position: relative;
   -o-object-fit: contain;
      object-fit: contain;
   height: 100%;
+  z-index: 1;
+  filter: brightness(1);
+  transition: all 0.4s ease;
+}
+.gallery .splide__slide div {
+  opacity: 0;
+  transition: all 0.4s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+.gallery .splide__slide div p {
+  color: white;
+  padding-bottom: 5px;
+}
+.gallery .splide__slide div .slide-title {
+  font-weight: 500;
+}
+.gallery .splide__slide div .slide-caption {
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+.gallery .splide__slide div .slide-description {
+  font-weight: 300;
 }
 .gallery .splide__arrow {
   background: none !important;
@@ -2237,14 +2306,15 @@ h6, .h6, .fs-6 {
   width: 100%;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 .video a img:first-of-type {
   position: relative;
   z-index: 1;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  filter: opacity(0.4);
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: opacity(0.5);
 }
 .video a img:last-of-type {
   position: absolute;
@@ -2385,15 +2455,15 @@ h6, .h6, .fs-6 {
   }
 }
 @media (min-width: 768px) {
-  .module-architects .profile section {
+  .module-architects .profile .architect-bios {
     padding-left: 30px;
   }
 }
-.module-architects .profile section p:first-of-type {
+.module-architects .profile .architect-bios p:first-of-type {
   text-transform: uppercase;
   font-weight: 500;
 }
-.module-architects .profile section p:first-of-type::before {
+.module-architects .profile .architect-bios p:first-of-type::before {
   display: inline-block;
   content: "";
   height: 16px;
@@ -2495,6 +2565,33 @@ h6, .h6, .fs-6 {
   -o-object-fit: contain;
      object-fit: contain;
   margin-right: 10px;
+}
+.single-architect .pageHeader section {
+  width: 100% !important;
+}
+.single-architect .profile {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+@media (min-width: 768px) {
+  .single-architect .profile {
+    border-left: 1px solid #cccccc;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .single-architect .profile {
+    -moz-column-gap: 150px;
+         column-gap: 150px;
+  }
+}
+@media (min-width: 768px) {
+  .single-architect .profile .architect-single-bio {
+    padding-left: 30px;
+  }
 }
 @font-face {
   font-family: "lg";

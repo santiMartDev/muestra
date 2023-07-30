@@ -10,7 +10,7 @@
         <p><?php echo $project_year; ?></p>
     </section>
     <section>
-        <p><?php _e('Architect(s)', 'imaneo'); ?></p>
+        <p><?php _e('Architectes et artistes', 'imaneo'); ?></p>
         <p><?php echo $project_architects; ?></p>
     </section>
 </article>

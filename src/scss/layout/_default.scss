@@ -52,13 +52,12 @@
 		}
 
 		a {
-			color: #3ad3b7;
+			text-decoration: underline;
 
 			&:hover {
-				text-decoration: underline;
+				color: color('gray');
 			}
 		}
-
 		h4,
 		strong {
 			font-weight: 500;
@@ -126,5 +125,30 @@
 		p:first-of-type {
 			color: color('gray', 'light');
 		}
+	}
+}
+
+.default {
+	p,
+	h4,
+	figure {
+		@extend %module-bottom-small;
+	}
+
+	p {
+		line-height: 1.5em;
+	}
+
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			color: color('gray');
+		}
+	}
+
+	h4,
+	strong {
+		font-weight: 500;
 	}
 }

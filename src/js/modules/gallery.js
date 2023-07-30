@@ -9,10 +9,6 @@ const gallery = () => {
 		const galleryMain = gallery.querySelector('.gallery');
 		const galleryThumbs = gallery.querySelector('.thumbs');
 
-		const media = document.querySelector('.gallery .splide__list');
-
-		console.log(media);
-
 		const main = new Splide(galleryMain, {
 			type: 'loop',
 			pagination: false,
@@ -57,25 +53,30 @@ const gallery = () => {
 
 		const triggers = document.querySelectorAll('.is-trigger');
 
-		triggers.forEach((trigger) => {
-			trigger.addEventListener('click', (el) => {
-				//Scroll to gallery
-				galleryMain.scrollIntoView({
-					behavior: 'smooth',
-					block: 'center',
-					inline: 'center',
+		if (triggers) {
+			triggers.forEach((trigger) => {
+				trigger.addEventListener('click', (el) => {
+					//Scroll to gallery
+					galleryMain.scrollIntoView({
+						behavior: 'smooth',
+						block: 'center',
+						inline: 'center',
+					});
+
+					//Event to go to slide
+					const order = el.currentTarget.dataset.order;
+					main.go(parseInt(order) - 1);
 				});
-
-				//Event to go to slide
-				const order = el.currentTarget.dataset.order;
-				main.go(parseInt(order) - 1);
 			});
-		});
+		}
+	});
 
-		lightGallery(media, {
-			licenseKey: 'RWGFX-KWFPH-57MZ4-GKE8B',
-			download: false,
-		});
+	const media = document.querySelector('.gallery .splide__list');
+
+	lightGallery(media, {
+		counter: false,
+		licenseKey: 'RWGFX-KWFPH-57MZ4-GKE8B',
+		download: false,
 	});
 };
 

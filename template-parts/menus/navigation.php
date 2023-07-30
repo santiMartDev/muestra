@@ -13,11 +13,12 @@
 <section class="navbar">
     <nav class="nav--menu" role="navigation">
         <ul>
-            <li class="btnSubmenu"><?php _e("Projects", "imaneo"); ?></li>
+            <a href="<?php echo get_home_url(); ?>" class="btnSubmenu"><?php _e("Projects", "imaneo"); ?></a>
             <li class="btnSubmenu" data-submenu=".submenu1"><span><?php _e('Themes', 'imaneo'); ?></span> <img
                     class="cross1" src="<?php bloginfo('template_url') ?>/dist/assets/icons/icon-nav.svg" alt=""></li>
             <li class="btnSubmenu" data-submenu=".submenu2"><span><?php _e('Crossed Imagineries', 'imaneo'); ?></span>
-                <img class="cross2" src="<?php bloginfo('template_url') ?>/dist/assets/icons/icon-nav.svg" alt=""></li>
+                <img class="cross2" src="<?php bloginfo('template_url') ?>/dist/assets/icons/icon-nav.svg" alt="">
+            </li>
             <li class="btnSubmenu" data-submenu=".submenu3"><span><?php _e('Resources', 'imaneo'); ?></span> <img
                     class="cross3" src="<?php bloginfo('template_url') ?>/dist/assets/icons/icon-nav.svg" alt=""></li>
         </ul>
@@ -26,10 +27,15 @@
     <nav class="nav--submenu" role="navigation">
 
         <ul class="submenu submenu1">
-            <li><a href="<?php echo get_the_permalink(24); ?>">Néo-mauresque au Maghreb</a></li>
-            <li><a href="<?php echo get_the_permalink(158); ?>">Nationalisme & impérialisme</a></li>
-            <li><a href="<?php echo get_the_permalink(199); ?>">Un style pour les synagogues</a></li>
-            <li><a href="<?php echo get_the_permalink(198); ?>">Diffusion</a></li>
+            <li><a href="<?php echo get_the_permalink(24); ?>"><?php _e('Néo-mauresque au Maghreb','imaneo'); ?></a>
+            </li>
+            <li><a href="<?php echo get_the_permalink(158); ?>"><?php _e('Nationalisme & impérialisme','imaneo'); ?></a>
+            </li>
+            <li><a
+                    href="<?php echo get_the_permalink(199); ?>"><?php _e('Un style pour les synagogues','imaneo'); ?></a>
+            </li>
+            <li><a href="<?php echo get_the_permalink(198); ?>"><?php _e('Diffusion','imaneo'); ?></a></li>
+            <li><a href="<?php echo get_the_permalink(198); ?>"><?php _e('Sources','imaneo'); ?></a></li>
         </ul>
 
         <ul class="submenu submenu2">

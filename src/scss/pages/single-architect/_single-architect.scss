@@ -1,0 +1,38 @@
+// --------------------------------------------------
+//		Page: Single Architect
+// --------------------------------------------------
+
+@use 'settings' as *;
+@use 'helper' as *;
+@use 'tools' as *;
+
+.single-architect {
+	.pageHeader {
+		section {
+			width: 100% !important;
+		}
+	}
+
+	.profile {
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		column-gap: 30px;
+
+		@include up(md) {
+			border-left: 1px solid color('gray', 'light');
+			column-gap: 50px;
+		}
+		@include up(lg) {
+			column-gap: 150px;
+		}
+
+		.architect-single-bio {
+			@include up(md) {
+				padding-left: 30px;
+			}
+			p {
+				@extend %font-base;
+			}
+		}
+	}
+}

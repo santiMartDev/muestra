@@ -2,40 +2,37 @@
 //		Components: Page Header
 // --------------------------------------------------
 
-@use "helper" as *;
-@use "tools" as *;
+@use 'helper' as *;
+@use 'tools' as *;
 
 .singleHeader {
-  display: flex;
-  row-gap: 15px;
-  flex-direction: column;
+	display: flex;
+	row-gap: 15px;
+	flex-direction: column;
 
+	@extend %module-top-medium;
+	@extend %module-bottom-small;
+	border-bottom: 1px solid color('gray', 'light');
 
-  @extend %module-top-medium;
-  @extend %module-bottom-small;
-  border-bottom: 1px solid color("gray", "light");
-
-  @include up(md) {
-    flex-direction: row;
-    align-items: center;
-    column-gap: 30px;
+	@include up(md) {
+		flex-direction: row;
+		align-items: center;
+		column-gap: 30px;
 	}
-  
-  img {
-    object-fit: contain;
-    height: 40px;
 
-    @include down(md) {
-      align-self: flex-start;
-    }
-    @include up(md) {
-      height: 80px;
-    }
-  }
+	img {
+		object-fit: contain;
+		height: 40px;
+		align-self: flex-start;
 
-  h1 {
-    font-weight: 500;
-    line-height: 1em;
-    text-transform: uppercase;
-  }
+		@include up(md) {
+			height: 80px;
+		}
+	}
+
+	h1 {
+		font-weight: 500;
+		line-height: 1em;
+		text-transform: uppercase;
+	}
 }

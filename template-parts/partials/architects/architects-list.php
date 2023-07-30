@@ -15,9 +15,9 @@ $architects = new WP_Query( $args );
 
 <?php if ( $architects->have_posts() ) { ?>
 
-    <article class="module-architects">
+<article class="module-architects">
 
-        <?php while ( $architects->have_posts() ) {  $architects->the_post();
+    <?php while ( $architects->have_posts() ) {  $architects->the_post();
 
             // var_dump(apply_filters( 'wpml_object_id', get_the_ID(), 'architect', TRUE, 'fr' ));
 
@@ -38,17 +38,17 @@ $architects = new WP_Query( $args );
 
             ?>
 
-            <article class="profile">
+    <article class="profile">
 
-                <section>
-                    <p><?php the_title(); ?></p>
-                    <?php the_content() ?>
-                </section>
+        <section class="architect-bios default">
+            <p><?php the_title(); ?></p>
+            <?php the_content() ?>
+        </section>
 
-                <figure>
-                    <?php if( $projects ): ?>
-                        <ul>
-                            <?php foreach( $projects as $project ):
+        <figure>
+            <?php if( $projects ): ?>
+            <ul>
+                <?php foreach( $projects as $project ):
 
                             // var_dump($project);
 
@@ -59,23 +59,23 @@ $architects = new WP_Query( $args );
                                 $project_icon = (!empty($project_info['project_info']['icon'])) ? '<img src="'.$project_info['project_info']['icon']['sizes']['theme_full'].'">' : '' ;
                                 $project_location = (!empty($project_info['project_info']['location'])) ? '<span>'.$project_info['project_info']['location'].'</span>' : '' ;
                                 ?>
-                                <li>
-                                    <picture>
-                                        <?php echo $project_icon; ?>
-                                    </picture>
-                                    <p><?php echo get_the_title($project_id); ?></p>
-                                    <?php echo $project_location; ?>
-                                    <a href="<?php echo get_permalink($project_id) ?>"><?php _e('Read more', 'imaneo'); ?></a>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    <?php endif; ?>
-                </figure>
-
-            </article>
-
-        <?php }  wp_reset_postdata();  ?>
+                <li>
+                    <picture>
+                        <?php echo $project_icon; ?>
+                    </picture>
+                    <p><?php echo get_the_title($project_id); ?></p>
+                    <?php echo $project_location; ?>
+                    <a href="<?php echo get_permalink($project_id) ?>"><?php _e('Read more', 'imaneo'); ?></a>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+            <?php endif; ?>
+        </figure>
 
     </article>
+
+    <?php }  wp_reset_postdata();  ?>
+
+</article>
 
 <?php } ?>

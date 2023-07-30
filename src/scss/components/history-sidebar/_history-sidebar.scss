@@ -1,0 +1,16 @@
+// --------------------------------------------------
+//		Component: History Sidebar
+// --------------------------------------------------
+
+@use 'settings' as *;
+@use 'helper' as *;
+@use 'tools' as *;
+
+.module-history-sidebar {
+	nav {
+		padding-left: 20px;
+	}
+	nav ul li a {
+		font-weight: 300;
+	}
+}

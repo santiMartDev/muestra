@@ -9,10 +9,19 @@ import videoGallery from './modules/videoGallery.js';
 import videoSingle from './modules/videoSingle.js';
 import menu from './init/menu.js';
 
-const beforeStart = () => {
+const beforeStart = () => {};
+
+const start = () => {};
+
+document.addEventListener('DOMContentLoaded', () => {
 	menuHeader();
 	accordionMenu();
 	menu();
+
+	const podcastExist = document.querySelector('.podcast');
+	if (podcastExist != null) {
+		podcast();
+	}
 
 	const mapExist = document.getElementsByClassName('project-map');
 	if (mapExist.length > 0) {
@@ -43,22 +52,15 @@ const beforeStart = () => {
 	if (videoSingleExist != null) {
 		videoSingle();
 	}
-};
-
-const start = () => {
-	const podcastExist = document.querySelector('.podcast');
-	if (podcastExist != null) {
-		podcast();
-	}
-};
+});
 
 // load
 window.addEventListener('load', () => {
-	beforeStart();
-
+	const loader = document.querySelector('.loader');
 	setTimeout(() => {
-		// const body = document.querySelector("body");
-		// body.classList.add("loaded");
-		start();
+		loader.classList.add('hidden');
+		loader.addEventListener('transitionend', () => {
+			loader.style.display = 'none';
+		});
 	}, 1000);
 });
