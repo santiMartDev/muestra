@@ -20,7 +20,7 @@
         <section class="videos splide">
             <div class="splide__track">
                 <div class="splide__list">
-                    <?php foreach ($media['videos'] as $video) { ?>
+                    <?php foreach ($media['video_gallery'] as $video) { ?>
                     <li class="splide__slide" data-splide-vimeo="<?php echo $video['link']; ?>">
                         <img src="<?php echo $video['img']; ?>">
                     </li>
@@ -32,7 +32,7 @@
         <section class="covers splide">
             <div class="splide__track">
                 <div class="splide__list">
-                    <?php foreach ($media['videos'] as $video) { ?>
+                    <?php foreach ($media['video_gallery'] as $video) { ?>
                     <div class="splide__slide">
                         <img src="<?php echo $video['img']; ?>" alt="">
                         <p><?php echo $video['title']; ?></p>
