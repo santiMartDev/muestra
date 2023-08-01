@@ -21,9 +21,9 @@
             <div class="splide__track">
                 <div class="splide__list">
                     <?php foreach ($media['video_gallery'] as $video) { ?>
-                    <li class="splide__slide" data-splide-vimeo="<?php echo $video['url']; ?>">
-                        <img src="<?php echo $video['image']; ?>">
-                    </li>
+                        <li class="splide__slide" data-splide-vimeo="<?php echo $video['url']; ?>">
+                            <img src="<?php echo $video['image']; ?>">
+                        </li>
                     <?php } ?>
                 </div>
             </div>
