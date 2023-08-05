@@ -21,7 +21,7 @@
     <?php endif; ?>
 
     <?php // Tab Link Podcast  ?>
-    <?php if (!empty($project['podcast']['podcast'])) : ?>
+    <?php if ( !empty($project['podcast']['podcast']) || !empty($project['podcast']['media']['video_gallery']) || !empty($project['podcast']['media']['gallery']) || !empty($project['podcast']['media']['video_single']['number']) ) : ?>
         <li><a class="tab" href="#<?php echo slugify($tab_text_podcast); ?>"><?php echo $tab_text_podcast; ?></a></li>
     <?php endif; ?>
 
@@ -70,7 +70,7 @@
 <?php endif; ?>
 
 <?php // Tab Content Podcast  ?>
-<?php if (!empty($project['podcast']['podcast'])) : ?>
+<?php if ( !empty($project['podcast']['podcast']) || !empty($project['podcast']['media']['video_gallery']) || !empty($project['podcast']['media']['gallery']) || !empty($project['podcast']['media']['video_single']['number']) ) : ?>
     <div class="section" id="<?php echo slugify($tab_text_podcast); ?>">
         <p class="tabs__title"><?php echo $tab_text_podcast; ?></p>
         <?php require(TEMPLATEPATH . '/template-parts/project/project-podcast.php'); ?>

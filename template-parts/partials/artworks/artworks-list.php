@@ -35,7 +35,7 @@ $projects = new WP_Query($args);
         $sidebar_menus = array($sidebar);
         $media = (!empty($artist['media'])) ? $artist['media'] : '';
 
-        if ( $media['gallery'] || !empty($media['video'])) : ?>
+        if ( !empty($project['artist']['media']['video_gallery']) || !empty($project['artist']['media']['gallery']) || !empty($project['artist']['media']['video_single']['number']) ):  ?>
 
             <div class="artworks-item">
 
