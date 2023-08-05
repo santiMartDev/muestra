@@ -32,7 +32,8 @@
     <article class="ac">
         <section class="ac-header">
             <button class="ac-trigger">
-                <p class="btnSubmenuMobile" data-submenuMobile=".submenuMobile1"><span><?php _e('Themes', 'imaneo'); ?></span>
+                <p class="btnSubmenuMobile" data-submenuMobile=".submenuMobile1">
+                    <span><?php _e('Themes', 'imaneo'); ?></span>
                     <img class="cross1" src="<?php bloginfo('template_url') ?>/dist/assets/icons/icon-nav.svg" alt="">
                 </p>
             </button>
@@ -49,7 +50,8 @@
     <article class="ac">
         <section class="ac-header nav--menu">
             <button class="ac-trigger">
-                <p class="btnSubmenuMobile" data-submenuMobile=".submenuMobile2"><span><?php _e('Crossed Imagineries', 'imaneo'); ?></span>
+                <p class="btnSubmenuMobile" data-submenuMobile=".submenuMobile2">
+                    <span><?php _e('Crossed Imagineries', 'imaneo'); ?></span>
                     <img class="cross2" src="<?php bloginfo('template_url') ?>/dist/assets/icons/icon-nav.svg" alt="">
                 </p>
             </button>
@@ -65,7 +67,8 @@
     <article class="ac">
         <section class="ac-header nav--menu">
             <button class="ac-trigger">
-                <p class="btnSubmenuMobile" data-submenuMobile=".submenuMobile3"><span><?php _e('Resources', 'imaneo'); ?></span>
+                <p class="btnSubmenuMobile" data-submenuMobile=".submenuMobile3">
+                    <span><?php _e('Resources', 'imaneo'); ?></span>
                     <img class="cross3" src="<?php bloginfo('template_url') ?>/dist/assets/icons/icon-nav.svg" alt="">
                 </p>
             </button>
@@ -79,3 +82,4 @@
         </nav>
     </article>
 </article>
+<?php get_template_part('template-parts/menus/languages'); ?>

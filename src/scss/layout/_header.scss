@@ -18,20 +18,30 @@
 
 	&__menu {
 		width: 50%;
-
-		display: none;
-		grid-template-columns: 1fr 50px;
+		height: 100%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
 
 		@include up(lg) {
 			display: grid;
+			grid-template-columns: 1fr 50px;
 		}
 
-		.nav--menu {
+		.navbar {
+			display: none;
+
+			@include up(lg) {
+				display: flex;
+			}
 		}
 
 		.languages-navigation {
-			justify-self: stretch;
-			align-self: stretch;
+			display: none;
+
+			@include up(lg) {
+				display: block;
+			}
 		}
 	}
 }

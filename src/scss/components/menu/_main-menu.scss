@@ -2,90 +2,86 @@
 //		Components: Menu: Main menu
 // --------------------------------------------------
 
-@use "tools" as *;
-@use "elements" as *;
+@use 'tools' as *;
+@use 'elements' as *;
 
 .navbar {
-  display: none;
-
-  @include up(lg) {
-    display: flex;
-    height: 100%;
+	@include up(lg) {
+		height: 100%;
 	}
 
-  ul {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-  }
+	ul {
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
 
-  li,
-  a {
-    font-weight: 500;
-  }
+	li,
+	a {
+		font-weight: 500;
+	}
 
-  li {
+	li {
+		span,
+		a {
+			position: relative;
+			padding-bottom: 5px;
+		}
 
-    span,
-    a {
-      position: relative;
-      padding-bottom: 5px;
-    }
+		span::before,
+		a::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 1px;
+			background-color: black;
+			width: 0;
 
-    span::before,
-    a::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 1px;
-      background-color: black;
-      width: 0;
+			transition: all 0.3s ease-out;
+		}
 
-      transition: all 0.3s ease-out;
-    }
+		&:hover {
+			span::before,
+			a::before {
+				width: 100%;
+				transition: all 0.3s ease-out;
+			}
+		}
+	}
 
-    &:hover {
-      span::before,
-      a::before {
-        width: 100%;
-        transition: all 0.3s ease-out;
-      }
-    }
-  }
+	.nav--menu {
+		width: 35%;
 
-  .nav--menu {
-    width: 35%;
+		li {
+			cursor: pointer;
 
-    li {
-      cursor: pointer;
+			&.disabled {
+				pointer-events: none;
+			}
 
-      &.disabled {
-        pointer-events: none;
-      }
+			img {
+				width: 14px;
+				margin-left: 10px;
+			}
+		}
+	}
 
-      img {
-        width: 14px;
-        margin-left: 10px;
-      }
-    }
-  }
+	.nav--submenu {
+		width: 55%;
+		position: relative;
+	}
 
-  .nav--submenu {
-    width: 55%;
-    position: relative;
-  }
+	.nav--legal {
+		width: 10%;
+	}
 
-  .nav--legal {
-    width: 10%;
-  }
-
-  .submenu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    opacity: 0;
-  }
+	.submenu {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		opacity: 0;
+	}
 }

@@ -2,109 +2,110 @@
 //		Components: Sidenav: Sidenav
 // --------------------------------------------------
 
-@use "tools" as *;
-@use "helper" as *;
-@use "settings" as *;
-@use "elements" as *;
+@use 'tools' as *;
+@use 'helper' as *;
+@use 'settings' as *;
+@use 'elements' as *;
 
 .sidenav {
+	// sidenav content ========================================
 
-  // sidenav content ========================================
+	position: fixed;
+	z-index: 400;
+	top: 0;
+	left: 0;
 
-  position: fixed;
-  z-index: 400;
-  top: 0;
-  left: 0;
+	@extend %module-vertical-medium;
+	@extend %module-horizontal-large;
 
-  @extend %module-vertical-medium;
-  @extend %module-horizontal-large;
+	width: 100%;
+	height: 100vh;
 
-  width: 100%;
-  height: 100vh;
+	background-color: white;
 
-  background-color: white;
+	transform: translateX(-100%);
+	transition: all 0.3s;
 
-  transform: translateX(-100%);
-  transition: all 0.3s;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	header {
+		display: flex;
 
-  header {
-    display: flex;
+		figure {
+			width: 100%;
+			height: 100%;
 
-    figure {
-      width: 100%;
-      height: 100%;
+			&:last-of-type {
+				display: flex;
+				justify-content: flex-end;
+				align-items: flex-start;
+			}
 
-      &:last-of-type {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
-      }
+			img {
+				width: 45px;
+			}
+		}
 
-      img {
-        width: 60px;
-      }
-    }
+		button {
+			border: none;
+			background: none;
 
-    button {
-      border: none;
-      background: none;
-      
-      width: 50px;
-      aspect-ratio: 1 / 1;
-    }
-  }
+			width: 50px;
+			aspect-ratio: 1 / 1;
+		}
+	}
 
-  // mobile navigation ========================================
+	// mobile navigation ========================================
 
-  .navbar--mobile {
-    button p, li a, a p {
-      @extend %h3;
-      font-weight: 300;
-    }
+	.navbar--mobile {
+		button p,
+		li a,
+		a p {
+			@extend %h3;
+			font-weight: 300;
+		}
 
-    .ac {
-      border: none;
-      margin-bottom: 10px;
+		.ac {
+			border: none;
+			margin-bottom: 10px;
 
-      &.is-disable {
-        opacity: 0.5;
-        pointer-events: none;
-      }
+			&.is-disable {
+				opacity: 0.5;
+				pointer-events: none;
+			}
 
-      .ac-trigger {
-        padding: 0;
+			.ac-trigger {
+				padding: 0;
 
-        &::after {
-          display: none;
-        }
+				&::after {
+					display: none;
+				}
 
-        .btnSubmenuMobile {
-          display: flex;
-          align-items: center;
-          img {
-            margin-left: 30px;
-            height: 20px;
-            aspect-ratio: 1 / 1;
-          }
-        }
-      }
+				.btnSubmenuMobile {
+					display: flex;
+					align-items: center;
+					img {
+						margin-left: 30px;
+						height: 20px;
+						aspect-ratio: 1 / 1;
+					}
+				}
+			}
 
-      .ac-panel {
-        margin-left: 30px;
-      }
-    }
-  }
+			.ac-panel {
+				margin-left: 30px;
+			}
+		}
+	}
 }
 
 // menu open ========================================
 
 .menu-open {
-  .sidenav {
-    transform: translateX(0);
-    transition: all 0.3s;
-  }
+	.sidenav {
+		transform: translateX(0);
+		transition: all 0.3s;
+	}
 }

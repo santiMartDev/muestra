@@ -7,9 +7,9 @@
         // get education fields
         $speaker_info = get_field('speakers', $item->ID);
         $media = $speaker_info['media'];
+        $podcast = $speaker_info['podcast'];
         // config menus to education
         $sidebar_menus = array($sidebar_speaker_extra);
-
     ?>
 
 <section class="ac speaker">
@@ -33,6 +33,8 @@
         <?php require(TEMPLATEPATH . '/template-parts/modules/sidebar.php'); ?>
 
         <?php require(TEMPLATEPATH . '/template-parts/modules/media.php'); ?>
+
+        <?php require(TEMPLATEPATH . '/template-parts/modules/podcast-speaker.php'); ?>
     </div>
 
 </section>
