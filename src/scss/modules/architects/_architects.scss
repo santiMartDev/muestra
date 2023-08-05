@@ -23,10 +23,14 @@
 
 	.profile {
 		display: grid;
-		grid-template-columns: 3fr 1fr;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
 		column-gap: 30px;
 
 		@include up(md) {
+			grid-template-columns: 3fr 1fr;
+			grid-template-rows: auto;
+
 			border-left: 1px solid color('gray', 'light');
 			column-gap: 50px;
 		}

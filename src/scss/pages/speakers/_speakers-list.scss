@@ -17,7 +17,9 @@
 
 	.ac {
 		border: none;
-		border-bottom: 1px solid color('gray', 'light');
+		&:not(:last-of-type) {
+			border-bottom: 1px solid color('gray', 'light');
+		}
 
 		@include up(lg) {
 			@include spacing('margin-left', 'medium');

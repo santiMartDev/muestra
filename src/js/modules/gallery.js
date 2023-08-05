@@ -23,6 +23,7 @@ const gallery = () => {
 					padding: 0,
 					autoWidth: false,
 					perPage: 1,
+					height: '25vh',
 				},
 			},
 		});

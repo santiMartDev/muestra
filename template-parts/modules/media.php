@@ -5,7 +5,7 @@
 
 <article class="video">
     <a data-src="//vimeo.com/<?php echo $media['video_single']['number']; ?>"
-        data-poster="<?php echo $media['video_single']['image']['url']; ?>" ?>">
+        data-poster="<?php echo $media['video_single']['image']['url']; ?>">
         <img src="<?php echo $media['video_single']['image']['url']; ?>" alt="">
         <img src="<?php bloginfo('template_url') ?>/dist/assets/icons/icon-play-video.svg" alt="">
     </a>

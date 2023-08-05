@@ -8015,7 +8015,8 @@
             arrows: false,
             padding: 0,
             autoWidth: false,
-            perPage: 1
+            perPage: 1,
+            height: '25vh'
           }
         }
       });
@@ -12455,6 +12456,11 @@
       arrows: false,
       video: {
         loop: true
+      },
+      breakpoints: {
+        991: {
+          height: '25vh'
+        }
       }
     });
     const coversSlider = new Splide(galleryCovers, {

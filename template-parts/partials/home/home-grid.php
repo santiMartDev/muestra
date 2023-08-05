@@ -15,9 +15,9 @@ $portfolio = new WP_Query( $args );
 
 <?php if ( $portfolio->have_posts() ) { ?>
 
-	<article class="grid grid-projects">
+<article class="grid grid-projects" id="alm">
 
-		<?php while ( $portfolio->have_posts() ) {  $portfolio->the_post();
+    <?php while ( $portfolio->have_posts() ) {  $portfolio->the_post();
 
             // variables
 			$projects = get_field('projects');
@@ -27,10 +27,10 @@ $portfolio = new WP_Query( $args );
 			$thumb_url = wp_get_attachment_image_src($thumb_id,'theme_vertical', true);
 			?>
 
-			<?php  require( TEMPLATEPATH . '/template-parts/partials/cards/card.php' );  ?>
+    <?php  require( TEMPLATEPATH . '/template-parts/partials/cards/card.php' );  ?>
 
-		<?php }  wp_reset_postdata();  ?>
+    <?php }  wp_reset_postdata();  ?>
 
-	</article>
+</article>
 
 <?php } ?>

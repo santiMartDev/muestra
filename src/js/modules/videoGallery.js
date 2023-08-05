@@ -20,6 +20,11 @@ const videoGallery = () => {
 		video: {
 			loop: true,
 		},
+		breakpoints: {
+			991: {
+				height: '25vh',
+			},
+		},
 	});
 
 	const coversSlider = new Splide(galleryCovers, {

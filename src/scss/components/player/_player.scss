@@ -36,11 +36,15 @@
 	@extend %module-bottom-medium;
 
 	display: flex;
-	gap: 30px;
+	flex-wrap: wrap;
+	gap: 10px;
 
 	@include down(lg) {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
+	}
+	@include up(lg) {
+		gap: 30px;
 	}
 
 	a p {

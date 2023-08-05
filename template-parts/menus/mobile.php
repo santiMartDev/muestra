@@ -25,7 +25,7 @@
 
 <article class="navbar--mobile accordion-container">
     <section class=" nav--menu-mobile">
-        <a href="<?php bloginfo('template_url') ?>">
+        <a href="<?php echo get_home_url(); ?>">
             <p class="btnSubmenuMobile"><?php _e("Projects", "imaneo"); ?></p>
         </a>
     </section>

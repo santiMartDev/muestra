@@ -1,6 +1,61 @@
+// --------------------------------------------------
+//		Modules: Gallery
+// --------------------------------------------------
+
 @use 'settings' as *;
 @use 'helper' as *;
 @use 'tools' as *;
 
 .video {
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+
+	@extend %module-vertical-medium;
+	@extend %module-horizontal-medium;
+
+	max-height: 70vh;
+	background-color: transparent;
+
+	@include down(lg) {
+		padding: 0;
+	}
+	@include up(lg) {
+		background-color: color('black');
+	}
+
+	a {
+		position: relative;
+		z-index: 100;
+		width: 100%;
+
+		display: flex;
+		justify-content: center;
+
+		cursor: pointer;
+
+		img:first-of-type {
+			position: relative;
+			z-index: 1;
+			width: 100%;
+			object-fit: cover;
+
+			filter: brightness(0.5);
+
+			@include up(lg) {
+				filter: opacity(0.5);
+			}
+		}
+
+		img:last-of-type {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 2;
+
+			width: 80px;
+		}
+	}
 }

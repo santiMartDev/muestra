@@ -10,7 +10,11 @@
 	@extend %module-vertical-medium;
 
 	height: 100%;
-	background-color: color('black');
+	background-color: transparent;
+
+	@include up(lg) {
+		background-color: color('black');
+	}
 }
 
 .gallery {
