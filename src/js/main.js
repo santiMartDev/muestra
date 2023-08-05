@@ -7,7 +7,10 @@ import accordionMenu from './modules/accordionMenu';
 import map from './modules/map.js';
 import videoGallery from './modules/videoGallery.js';
 import videoSingle from './modules/videoSingle.js';
+import accordionSpeaker from './modules/accordionSpeaker.js';
 import menu from './init/menu.js';
+
+new Accordion('.speakers');
 
 const beforeStart = () => {};
 
@@ -21,6 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	const podcastExist = document.querySelector('.podcast');
 	if (podcastExist != null) {
 		podcast();
+	}
+
+	const accordionSpeakerExist = document.querySelector('.speaker');
+	if (accordionSpeakerExist != null) {
+		accordionSpeaker();
 	}
 
 	const mapExist = document.getElementsByClassName('project-map');

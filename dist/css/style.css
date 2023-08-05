@@ -242,7 +242,7 @@ h1, .h1, .fs-1 {
   }
 }
 
-.project-education .title__edu, .education-list .title__edu, .module-architects .profile .architect-bios p:first-of-type, .module-architects .profile figure ul li p, .about header p, .gallery .splide__slide div .slide-title, .lists-title p, .tabs__title, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
+.speakers .ac-header .speaker-content p:first-of-type, .project-education .title__edu, .education-list .title__edu, .module-architects .profile .architect-bios p:first-of-type, .module-architects .profile figure ul li p, .about header p, .gallery .splide__slide div .slide-title, .lists-title p, .tabs__title, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
   font-size: clamp(
     1rem,
     0.33vw + 0.92rem,
@@ -250,7 +250,7 @@ h1, .h1, .fs-1 {
   );
 }
 @media (min-width: 992px) {
-  .project-education .title__edu, .education-list .title__edu, .module-architects .profile .architect-bios p:first-of-type, .module-architects .profile figure ul li p, .about header p, .gallery .splide__slide div .slide-title, .lists-title p, .tabs__title, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
+  .speakers .ac-header .speaker-content p:first-of-type, .project-education .title__edu, .education-list .title__edu, .module-architects .profile .architect-bios p:first-of-type, .module-architects .profile figure ul li p, .about header p, .gallery .splide__slide div .slide-title, .lists-title p, .tabs__title, .pageHeader p, .footer__title, h4, .h4, .fs-4 {
     font-size: clamp(
     1.25rem,
     1.12vw + 0.56rem,
@@ -259,7 +259,7 @@ h1, .h1, .fs-1 {
   }
 }
 
-.module-architects .profile figure ul li span,
+.speakers .ac-header .speaker-content p:last-of-type, .module-architects .profile figure ul li span,
 .module-architects .profile figure ul li a, .module-sidebar h4, .gallery .splide__slide div .slide-caption, .pdfs a p, h5, .h5, .fs-5 {
   font-size: clamp(
     0.81rem,
@@ -268,7 +268,7 @@ h1, .h1, .fs-1 {
   );
 }
 @media (min-width: 992px) {
-  .module-architects .profile figure ul li span,
+  .speakers .ac-header .speaker-content p:last-of-type, .module-architects .profile figure ul li span,
   .module-architects .profile figure ul li a, .module-sidebar h4, .gallery .splide__slide div .slide-caption, .pdfs a p, h5, .h5, .fs-5 {
     font-size: clamp(
     0.88rem,
@@ -2592,6 +2592,74 @@ h6, .h6, .fs-6 {
   .single-architect .profile .architect-single-bio {
     padding-left: 30px;
   }
+}
+.speakers {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.speakers .ac {
+  margin-left: clamp(
+    1.56rem,
+    5.82vw + 0.14rem,
+    3.75rem
+  );
+  margin-right: clamp(
+    1.56rem,
+    5.82vw + 0.14rem,
+    3.75rem
+  );
+  border: none;
+  border-bottom: 1px solid #cccccc;
+}
+@media (min-width: 992px) {
+  .speakers .ac {
+    margin-left: clamp(
+    3.75rem,
+    4.46vw + 0.98rem,
+    5rem
+  );
+  }
+}
+@media (min-width: 992px) {
+  .speakers .ac {
+    margin-right: clamp(
+    3.75rem,
+    4.46vw + 0.98rem,
+    5rem
+  );
+  }
+}
+.speakers .ac-trigger {
+  padding: 0;
+  margin: 0;
+}
+.speakers .ac-trigger::after {
+  width: 30px;
+  font-size: 28px;
+}
+.speakers .ac-header {
+  padding: 0;
+  margin: 0;
+}
+.speakers .ac-header .speaker-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+.speakers .ac-header .speaker-content img {
+  filter: grayscale(1);
+  width: 100px;
+  height: 100px;
+  border-radius: 3px;
+}
+.speakers .ac-header .speaker-content p:first-of-type {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.speakers .ac-header .speaker-content p:last-of-type {
+  font-weight: 300;
 }
 @font-face {
   font-family: "lg";

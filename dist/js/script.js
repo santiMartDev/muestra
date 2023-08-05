@@ -15536,6 +15536,7 @@
     init();
   }
 
+  new Accordion('.speakers');
   document.addEventListener('DOMContentLoaded', () => {
     menuHeader();
     accordionMenu();
@@ -15544,6 +15545,7 @@
     if (podcastExist != null) {
       podcast();
     }
+    document.querySelector('.speaker');
     const mapExist = document.getElementsByClassName('project-map');
     if (mapExist.length > 0) {
       map();

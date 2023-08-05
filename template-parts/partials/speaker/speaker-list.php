@@ -15,9 +15,9 @@ $speakers = new WP_Query( $args );
 
 <?php if ( $speakers->have_posts() ) { ?>
 
-    <div class="grid grid-speaker">
+<div class="speakers">
 
-        <?php while ( $speakers->have_posts() ) {  $speakers->the_post();
+    <?php while ( $speakers->have_posts() ) {  $speakers->the_post();
 
             // assign education field to cpt to include
             $speaker = array( get_post( get_the_ID()) );
@@ -62,15 +62,13 @@ $speakers = new WP_Query( $args );
             $sidebar_speaker_extra = array( array('title' => __('Related topcis', 'imaneo'), 'link' => '', 'blank' => false));
             $sidebar_speaker_extra = array_merge($sidebar_speaker_extra, $sidebar_speaker_themes);
 
-            echo '<div>';
             // include module education
             require( TEMPLATEPATH . '/template-parts/modules/speaker.php' );
-            echo '</div>';
 
             ?>
 
-        <?php }  wp_reset_postdata();  ?>
+    <?php }  wp_reset_postdata();  ?>
 
-    </div>
+</div>
 
 <?php } ?>

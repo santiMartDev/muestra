@@ -1,0 +1,65 @@
+// --------------------------------------------------
+//		Page: Speakers List
+// --------------------------------------------------
+
+@use 'settings' as *;
+@use 'helper' as *;
+@use 'tools' as *;
+
+.speakers {
+	display: flex;
+	flex-direction: column;
+	row-gap: 30px;
+
+	.ac {
+		@include spacing('margin-left', 'medium');
+		@include spacing('margin-right', 'medium');
+		border: none;
+		border-bottom: 1px solid color('gray', 'light');
+
+		&-trigger {
+			padding: 0;
+			margin: 0;
+
+			&::after {
+				width: 30px;
+				font-size: 28px;
+			}
+		}
+
+		&-header {
+			padding: 0;
+			margin: 0;
+
+			.speaker-content {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+
+				padding: 20px 0;
+
+				img {
+					filter: grayscale(1);
+					width: 100px;
+					height: 100px;
+					border-radius: 3px;
+				}
+
+				p {
+					&:first-of-type {
+						@extend %h4;
+						font-weight: 700;
+						text-transform: uppercase;
+					}
+					&:last-of-type {
+						@extend %h5;
+						font-weight: 300;
+					}
+				}
+			}
+		}
+
+		&-panel {
+		}
+	}
+}
