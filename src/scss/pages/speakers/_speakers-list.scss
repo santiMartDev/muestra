@@ -9,13 +9,20 @@
 .speakers {
 	display: flex;
 	flex-direction: column;
-	row-gap: 30px;
+	row-gap: 15px;
+
+	@include up(lg) {
+		row-gap: 30px;
+	}
 
 	.ac {
-		@include spacing('margin-left', 'medium');
-		@include spacing('margin-right', 'medium');
 		border: none;
 		border-bottom: 1px solid color('gray', 'light');
+
+		@include up(lg) {
+			@include spacing('margin-left', 'medium');
+			@include spacing('margin-right', 'medium');
+		}
 
 		&-trigger {
 			padding: 0;
@@ -36,13 +43,22 @@
 				align-items: center;
 				gap: 20px;
 
-				padding: 20px 0;
+				padding: 20px 40px 20px 0;
+
+				@include up(lg) {
+					padding: 20px 0;
+				}
 
 				img {
+					display: none;
 					filter: grayscale(1);
 					width: 100px;
 					height: 100px;
 					border-radius: 3px;
+
+					@include up(lg) {
+						display: inline-block;
+					}
 				}
 
 				p {
@@ -60,6 +76,15 @@
 		}
 
 		&-panel {
+			.module-sidebar {
+				@include spacing('margin-left', 'small');
+				@include spacing('margin-top', 'small');
+				@include spacing('margin-bottom', 'small');
+				border-left: 1px solid color('gray', 'light');
+				padding-left: 20px;
+			}
+
+			@include spacing('margin-bottom', 'small');
 		}
 	}
 }

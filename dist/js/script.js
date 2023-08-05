@@ -12460,7 +12460,7 @@
     const coversSlider = new Splide(galleryCovers, {
       direction: 'ttb',
       type: 'loop',
-      rewind: true,
+      autoWidth: false,
       autoHeight: true,
       height: '60vh',
       isNavigation: true,
@@ -12471,7 +12471,7 @@
         991: {
           direction: 'ltr',
           autoWidth: true,
-          autoheight: false,
+          autoHeight: false,
           height: '10vh'
         }
       }
@@ -15536,7 +15536,6 @@
     init();
   }
 
-  new Accordion('.speakers');
   document.addEventListener('DOMContentLoaded', () => {
     menuHeader();
     accordionMenu();
@@ -15545,7 +15544,10 @@
     if (podcastExist != null) {
       podcast();
     }
-    document.querySelector('.speaker');
+    const accordionSpeakerExist = document.querySelector('.speakers');
+    if (accordionSpeakerExist != null) {
+      new Accordion('.speakers');
+    }
     const mapExist = document.getElementsByClassName('project-map');
     if (mapExist.length > 0) {
       map();

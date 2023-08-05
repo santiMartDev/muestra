@@ -70,8 +70,15 @@
 				top: 0;
 				left: 0;
 				height: 100%;
+				object-fit: contain;
 				filter: brightness(1);
 				transition: all 0.4s ease;
+
+				@include up(lg) {
+					width: 100%;
+					height: fit-content;
+					object-fit: cover;
+				}
 			}
 
 			p {

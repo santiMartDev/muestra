@@ -25,7 +25,7 @@ const videoGallery = () => {
 	const coversSlider = new Splide(galleryCovers, {
 		direction: 'ttb',
 		type: 'loop',
-		rewind: true,
+		autoWidth: false,
 		autoHeight: true,
 		height: '60vh',
 		isNavigation: true,
@@ -36,7 +36,7 @@ const videoGallery = () => {
 			991: {
 				direction: 'ltr',
 				autoWidth: true,
-				autoheight: false,
+				autoHeight: false,
 				height: '10vh',
 			},
 		},

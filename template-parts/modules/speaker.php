@@ -17,7 +17,9 @@
     <div class="ac-header">
         <button class="ac-trigger">
             <div class="speaker-content">
-                <?php echo get_the_post_thumbnail( $item->ID, 'thumbnail' ); ?>
+                <?php if(!empty(get_the_post_thumbnail( $item->ID, 'thumbnail' ))) :
+                    echo get_the_post_thumbnail( $item->ID, 'thumbnail' );
+                endif ?>
                 <div>
                     <p><?php echo get_the_title($item->ID);  ?></p>
                     <p><?php echo $speaker_info['position']; ?></p>
@@ -27,11 +29,10 @@
         </button>
     </div>
 
-    <div class="ac-panel project-panel">
+    <div class="ac-panel">
+        <?php require(TEMPLATEPATH . '/template-parts/modules/sidebar.php'); ?>
+
         <?php require(TEMPLATEPATH . '/template-parts/modules/media.php'); ?>
-        <div class="">
-            <?php require(TEMPLATEPATH . '/template-parts/modules/sidebar.php'); ?>
-        </div>
     </div>
 
 </section>
