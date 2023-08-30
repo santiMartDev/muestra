@@ -60,8 +60,11 @@ $speakers = new WP_Query( $args );
 
             // config extra education menu - title and buttons
             $sidebar_speaker_extra = array( array('title' => __('Related topcis', 'imaneo'), 'link' => '', 'blank' => false));
-            $sidebar_speaker_extra = array_merge($sidebar_speaker_extra, $sidebar_speaker_themes);
 
+            if($sidebar_speaker_themes) {
+                $sidebar_speaker_extra = array_merge($sidebar_speaker_extra, $sidebar_speaker_themes);
+            }
+            
             // include module education
             require( TEMPLATEPATH . '/template-parts/modules/speaker.php' );
 

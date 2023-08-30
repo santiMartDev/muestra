@@ -63,5 +63,5 @@ window.addEventListener('load', () => {
 		loader.addEventListener('transitionend', () => {
 			loader.style.display = 'none';
 		});
-	}, 1000);
+	}, 500);
 });

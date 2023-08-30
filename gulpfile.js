@@ -78,7 +78,7 @@ gulp.task('script', async () => {
 	const compile = await rollup.rollup({
 		input: paths.scripts.src,
 		plugins: [
-			commonjs(),
+			// commonjs(),
 			nodeResolve(),
 			babel({
 				babelHelpers: 'bundled',
