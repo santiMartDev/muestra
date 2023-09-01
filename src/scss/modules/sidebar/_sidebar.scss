@@ -6,6 +6,11 @@
 		@extend %h5;
 		color: color('black');
 		line-height: $line-height-base;
-		font-weight: 700;
+		font-weight: 500;
+
+		&::after {
+			content: '+';
+			padding-left: 5px;
+		}
 	}
 }

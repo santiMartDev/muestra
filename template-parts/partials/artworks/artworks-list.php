@@ -21,8 +21,6 @@ $projects = new WP_Query($args);
 
         $project = get_field('projects');
 
-        // var_dump($project);
-
         // assign artist field to module artist
         $artist = $project['artist'];
         $info = $project['project_info'];

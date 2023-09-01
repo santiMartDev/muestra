@@ -7,7 +7,7 @@
 // title
 $page_title = __('IMANEO', 'imaneo');
 $page_description = __('CROSSED IMAGINATIONS OF NEO-MOORISH ARCHITECTURE', 'imaneo');
-require( TEMPLATEPATH . '/template-parts/partials/page-header.php' );
+require( TEMPLATEPATH . '/template-parts/partials/home/home-header.php' );
 
 // Home grid
 require( TEMPLATEPATH . '/template-parts/partials/home/home-grid.php' );

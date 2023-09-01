@@ -6,10 +6,6 @@
 $education = $project['education'];
 $education_id = $education[0]->ID;
 
-var_dump($education);
-
-// var_dump($education);
-
 // config extra education menu
 $sidebar_education_extra = array(
     array('title' => __('All educational activities', 'imaneo'), 'link' => array('url' => get_the_permalink(142)), 'blank' => false)

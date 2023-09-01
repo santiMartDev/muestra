@@ -1,10 +1,10 @@
 <?php // Module Sidebar ?>
 
-<?php if(!empty($sidebar_menus)) :  // var_dump($sidebar_menus); ?>
+<?php if(!empty($sidebar_menus)) : ?>
     <aside class="module-sidebar">
-        <?php foreach ($sidebar_menus as $menu) { // var_dump($menu); ?>
+        <?php foreach ($sidebar_menus as $menu) { ?>
             <ul class="sidebar-menu">
-                <?php foreach ($menu as $link) { // var_dump($link);
+                <?php foreach ($menu as $link) {
                     $target = (!empty($link['blank'])) ? 'target="_blank"' : '';
                     $href = (!empty($link['link'])) ? 'href="'.$link['link']['url'].'"' : '';
                     $tag = (!empty($link['link'])) ? 'a' : 'h4';

@@ -2412,7 +2412,11 @@ h6, .h6, .fs-6 {
 .module-sidebar h4 {
   color: #131313;
   line-height: 1.6em;
-  font-weight: 700;
+  font-weight: 500;
+}
+.module-sidebar h4::after {
+  content: "+";
+  padding-left: 5px;
 }
 
 .about header {

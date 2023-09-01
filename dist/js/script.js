@@ -9190,7 +9190,7 @@
 
     /////////////////////////////////////////////////////////////////////////
 
-    const res = await fetch('https://imaneo.hotpixel.es/wp-json/wp/v2/project?per_page=20');
+    const res = await fetch('https://imaneo.inha.fr/wp-json/wp/v2/project?per_page=20');
     const data = await res.json();
     const mapID = document.querySelector('#mapID');
     const markerBK = mapID.dataset.marker;

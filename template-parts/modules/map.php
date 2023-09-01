@@ -5,7 +5,6 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 $thumb_url = wp_get_attachment_image_src($thumb_id, 'theme_vertical', true);
 $location = $project_location;
 
-// var_dump($location);
 ?>
 
 <section id="mapID" data-marker="<?php bloginfo('template_url') ?>/dist/assets/icons/icon-map-dot.svg"
