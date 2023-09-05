@@ -1,13 +1,11 @@
 import menuHeader from './modules/header.js';
 import tabs from './modules/tabs.js';
 import gallery from './modules/gallery';
-import artworks from './modules/artworks';
 import podcast from './modules/podcast';
 import accordionMenu from './modules/accordionMenu';
 import map from './modules/map.js';
 import videoGallery from './modules/videoGallery.js';
 import videoSingle from './modules/videoSingle.js';
-import contemporary from './modules/contemporary.js';
 import menu from './init/menu.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -33,12 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	const galleryExist = document.getElementsByClassName('gallery-wrap');
 	if (galleryExist.length > 0) {
 		gallery();
-	}
-
-	const contemporaryExist =
-		document.getElementsByClassName('contemporary-wrap');
-	if (galleryExist.length > 0) {
-		contemporary();
 	}
 
 	const tabsExist = document.getElementsByClassName('tab');

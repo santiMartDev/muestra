@@ -2,9 +2,9 @@
 
 <?php
 // assign gallery to media
-$media = $project['gallery'];
+$media['gallery'] = $project['gallery'];
 ?>
 
 <article class="project-gallery">
-    <?php require( TEMPLATEPATH . '/template-parts/modules/gallery.php' ); ?>
+    <?php require( TEMPLATEPATH . '/template-parts/modules/media.php' ); ?>
 </article>

@@ -1,7 +1,3 @@
-// Import LIGHTGALLERY
-import lightGallery from 'lightgallery';
-import lgVideo from 'lightgallery/plugins/video';
-
 // lg Gallery
 function lgVideoSingle() {
 	var media = document.getElementsByClassName('video');
