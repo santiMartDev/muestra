@@ -474,7 +474,8 @@ h1, .h1, .fs-1 {
   }
 }
 
-.page-template-default #wrapper, .gallery-wrap, .grid, .video, .module-video-gallery, .sidenav, .tabs, .module-vertical-medium {
+.page-template-default #wrapper, .gallery-wrap,
+.contemporary-wrap, .grid, .video, .module-video-gallery, .sidenav, .tabs, .module-vertical-medium {
   padding-top: clamp(
     1.88rem,
     1.66vw + 1.47rem,
@@ -487,7 +488,8 @@ h1, .h1, .fs-1 {
   );
 }
 @media (min-width: 992px) {
-  .page-template-default #wrapper, .gallery-wrap, .grid, .video, .module-video-gallery, .sidenav, .tabs, .module-vertical-medium {
+  .page-template-default #wrapper, .gallery-wrap,
+  .contemporary-wrap, .grid, .video, .module-video-gallery, .sidenav, .tabs, .module-vertical-medium {
     padding-top: clamp(
     3.13rem,
     6.7vw + -1.03rem,
@@ -573,7 +575,7 @@ h1, .h1, .fs-1 {
   .module-left-small {
     padding-left: clamp(
     1.25rem,
-    2.23vw + -0.13rem,
+    1.64vw + 0.23rem,
     1.88rem
   );
   }
@@ -590,7 +592,7 @@ h1, .h1, .fs-1 {
   .module-right-small {
     padding-right: clamp(
     1.25rem,
-    2.23vw + -0.13rem,
+    1.64vw + 0.23rem,
     1.88rem
   );
   }
@@ -612,12 +614,12 @@ body, .module-default, .module-max-width, .module-max-width-small, .module-horiz
   body, .module-default, .module-max-width, .module-max-width-small, .module-horizontal-small {
     padding-left: clamp(
     1.25rem,
-    2.23vw + -0.13rem,
+    1.64vw + 0.23rem,
     1.88rem
   );
     padding-right: clamp(
     1.25rem,
-    2.23vw + -0.13rem,
+    1.64vw + 0.23rem,
     1.88rem
   );
   }
@@ -634,7 +636,7 @@ body, .module-default, .module-max-width, .module-max-width-small, .module-horiz
   .module-architects, .module-default, .module-left-medium {
     padding-left: clamp(
     3.75rem,
-    4.46vw + 0.98rem,
+    3.29vw + 1.71rem,
     5rem
   );
   }
@@ -651,7 +653,7 @@ body, .module-default, .module-max-width, .module-max-width-small, .module-horiz
   .module-right-medium {
     padding-right: clamp(
     3.75rem,
-    4.46vw + 0.98rem,
+    3.29vw + 1.71rem,
     5rem
   );
   }
@@ -673,17 +675,17 @@ body {
   body {
     padding-left: clamp(
     3.75rem,
-    4.46vw + 0.98rem,
+    3.29vw + 1.71rem,
     5rem
   );
     padding-right: clamp(
     3.75rem,
-    4.46vw + 0.98rem,
+    3.29vw + 1.71rem,
     5rem
   );
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1600px) {
   body {
     max-width: 1440px;
     padding-left: 0;
@@ -707,12 +709,12 @@ body {
   .video, .podcast .shk, .pdfs, .module-narrow, .module-horizontal-medium {
     padding-left: clamp(
     3.75rem,
-    4.46vw + 0.98rem,
+    3.29vw + 1.71rem,
     5rem
   );
     padding-right: clamp(
     3.75rem,
-    4.46vw + 0.98rem,
+    3.29vw + 1.71rem,
     5rem
   );
   }
@@ -729,7 +731,7 @@ body {
   .module-left-large {
     padding-left: clamp(
     3.75rem,
-    26.79vw + -12.86rem,
+    19.74vw + -8.49rem,
     11.25rem
   );
   }
@@ -746,7 +748,7 @@ body {
   .module-right-large {
     padding-right: clamp(
     3.75rem,
-    26.79vw + -12.86rem,
+    19.74vw + -8.49rem,
     11.25rem
   );
   }
@@ -768,12 +770,12 @@ body {
   .sidenav, .module-extra, .module-horizontal-large {
     padding-left: clamp(
     3.75rem,
-    26.79vw + -12.86rem,
+    19.74vw + -8.49rem,
     11.25rem
   );
     padding-right: clamp(
     3.75rem,
-    26.79vw + -12.86rem,
+    19.74vw + -8.49rem,
     11.25rem
   );
   }
@@ -2272,12 +2274,14 @@ h6, .h6, .fs-6 {
   height: 100%;
 }
 
-.gallery-wrap {
+.gallery-wrap,
+.contemporary-wrap {
   height: 100%;
   background-color: transparent;
 }
 @media (min-width: 992px) {
-  .gallery-wrap {
+  .gallery-wrap,
+  .contemporary-wrap {
     background-color: #131313;
   }
 }

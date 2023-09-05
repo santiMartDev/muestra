@@ -2,194 +2,194 @@
 //		Tools: margins [placeholder]
 // --------------------------------------------------
 
-@use "settings" as *;
-@use "breakpoints" as *;
-@use "sass:map";
-@use "sass:list";
+@use 'settings' as *;
+@use 'breakpoints' as *;
+@use 'sass:map';
+@use 'sass:list';
 
 // Block margins vertical ========================================
 
 @each $size, $value in $clamp-y-spaces {
-  @if $size != "none" {
-    // Margin top
-    %module-top-#{$size} {
-      padding-top: clamped(
-        list.nth($value, 1) * 1px,
-        list.nth($value, 2) * 1px,
-        390px,
-        991px
-      );
+	@if $size != 'none' {
+		// Margin top
+		%module-top-#{$size} {
+			padding-top: clamped(
+				list.nth($value, 1) * 1px,
+				list.nth($value, 2) * 1px,
+				390px,
+				991px
+			);
 
-      @include up(lg) {
-        padding-top: clamped(
-          list.nth($value, 3) * 1px,
-          list.nth($value, 4) * 1px,
-          992px,
-          1440px
-        );
-      }
-    }
+			@include up(lg) {
+				padding-top: clamped(
+					list.nth($value, 3) * 1px,
+					list.nth($value, 4) * 1px,
+					992px,
+					1440px
+				);
+			}
+		}
 
-    // Margin bottom
-    %module-bottom-#{$size} {
-      padding-bottom: clamped(
-        list.nth($value, 1) * 1px,
-        list.nth($value, 2) * 1px,
-        390px,
-        991px
-      );
+		// Margin bottom
+		%module-bottom-#{$size} {
+			padding-bottom: clamped(
+				list.nth($value, 1) * 1px,
+				list.nth($value, 2) * 1px,
+				390px,
+				991px
+			);
 
-      @include up(lg) {
-        padding-bottom: clamped(
-          list.nth($value, 3) * 1px,
-          list.nth($value, 4) * 1px,
-          992px,
-          1440px
-        );
-      }
-    }
+			@include up(lg) {
+				padding-bottom: clamped(
+					list.nth($value, 3) * 1px,
+					list.nth($value, 4) * 1px,
+					992px,
+					1440px
+				);
+			}
+		}
 
-    // Margin vertical
-    %module-vertical-#{$size} {
-      padding-top: clamped(
-        list.nth($value, 1) * 1px,
-        list.nth($value, 2) * 1px,
-        390px,
-        991px
-      );
-      padding-bottom: clamped(
-        list.nth($value, 1) * 1px,
-        list.nth($value, 2) * 1px,
-        390px,
-        991px
-      );
+		// Margin vertical
+		%module-vertical-#{$size} {
+			padding-top: clamped(
+				list.nth($value, 1) * 1px,
+				list.nth($value, 2) * 1px,
+				390px,
+				991px
+			);
+			padding-bottom: clamped(
+				list.nth($value, 1) * 1px,
+				list.nth($value, 2) * 1px,
+				390px,
+				991px
+			);
 
-      @include up(lg) {
-        padding-top: clamped(
-          list.nth($value, 3) * 1px,
-          list.nth($value, 4) * 1px,
-          992px,
-          1440px
-        );
-        padding-bottom: clamped(
-          list.nth($value, 3) * 1px,
-          list.nth($value, 4) * 1px,
-          992px,
-          1440px
-        );
-      }
-    }
-  }
+			@include up(lg) {
+				padding-top: clamped(
+					list.nth($value, 3) * 1px,
+					list.nth($value, 4) * 1px,
+					992px,
+					1440px
+				);
+				padding-bottom: clamped(
+					list.nth($value, 3) * 1px,
+					list.nth($value, 4) * 1px,
+					992px,
+					1440px
+				);
+			}
+		}
+	}
 }
 
 // Block margins horizontal ========================================
 
 @each $size, $value in $clamp-x-spaces {
-  @if $size != "none" {
-    // Margin left
-    %module-left-#{$size} {
-      padding-left: clamped(
-        list.nth($value, 1) * 1px,
-        list.nth($value, 2) * 1px,
-        390px,
-        991px
-      );
+	@if $size != 'none' {
+		// Margin left
+		%module-left-#{$size} {
+			padding-left: clamped(
+				list.nth($value, 1) * 1px,
+				list.nth($value, 2) * 1px,
+				390px,
+				991px
+			);
 
-      @include up(lg) {
-        padding-left: clamped(
-          list.nth($value, 3) * 1px,
-          list.nth($value, 4) * 1px,
-          992px,
-          1440px
-        );
-      }
-    }
+			@include up(lg) {
+				padding-left: clamped(
+					list.nth($value, 3) * 1px,
+					list.nth($value, 4) * 1px,
+					992px,
+					1600px
+				);
+			}
+		}
 
-    // Margin right
-    %module-right-#{$size} {
-      padding-right: clamped(
-        list.nth($value, 1) * 1px,
-        list.nth($value, 2) * 1px,
-        390px,
-        991px
-      );
+		// Margin right
+		%module-right-#{$size} {
+			padding-right: clamped(
+				list.nth($value, 1) * 1px,
+				list.nth($value, 2) * 1px,
+				390px,
+				991px
+			);
 
-      @include up(lg) {
-        padding-right: clamped(
-          list.nth($value, 3) * 1px,
-          list.nth($value, 4) * 1px,
-          992px,
-          1440px
-        );
-      }
-    }
+			@include up(lg) {
+				padding-right: clamped(
+					list.nth($value, 3) * 1px,
+					list.nth($value, 4) * 1px,
+					992px,
+					1600px
+				);
+			}
+		}
 
-    // Body horizontal margins
-    %body-horizontal-#{$size} {
-      padding-left: clamped(
-        list.nth($value, 1) * 1px,
-        list.nth($value, 2) * 1px,
-        390px,
-        991px
-      );
-      padding-right: clamped(
-        list.nth($value, 1) * 1px,
-        list.nth($value, 2) * 1px,
-        390px,
-        991px
-      );
+		// Body horizontal margins
+		%body-horizontal-#{$size} {
+			padding-left: clamped(
+				list.nth($value, 1) * 1px,
+				list.nth($value, 2) * 1px,
+				390px,
+				991px
+			);
+			padding-right: clamped(
+				list.nth($value, 1) * 1px,
+				list.nth($value, 2) * 1px,
+				390px,
+				991px
+			);
 
-      @include up(lg) {
-        padding-left: clamped(
-          list.nth($value, 3) * 1px,
-          list.nth($value, 4) * 1px,
-          992px,
-          1440px
-        );
-        padding-right: clamped(
-          list.nth($value, 3) * 1px,
-          list.nth($value, 4) * 1px,
-          992px,
-          1440px
-        );
-      }
+			@include up(lg) {
+				padding-left: clamped(
+					list.nth($value, 3) * 1px,
+					list.nth($value, 4) * 1px,
+					992px,
+					1600px
+				);
+				padding-right: clamped(
+					list.nth($value, 3) * 1px,
+					list.nth($value, 4) * 1px,
+					992px,
+					1600px
+				);
+			}
 
-      @include up(xxl) {
-        max-width: $max-width;
-        padding-left: 0;
-        padding-right: 0;
-      }
-    }
+			@include up(xxxl) {
+				max-width: $max-width;
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
 
-    // Margin horizontal
-    %module-horizontal-#{$size} {
-      padding-left: clamped(
-        list.nth($value, 1) * 1px,
-        list.nth($value, 2) * 1px,
-        390px,
-        991px
-      );
-      padding-right: clamped(
-        list.nth($value, 1) * 1px,
-        list.nth($value, 2) * 1px,
-        390px,
-        991px
-      );
+		// Margin horizontal
+		%module-horizontal-#{$size} {
+			padding-left: clamped(
+				list.nth($value, 1) * 1px,
+				list.nth($value, 2) * 1px,
+				390px,
+				991px
+			);
+			padding-right: clamped(
+				list.nth($value, 1) * 1px,
+				list.nth($value, 2) * 1px,
+				390px,
+				991px
+			);
 
-      @include up(lg) {
-        padding-left: clamped(
-          list.nth($value, 3) * 1px,
-          list.nth($value, 4) * 1px,
-          992px,
-          1440px
-        );
-        padding-right: clamped(
-          list.nth($value, 3) * 1px,
-          list.nth($value, 4) * 1px,
-          992px,
-          1440px
-        );
-      }
-    }
-  }
+			@include up(lg) {
+				padding-left: clamped(
+					list.nth($value, 3) * 1px,
+					list.nth($value, 4) * 1px,
+					992px,
+					1600px
+				);
+				padding-right: clamped(
+					list.nth($value, 3) * 1px,
+					list.nth($value, 4) * 1px,
+					992px,
+					1600px
+				);
+			}
+		}
+	}
 }

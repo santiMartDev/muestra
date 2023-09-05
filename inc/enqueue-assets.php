@@ -33,7 +33,7 @@ function ffTheme_assets()
     wp_enqueue_script('finuras-scripts-lgVideo', get_template_directory_uri() . '/dist/libs/lightgallery/plugins/video/lg-video.min.js', array(), '1.0.0', 'true');
 
     // Include JS
-    wp_enqueue_script('custom-scripts', get_template_directory_uri() . '/dist/js/min/script.min.js', array(), '1.0', 'true');
+    wp_enqueue_script('custom-scripts', get_template_directory_uri() . '/dist/js/script.js', array(), '1.0', 'true');
 }
 
 add_action('wp_enqueue_scripts', 'ffTheme_assets');

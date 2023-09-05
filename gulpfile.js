@@ -27,7 +27,7 @@ const paths = {
 	},
 	css: {
 		src: './dist/css/style.css',
-		dest: './dist/css/min/',
+		dest: './dist/css/',
 	},
 	scripts: {
 		src: './src/js/main.js',

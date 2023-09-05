@@ -70,14 +70,14 @@ const gallery = () => {
 				});
 			});
 		}
-	});
 
-	const media = document.querySelector('.gallery .splide__list');
+		const media = gallery.querySelector('.gallery .splide__list');
 
-	lightGallery(media, {
-		counter: false,
-		licenseKey: 'RWGFX-KWFPH-57MZ4-GKE8B',
-		download: false,
+		lightGallery(media, {
+			counter: false,
+			licenseKey: 'RWGFX-KWFPH-57MZ4-GKE8B',
+			download: false,
+		});
 	});
 };
 

@@ -6,7 +6,8 @@
 @use 'helper' as *;
 @use 'tools' as *;
 
-.gallery-wrap {
+.gallery-wrap,
+.contemporary-wrap {
 	@extend %module-vertical-medium;
 
 	height: 100%;

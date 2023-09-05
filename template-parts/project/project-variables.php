@@ -5,13 +5,13 @@ unset($tabs_links);
 unset($tabs_content);
 
 // texts to tabs
-$tab_text_gallery = __('Contemporary photography', 'imaneo');
+$tab_text_gallery = __('Contemporary photographies', 'imaneo');
 $tab_text_history = __('History', 'imaneo');
 $tab_text_map = __('Map', 'imaneo');
 $tab_text_artist = __('Artistic looks', 'imaneo');
-$tab_text_podcast = __('Word of people', 'imaneo');
+$tab_text_podcast = __('Words of people', 'imaneo');
 $tab_text_theme = __('Related topics', 'imaneo');
-$tab_text_education = __('Educational activity', 'imaneo');
+$tab_text_education = __('Educational activities', 'imaneo');
 
 // get project fields
 $project = get_field('projects');

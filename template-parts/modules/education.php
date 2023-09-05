@@ -6,6 +6,10 @@ $content = $content_post->post_content;
 $content = apply_filters('the_content', $content);
 $content = str_replace(']]>', ']]&gt;', $content);
 $title = $content_post->post_title;
+
+$motif = get_field('education', $education_id);
+
+var_dump($motif['img']);
 ?>
 
 <p class="title__edu"><?php echo $title;  ?></p>
@@ -16,7 +20,9 @@ $title = $content_post->post_title;
 <section class="module-default">
 
     <section>
-        <?php echo $content; ?>
+        <a href="<?php echo $motif['download'] ?>">
+            <img src="<?php echo $motif['img'] ?>" alt="">
+        </a>
     </section>
 
     <?php require(TEMPLATEPATH . '/template-parts/modules/sidebar.php'); ?>
