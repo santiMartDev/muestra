@@ -62,6 +62,8 @@ if (have_posts()) : while (have_posts()) : the_post();
             // get all projects by term taxonomy
             $projects = new WP_Query($args_project);
 
+            var_dump($projects);
+
             // loop projects by term taxonomy
             if ($educations->have_posts()) {
                 while ($educations->have_posts()) {
@@ -80,9 +82,6 @@ if (have_posts()) : while (have_posts()) : the_post();
                 while ($projects->have_posts()) {
                     $projects->the_post();
                     $sidebar_theme_projects[] = array('title' => get_the_title(),  'link' => array('url' => get_the_permalink()), 'blank' => false);
-
-                    var_dump(get_the_title());
-
                 }
 
                 $sidebar_menus[] = $sidebar_theme_projects;
