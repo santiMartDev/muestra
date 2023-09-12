@@ -59,6 +59,8 @@ if (have_posts()) : while (have_posts()) : the_post();
                 ),
             );
 
+            var_dump($term->name);
+
             // get all projects by term taxonomy
             $projects = new WP_Query($args_project);
 
