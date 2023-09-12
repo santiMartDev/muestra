@@ -53,18 +53,18 @@ if (have_posts()) : while (have_posts()) : the_post();
                 'tax_query' => array(
                     array(
                         'taxonomy' => 'project_theme',
-                        'field' => 'slug',
-                        'terms' => $term->name
+                        'field' => 'id',
+                        'terms' => $term->term_id
                     ),
                 ),
             );
 
-            var_dump($term->name);
+            // var_dump($term->name);
 
             // get all projects by term taxonomy
             $projects = new WP_Query($args_project);
 
-            var_dump($projects);
+            // var_dump($projects);
 
             // loop projects by term taxonomy
             if ($educations->have_posts()) {
