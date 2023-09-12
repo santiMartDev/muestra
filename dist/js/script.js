@@ -5199,11 +5199,12 @@
     gsapWithCSS.core.Tween;
 
   const menuHeader = () => {
-    const btns = document.querySelectorAll(".btnSubmenu");
+    const btns = document.querySelectorAll('.btnSubmenu');
     btns.forEach(btn => {
-      btn.addEventListener("click", e => {
+      btn.addEventListener('click', e => {
         //Btn clicked
         const target = e.currentTarget;
+        console.log(target.lastChild);
 
         //Data from Btn
         const targetData = e.currentTarget.dataset.submenu;
@@ -5212,16 +5213,16 @@
         const selected = document.querySelector(targetData);
 
         //Cross anime from Btn
-        const targetCross = document.querySelector(`.${e.currentTarget.lastChild.className}`);
+        const targetCross = target.querySelector('.cross');
         const disabled = document.querySelectorAll(`.btnSubmenu:not([data-submenu="${e.currentTarget.dataset.submenu}"])`);
 
         //Reset All Menus
 
-        if (!target.classList.contains("active")) {
+        if (!target.classList.contains('active')) {
           //Add active class to Btn
-          target.classList.add("active");
+          target.classList.add('active');
           disabled.forEach(el => {
-            el.classList.add("disabled");
+            el.classList.add('disabled');
           });
 
           //Menu Anime
@@ -5231,30 +5232,30 @@
           }).to(disabled, {
             opacity: 0.2,
             duration: 0.6
-          }, "<").to(selected, {
+          }, '<').to(selected, {
             zIndex: 1,
             duration: 0
-          }, "<").to(selected, {
+          }, '<').to(selected, {
             opacity: 1,
             duration: 0.6
-          }, "<");
-        } else if (target.classList.contains("active")) {
+          }, '<');
+        } else if (target.classList.contains('active')) {
           gsapWithCSS.timeline().to(targetCross, {
             rotate: 0,
             duration: 0.6
           }).to(disabled, {
             opacity: 1,
             duration: 0.6
-          }, "<").to(selected, {
+          }, '<').to(selected, {
             opacity: 0,
             duration: 0.6
-          }, "<").to(selected, {
+          }, '<').to(selected, {
             zIndex: 0,
             duration: 0
           });
-          target.classList.remove("active");
+          target.classList.remove('active');
           disabled.forEach(el => {
-            el.classList.remove("disabled");
+            el.classList.remove('disabled');
           });
         }
       });
@@ -12441,49 +12442,49 @@
 
   // You need to transpile this code
   const videoGallery = () => {
-    const galleryVideos = document.querySelector('.videos.splide');
-    const galleryCovers = document.querySelector('.covers.splide');
-    const module = document.querySelector('.module-video-gallery .module-wrapper');
-    module.offsetHeight;
-    const videosSlider = new Splide(galleryVideos, {
-      heightRatio: 0.5625,
-      height: '60vh',
-      cover: true,
-      pagination: false,
-      arrows: false,
-      video: {
-        loop: true
-      },
-      breakpoints: {
-        991: {
-          height: '25vh'
+    const modules = document.querySelectorAll('.module-video-gallery .module-wrapper');
+    modules.forEach(module => {
+      const galleryVideos = module.querySelector('.videos.splide');
+      const galleryCovers = module.querySelector('.covers.splide');
+      const videosSlider = new Splide(galleryVideos, {
+        heightRatio: 0.5625,
+        height: '60vh',
+        cover: true,
+        pagination: false,
+        arrows: false,
+        video: {
+          loop: true
+        },
+        breakpoints: {
+          991: {
+            height: '25vh'
+          }
         }
-      }
-    });
-    const coversSlider = new Splide(galleryCovers, {
-      direction: 'ttb',
-      type: 'loop',
-      autoWidth: false,
-      autoHeight: true,
-      height: '60vh',
-      isNavigation: true,
-      pagination: false,
-      arrows: false,
-      gap: 10,
-      breakpoints: {
-        991: {
-          direction: 'ltr',
-          autoWidth: true,
-          autoHeight: false,
-          height: '10vh'
+      });
+      const coversSlider = new Splide(galleryCovers, {
+        direction: 'ttb',
+        autoWidth: false,
+        autoHeight: true,
+        height: '60vh',
+        isNavigation: true,
+        pagination: false,
+        arrows: false,
+        gap: 10,
+        breakpoints: {
+          991: {
+            direction: 'ltr',
+            autoWidth: true,
+            autoHeight: false,
+            height: '10vh'
+          }
         }
-      }
+      });
+      videosSlider.sync(coversSlider);
+      videosSlider.mount({
+        Video
+      });
+      coversSlider.mount();
     });
-    videosSlider.sync(coversSlider);
-    videosSlider.mount({
-      Video
-    });
-    coversSlider.mount();
   };
 
   // lg Gallery

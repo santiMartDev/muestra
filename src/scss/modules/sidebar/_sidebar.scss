@@ -2,6 +2,10 @@
 @use 'tools' as *;
 
 .module-sidebar {
+	ul:first-of-type {
+		padding-bottom: 10px;
+	}
+
 	h4 {
 		@extend %h5;
 		color: color('black');

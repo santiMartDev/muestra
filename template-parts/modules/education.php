@@ -15,11 +15,9 @@ $motif = get_field('education', $education_id);
 <p class="title__edu"><?php echo $title;  ?></p>
 
 <!-- Education content -->
-<?php require(TEMPLATEPATH . '/template-parts/modules/media.php'); ?>
-
 <section class="module-default">
 
-    <section>
+    <section class="motif__edu">
         <a href="<?php echo $motif['download']['url'] ?>" target="_blank">
             <img src="<?php echo $motif['img'] ?>" alt="">
         </a>
