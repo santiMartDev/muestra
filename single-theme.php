@@ -62,6 +62,8 @@ if (have_posts()) : while (have_posts()) : the_post();
             // get all projects by term taxonomy
             $projects = new WP_Query($args_project);
 
+            var_dump($projects);
+
             // loop projects by term taxonomy
             if ($educations->have_posts()) {
                 while ($educations->have_posts()) {
