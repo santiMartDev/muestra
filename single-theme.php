@@ -35,8 +35,8 @@ if (have_posts()) : while (have_posts()) : the_post();
                 'tax_query' => array(
                     array(
                         'taxonomy' => 'project_theme',
-                        'field' => 'slug',
-                        'terms' => $term->name
+                        'field' => 'id',
+                        'terms' => $term->term_id
                     ),
                 ),
             );

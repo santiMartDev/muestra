@@ -37,8 +37,8 @@ $speakers = new WP_Query( $args );
                         'tax_query' => array(
                             array(
                                 'taxonomy' => 'project_theme',
-                                'field' => 'slug',
-                                'terms' => $term->name
+                                'field' => 'id',
+                                'terms' => $term->term_id
                             ),
                     ),
                 );
@@ -64,7 +64,7 @@ $speakers = new WP_Query( $args );
             if($sidebar_speaker_themes) {
                 $sidebar_speaker_extra = array_merge($sidebar_speaker_extra, $sidebar_speaker_themes);
             }
-            
+
             // include module education
             require( TEMPLATEPATH . '/template-parts/modules/speaker.php' );
 
