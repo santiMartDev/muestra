@@ -2644,6 +2644,13 @@ h6, .h6, .fs-6 {
   width: 60%;
   margin: 0 auto;
 }
+.project-education .motif__edu .pdfs,
+.education-list .motif__edu .pdfs {
+  width: 100%;
+  padding: 0;
+  padding-top: 30px;
+  justify-content: flex-start;
+}
 
 .themes-list .theme-item {
   border-bottom: 1px solid #cccccc;

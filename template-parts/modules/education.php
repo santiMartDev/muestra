@@ -7,9 +7,8 @@ $content = apply_filters('the_content', $content);
 $content = str_replace(']]>', ']]&gt;', $content);
 $title = $content_post->post_title;
 
-$motif = get_field('education', $education_id);
+$education = get_field('education', $education_id);
 
-// var_dump($motif['download']);
 ?>
 
 <p class="title__edu"><?php echo $title;  ?></p>
@@ -18,9 +17,17 @@ $motif = get_field('education', $education_id);
 <section class="module-default">
 
     <section class="motif__edu">
-        <a href="<?php echo $motif['download']['url'] ?>" target="_blank">
-            <img src="<?php echo $motif['img'] ?>" alt="">
+        <a href="<?php echo $education['download']['url'] ?>" target="_blank">
+            <img src="<?php echo $education['img'] ?>" alt="">
         </a>
+        <section class="pdfs">
+            <?php if (!empty($education['items'])) { 
+            foreach ($education['items'] as $pdf) { ?>
+            <a href="<?php echo $pdf['file']['url']; ?>" target="_blank">
+                <p> <?php echo $pdf['title']; ?></p>
+            </a>
+            <?php } } ?>
+        </section>
     </section>
 
     <?php require(TEMPLATEPATH . '/template-parts/modules/sidebar.php'); ?>
