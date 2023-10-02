@@ -69,7 +69,7 @@
             <div class="splide__list">
                 <?php foreach ($media['gallery'] as $img) { ?>
                 <a class="splide__slide" href="<?php echo $img['sizes']['theme_full']; ?>"
-                    data-sub-html="<?php echo $img['title']; ?>">
+                    data-sub-html="<?php echo $img['title']; ?> - <?php echo $img['description']; ?>">
                     <img src="<?php echo $img['sizes']['theme_full']; ?>" alt="">
                     <div>
                         <p class="slide-title"><?php echo $img['title']; ?></p>

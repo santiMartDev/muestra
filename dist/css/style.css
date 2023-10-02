@@ -965,7 +965,7 @@ li {
        column-gap: 30px;
   justify-content: space-between;
   margin-top: 30px;
-  height: min(14vh, 150px);
+  height: min(16.7vh, 180px);
 }
 .header__brand {
   width: 50%;

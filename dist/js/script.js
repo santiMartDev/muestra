@@ -9188,7 +9188,7 @@
 
     /////////////////////////////////////////////////////////////////////////
 
-    const res = await fetch('https://imaneo.inha.fr/wp-json/wp/v2/project?per_page=20');
+    const res = await fetch('https://imaneo-data.inha.fr/wp-json/wp/v2/project?per_page=20');
     const data = await res.json();
     const mapID = document.querySelector('#mapID');
     const markerBK = mapID.dataset.marker;
@@ -9221,17 +9221,6 @@
         icon: secIcon
       }).addTo(map);
     });
-
-    // const greenMarker = document.querySelector(
-    // 	'.leaflet-marker-pane img[alt="mainMarker"]'
-    // );
-
-    // gsap.timeline({
-    // 	repeat: -1,
-    // })
-    // 	.to(greenMarker, { scale: 1, ease: 'power2.out', duration: 0.6 })
-    // 	.to(greenMarker, { scale: 1.3, ease: 'power2.out', duration: 0.6 })
-    // 	.to(greenMarker, { scale: 1, ease: 'power2.out', duration: 0.6 });
   }
 
   /*!

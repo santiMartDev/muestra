@@ -41,9 +41,9 @@
             <?php } ?>
         </ul>
 
-        <?php $imaginerie_menu = wp_get_nav_menu_items('Imaginerie menu'); ?>
+        <?php $imagineries_menu = wp_get_nav_menu_items('Imaginaires menu'); ?>
         <ul class="submenu submenu2">
-            <?php foreach ($imaginerie_menu as $item) {
+            <?php foreach ($imagineries_menu as $item) {
                 $link = $item->url;
                 $title = $item->title;
             ?>

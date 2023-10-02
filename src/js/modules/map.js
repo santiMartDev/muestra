@@ -88,17 +88,6 @@ async function map() {
 			}
 		).addTo(map);
 	});
-
-	// const greenMarker = document.querySelector(
-	// 	'.leaflet-marker-pane img[alt="mainMarker"]'
-	// );
-
-	// gsap.timeline({
-	// 	repeat: -1,
-	// })
-	// 	.to(greenMarker, { scale: 1, ease: 'power2.out', duration: 0.6 })
-	// 	.to(greenMarker, { scale: 1.3, ease: 'power2.out', duration: 0.6 })
-	// 	.to(greenMarker, { scale: 1, ease: 'power2.out', duration: 0.6 });
 }
 
 export default map;

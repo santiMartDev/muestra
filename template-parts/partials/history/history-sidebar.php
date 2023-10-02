@@ -8,7 +8,7 @@
 
         <li>
 
-            <h4><?php _e('Architectes et artistes','imaneo'); ?></h4>
+            <h4><?php _e('Architects and artists','imaneo'); ?></h4>
 
             <?php if(!empty($project_info['architects'])) { ?>
             <nav role="navigation">

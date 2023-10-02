@@ -14,7 +14,7 @@ $podcasts = (!empty($podcast)) ? $podcast : '';
     <section class="pdfs">
         <?php if (!empty($item['pdfs'])) { ?>
         <?php foreach ($item['pdfs'] as $pdf) { ?>
-        <a href="<?php echo $pdf['file']['url']; ?>">
+        <a href="<?php echo $pdf['file']['url']; ?>" traget="_blank">
             <p> <?php echo $pdf['title']; ?></p>
         </a>
         <?php } ?>

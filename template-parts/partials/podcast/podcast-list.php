@@ -26,7 +26,7 @@ $projects = new WP_Query($args);
         $info = $project['project_info'];
 
         $sidebar = array(
-            array('title' => __('Related Project', 'imaneo'), 'link' => '', 'blank' => false),
+            array('title' => __('Related Projects', 'imaneo'), 'link' => '', 'blank' => false),
             array('title' => get_the_title(), 'link' => array('url' => get_the_permalink()), 'blank' => false),
         );
 
@@ -36,26 +36,17 @@ $projects = new WP_Query($args);
 
         if ($podcasts || !empty($media['video_single']['number']) || !empty($media['video_gallery']) ) : ?>
 
-            <div class="podcast-item">
+    <div class="podcast-item">
 
-                <div class="lists-title">
-                    <img src="<?php echo $info['icon']['url']; ?>" alt="">
-                    <p><?php echo get_the_title(); ?></p>
-                </div>
+        <div class="lists-title">
+            <img src="<?php echo $info['icon']['url']; ?>" alt="">
+            <p><?php echo get_the_title(); ?></p>
+        </div>
+        <?php require(TEMPLATEPATH . '/template-parts/modules/podcast.php'); ?>
 
-                <?php if ($podcasts) : ?>
+    </div>
 
-                    <?php require(TEMPLATEPATH . '/template-parts/modules/podcast.php'); ?>
-
-                <?php elseif(!empty($media['video_single']['number']) || !empty($media['video_gallery'] )) : ?>
-
-                    <?php require(TEMPLATEPATH . '/template-parts/modules/media.php'); ?>
-
-                <?php endif; ?>
-
-            </div>
-
-        <?php endif; ?>        
+    <?php endif; ?>
 
     <?php } wp_reset_postdata();  ?>
 
