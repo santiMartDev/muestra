@@ -32,6 +32,7 @@ $projects = new WP_Query($args);
 
         $sidebar_menus = array($sidebar);
         $podcasts = (!empty($podcast['podcast'])) ? $podcast['podcast'] : '';
+        $media = (!empty($podcast['media'])) ? $podcast['media'] : '';
 
         if ($podcasts || !empty($media['video_single']['number']) || !empty($media['video_gallery']) ) : ?>
 
