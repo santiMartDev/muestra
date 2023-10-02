@@ -33,7 +33,7 @@ $projects = new WP_Query($args);
         $sidebar_menus = array($sidebar);
         $podcasts = (!empty($podcast['podcast'])) ? $podcast['podcast'] : '';
 
-        if ($podcasts) : ?>
+        if ($podcasts || !empty($media['video_single']['number']) || !empty($media['video_gallery']) ) : ?>
 
             <div class="podcast-item">
 
@@ -41,11 +41,20 @@ $projects = new WP_Query($args);
                     <img src="<?php echo $info['icon']['url']; ?>" alt="">
                     <p><?php echo get_the_title(); ?></p>
                 </div>
-                <?php require(TEMPLATEPATH . '/template-parts/modules/podcast.php'); ?>
+
+                <?php if ($podcasts) : ?>
+
+                    <?php require(TEMPLATEPATH . '/template-parts/modules/podcast.php'); ?>
+
+                <?php elseif(!empty($media['video_single']['number']) || !empty($media['video_gallery'] )) : ?>
+
+                    <?php require(TEMPLATEPATH . '/template-parts/modules/media.php'); ?>
+
+                <?php endif; ?>
 
             </div>
 
-        <?php endif; ?>
+        <?php endif; ?>        
 
     <?php } wp_reset_postdata();  ?>
 
