@@ -13,7 +13,7 @@ _paq.push(['enableLinkTracking']);
 (function() {
     var u = "https://statistiques.inha.fr/";
     _paq.push(['setTrackerUrl', u + 'piwik.php']);
-    _paq.push(['setSiteId', '32']);
+    _paq.push(['setSiteId', '33']);
     var d = document,
         g = d.createElement('script'),
         s = d.getElementsByTagName('script')[0];
